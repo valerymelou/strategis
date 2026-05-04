@@ -5,11 +5,20 @@
   "prefix": "app",
   "sourceRoot": "apps/strategis-web/src",
   "tags": [],
+  "i18n": {
+    "sourceLocale": "en",
+    "locales": {
+      "fr": {
+        "translation": "apps/strategis-web/src/locale/fr/messages.fr.xlf"
+      }
+    }
+  },
   "targets": {
     "build": {
-      "executor": "@angular/build:application",
+      "executor": "@nx/angular:application",
       "outputs": ["{options.outputPath}"],
       "options": {
+        "plugins": ["apps/strategis-web/plugins/env-var-plugin.js"],
         "outputPath": "dist/apps/strategis-web",
         "browser": "apps/strategis-web/src/main.ts",
         "tsConfig": "apps/strategis-web/tsconfig.app.json",
@@ -23,6 +32,7 @@
       },
       "configurations": {
         "production": {
+          "localize": ["en", "fr"],
           "budgets": [
             {
               "type": "initial",
@@ -38,6 +48,7 @@
           "outputHashing": "all"
         },
         "development": {
+          "localize": ["en"],
           "optimization": false,
           "extractLicenses": false,
           "sourceMap": true
@@ -47,16 +58,31 @@
     },
     "serve": {
       "continuous": true,
-      "executor": "@angular/build:dev-server",
+      "executor": "@nx/angular:dev-server",
       "configurations": {
         "production": {
           "buildTarget": "strategis-web:build:production"
         },
         "development": {
           "buildTarget": "strategis-web:build:development"
+        },
+        "development-fr": {
+          "buildTarget": "strategis-web:build:development,fr"
         }
       },
       "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "ng-extract-i18n-merge:ng-extract-i18n-merge",
+      "options": {
+        "buildTarget": "strategis-web:build",
+        "format": "xlf2",
+        "outputPath": "apps/strategis-web/src/locale",
+        "targetFiles": ["fr/messages.fr.xlf"],
+        "sourceFile": "messages.xlf",
+        "includeContext": true,
+        "builderI18n": "@angular/build:extract-i18n"
+      }
     },
     "lint": {
       "executor": "@nx/eslint:lint"

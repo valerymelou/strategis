@@ -1,0 +1,22 @@
+<div class="bg-background flex h-screen overflow-hidden">
+  <app-sidebar [open]="sidebarOpen()" />
+
+  <!-- Mobile backdrop — closes sidebar on tap outside -->
+  @if (sidebarOpen()) {
+    <div
+      class="fixed inset-0 z-40 bg-black/60 lg:hidden"
+      (click)="closeSidebar()"
+    ></div>
+  }
+
+  <div
+    class="border-border bg-card m-2 flex flex-1 flex-col overflow-hidden rounded-xl border"
+  >
+    <app-navbar (toggleSidebar)="toggleSidebar()" />
+    <main class="flex-1 overflow-y-auto">
+      <div class="p-4 lg:p-6">
+        <router-outlet />
+      </div>
+    </main>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="flex flex-col gap-1.5">
+  @if (label) {
+  <label class="text-sm font-medium" [for]="inputId">{{ label }}</label>
+  }
+  <div cdkOverlayOrigin #origin="cdkOverlayOrigin">
+    <input
+      [id]="inputId"
+      ui-input
+      type="text"
+      [placeholder]="placeholder"
+      [value]="inputValue()"
+      (input)="onInput($event)"
+    />
+  </div>
+
+  <ng-template
+    cdkConnectedOverlay
+    [cdkConnectedOverlayOrigin]="origin"
+    [cdkConnectedOverlayOpen]="isOpen()"
+    [cdkConnectedOverlayPositions]="positions"
+    [cdkConnectedOverlayWidth]="triggerWidth"
+    (overlayOutsideClick)="closePanel()"
+    (detach)="closePanel()"
+  >
+    <ul
+      class="border-border bg-popover max-h-60 overflow-auto rounded-md border shadow-sm"
+    >
+      @for (opt of options(); track $index) {
+      <li>
+        <button
+          type="button"
+          class="hover:bg-accent w-full px-3 py-2 text-left text-sm"
+          (click)="selectOption(opt)"
+        >
+          <span class="text-muted-foreground font-medium"
+            >{{ labelFn(opt) }}</span
+          >
+          @if (getSubLabel(opt)) {
+          <span class="text-muted-foreground ml-2">{{ getSubLabel(opt) }}</span>
+          }
+        </button>
+      </li>
+      }
+    </ul>
+  </ng-template>
+
+  @if (selectedItem() !== null) {
+  <p class="text-muted-foreground text-xs">
+    {{ labelFn(selectedItem()!) }} @if (getSubLabel(selectedItem()!)) { — {{
+    getSubLabel(selectedItem()!) }} }
+  </p>
+  }
+</div>

@@ -1,0 +1,95 @@
+<div class="flex flex-col gap-6">
+  <!-- Header -->
+  <div class="flex flex-col gap-1.5 text-center">
+    <h1
+      class="text-foreground text-2xl font-semibold tracking-tight"
+      i18n="@@login.title"
+    >
+      Welcome back
+    </h1>
+    <p class="text-muted-foreground text-sm" i18n="@@login.subtitle">
+      Sign in to your Strategis Flow account
+    </p>
+  </div>
+
+  <!-- Form -->
+  <form
+    [formGroup]="form"
+    (ngSubmit)="submit()"
+    class="flex flex-col gap-4"
+    novalidate
+  >
+    <!-- Email -->
+    <div class="flex flex-col gap-1.5">
+      <label
+        for="email"
+        class="text-foreground text-sm font-medium"
+        i18n="@@login.email.label"
+      >
+        Email
+      </label>
+      <input
+        id="email"
+        type="email"
+        ui-input
+        formControlName="email"
+        autocomplete="email"
+        i18n-placeholder="@@login.email.placeholder"
+        placeholder="you@example.com"
+        [class.border-destructive]="email.invalid && email.touched"
+      />
+      @if (email.invalid && email.touched) {
+      <p class="text-destructive text-xs" i18n="@@login.email.error">
+        Please enter a valid email address.
+      </p>
+      }
+    </div>
+
+    <!-- Password -->
+    <div class="flex flex-col gap-1.5">
+      <label
+        for="password"
+        class="text-foreground text-sm font-medium"
+        i18n="@@login.password.label"
+      >
+        Password
+      </label>
+      <input
+        id="password"
+        type="password"
+        ui-input
+        formControlName="password"
+        autocomplete="current-password"
+        i18n-placeholder="@@login.password.placeholder"
+        placeholder="••••••••"
+        [class.border-destructive]="password.invalid && password.touched"
+      />
+      @if (password.invalid && password.touched) {
+      <p class="text-destructive text-xs" i18n="@@login.password.error">
+        Password is required.
+      </p>
+      }
+    </div>
+
+    <!-- Server error -->
+    @if (errorMessage()) {
+    <p class="bg-destructive/10 text-destructive rounded-md px-3 py-2 text-sm">
+      {{ errorMessage() }}
+    </p>
+    }
+
+    <!-- Submit -->
+    <button
+      type="submit"
+      ui-button
+      [className]="'w-full'"
+      [disabled]="isLoading()"
+    >
+      @if (isLoading()) {
+      <span i18n="@@login.submit.loading">Signing in…</span>
+      } @else {
+      <span i18n="@@login.submit.label">Sign in</span>
+      }
+    </button>
+  </form>
+</div>

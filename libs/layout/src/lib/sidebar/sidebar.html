@@ -1,0 +1,145 @@
+<aside
+  class="bg-background text-sidebar-foreground fixed inset-y-0 left-0 z-50 flex h-screen w-64 shrink-0 flex-col overflow-hidden transition-transform duration-200 ease-in-out lg:relative lg:inset-auto lg:z-auto lg:translate-x-0"
+  [class.-translate-x-full]="!open()"
+>
+  <!-- Header: logo + app name -->
+  <a href="/" class="flex shrink-0 items-center gap-3 p-4">
+    <div
+      class="bg-primary text-primary-foreground flex h-8 w-8 shrink-0 items-center justify-center rounded-md"
+    >
+      <ng-icon name="lucideArchive" size="16" />
+    </div>
+    <div class="flex flex-col overflow-hidden">
+      <span class="truncate text-sm leading-tight font-semibold"
+        >Strategis Flow</span
+      >
+      <span
+        class="text-muted-foreground truncate text-xs"
+        i18n="@@sidebar.appSubtitle"
+        >Intelligent Archive Management System</span
+      >
+    </div>
+  </a>
+
+  <!-- Scrollable navigation -->
+  <nav class="flex-1 overflow-y-auto px-3 pb-2">
+    @for (section of sections; track section.title) {
+    <div class="mb-4">
+      <p class="text-muted-foreground mb-1 px-2 text-xs font-medium">
+        {{ section.title }}
+      </p>
+      <ul class="space-y-2">
+        @for (item of section.items; track item.route) {
+        <li>
+          <a
+            [routerLink]="item.route"
+            routerLinkActive="bg-sidebar-accent text-sidebar-accent-foreground font-medium"
+            [routerLinkActiveOptions]="{ exact: item.exact ?? false }"
+            class="group hover:text-sidebar-accent-foreground text-muted-foreground peer/menu-button ring-sidebar-ring active:bg-sidebar-accent active:text-sidebar-accent-foreground hover:bg-sidebar-accent flex h-8 w-full items-center gap-3 overflow-hidden rounded-md p-2 px-2 py-1.5 text-left text-sm outline-hidden transition-[width,height,padding] focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0"
+          >
+            <ng-icon
+              [name]="item.icon"
+              size="15"
+              class="text-muted-foreground group-[.font-medium]:text-sidebar-accent-foreground shrink-0"
+            />
+            <span class="">{{ item.label }}</span>
+            @if (item.badge) {
+            <span
+              class="bg-destructive text-destructive-foreground rounded-full px-1.5 py-0.5 text-xs font-medium"
+            >
+              {{ item.badge }}
+            </span>
+            }
+          </a>
+        </li>
+        }
+      </ul>
+    </div>
+    }
+  </nav>
+
+  <!-- Bottom: org + user -->
+  <div class="relative shrink-0 space-y-1 px-2 pb-3">
+    <!-- User menu dropdown (opens above) -->
+    @if (menuOpen()) {
+    <!-- Backdrop -->
+    <div class="fixed inset-0 z-10" (click)="closeMenu()"></div>
+
+    <!-- Menu panel -->
+    <div
+      class="border-border bg-popover absolute right-2 bottom-full left-2 z-20 mb-1 overflow-hidden rounded-lg border shadow-lg"
+    >
+      <div class="p-1">
+        <button
+          type="button"
+          ui-button
+          variant="ghost"
+          [className]="'w-full justify-start gap-2 text-sm font-normal'"
+          [routerLink]="'/admin/settings'"
+          (click)="closeMenu()"
+        >
+          <ng-icon
+            name="lucideBuilding2"
+            size="15"
+            class="text-muted-foreground"
+          />
+          <span i18n="@@sidebar.menu.orgSettings">Organization settings</span>
+        </button>
+        <button
+          type="button"
+          ui-button
+          variant="ghost"
+          [className]="'w-full justify-start gap-2 text-sm font-normal'"
+          [routerLink]="'/settings'"
+          (click)="closeMenu()"
+        >
+          <ng-icon
+            name="lucideSettings"
+            size="15"
+            class="text-muted-foreground"
+          />
+          <span i18n="@@sidebar.menu.personalSettings">Personal settings</span>
+        </button>
+        <div class="bg-border my-1 h-px"></div>
+        <button
+          type="button"
+          ui-button
+          variant="ghost"
+          [className]="'w-full justify-start gap-2 text-sm font-normal text-destructive hover:text-destructive'"
+          (click)="logout()"
+        >
+          <ng-icon name="lucideLogOut" size="15" />
+          <span i18n="@@sidebar.menu.logout">Log out</span>
+        </button>
+      </div>
+    </div>
+    }
+
+    <!-- User row toggle -->
+    <button
+      type="button"
+      class="bg-card hover:bg-sidebar-accent flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-sm transition-colors"
+      (click)="toggleMenu()"
+    >
+      <span
+        class="bg-primary text-primary-foreground flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-semibold"
+      >
+        {{ initials() }}
+      </span>
+      <div class="flex min-w-0 flex-1 flex-col items-start">
+        <span class="w-full truncate text-left text-xs font-medium"
+          >{{ currentUser()?.email }}</span
+        >
+        <span class="text-muted-foreground w-full truncate text-left text-xs"
+          >{{ currentUser()?.name }}</span
+        >
+      </div>
+      <ng-icon
+        name="lucideChevronRight"
+        size="14"
+        class="text-muted-foreground shrink-0 transition-transform duration-200"
+        [style.transform]="menuOpen() ? 'rotate(-90deg)' : 'rotate(0deg)'"
+      />
+    </button>
+  </div>
+</aside>

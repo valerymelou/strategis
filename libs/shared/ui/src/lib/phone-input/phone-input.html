@@ -1,0 +1,87 @@
+<div class="flex">
+  <!-- Country picker trigger -->
+  <button
+    type="button"
+    cdkOverlayOrigin
+    #trigger="cdkOverlayOrigin"
+    class="border-input hover:bg-accent focus-visible:ring-ring flex h-9 shrink-0 items-center gap-1.5 rounded-l-md border border-r-0 bg-transparent px-3 py-1 text-sm shadow-sm transition-colors focus-visible:ring-1 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50"
+    [disabled]="isDisabled()"
+    (click)="openDropdown()"
+  >
+    <span aria-hidden="true">{{ getFlag(selectedCountry().iso) }}</span>
+    <span class="text-muted-foreground">{{ selectedCountry().dialCode }}</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="12"
+      height="12"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="text-muted-foreground"
+      aria-hidden="true"
+    >
+      <path d="m6 9 6 6 6-6" />
+    </svg>
+  </button>
+
+  <!-- National number input -->
+  <input
+    #numberInput
+    type="tel"
+    uiInput
+    class="rounded-l-none"
+    placeholder="677000000"
+    [value]="nationalNumber()"
+    [disabled]="isDisabled()"
+    (input)="onNumberInput($event)"
+    (blur)="onBlur()"
+  />
+</div>
+
+<!-- Country dropdown overlay -->
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="trigger"
+  [cdkConnectedOverlayOpen]="isOpen()"
+  [cdkConnectedOverlayPositions]="positions"
+  [cdkConnectedOverlayWidth]="280"
+  (overlayOutsideClick)="closeDropdown()"
+>
+  <div
+    class="bg-popover text-popover-foreground border-border z-50 flex max-h-72 flex-col overflow-hidden rounded-md border shadow-md"
+  >
+    <!-- Search -->
+    <div class="border-border border-b p-2">
+      <input
+        type="text"
+        class="border-input placeholder:text-muted-foreground focus-visible:ring-ring flex h-8 w-full rounded-md border bg-transparent px-2 py-1 text-sm focus-visible:ring-1 focus-visible:outline-none"
+        placeholder="Search country..."
+        [value]="searchQuery()"
+        (input)="searchQuery.set($any($event.target).value)"
+        (click)="$event.stopPropagation()"
+      />
+    </div>
+    <!-- Options -->
+    <div class="overflow-y-auto">
+      @for (country of filteredCountries; track country.iso) {
+      <button
+        type="button"
+        class="hover:bg-accent flex w-full items-center gap-2 px-3 py-2 text-sm"
+        [class.bg-accent]="country.iso === selectedCountry().iso"
+        (click)="selectCountry(country)"
+      >
+        <span aria-hidden="true">{{ getFlag(country.iso) }}</span>
+        <span class="flex-1 text-left">{{ country.name }}</span>
+        <span class="text-muted-foreground">{{ country.dialCode }}</span>
+      </button>
+      } @empty {
+      <p class="text-muted-foreground px-3 py-4 text-center text-sm">
+        No countries found
+      </p>
+      }
+    </div>
+  </div>
+</ng-template>

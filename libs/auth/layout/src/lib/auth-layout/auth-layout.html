@@ -1,0 +1,209 @@
+<div class="bg-background flex min-h-screen">
+  <!-- Left column: illustration (desktop only) -->
+  <div
+    class="bg-primary/5 relative hidden items-center justify-center overflow-hidden p-12 lg:flex lg:w-1/2"
+  >
+    <!-- Background pattern -->
+    <div class="absolute inset-0 opacity-5">
+      <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern
+            id="grid"
+            width="40"
+            height="40"
+            patternUnits="userSpaceOnUse"
+          >
+            <path
+              d="M 40 0 L 0 0 0 40"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+            />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#grid)" />
+      </svg>
+    </div>
+
+    <div class="relative flex flex-col items-center gap-10 text-center">
+      <!-- Archive illustration -->
+      <svg
+        width="280"
+        height="240"
+        viewBox="0 0 280 240"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        class="drop-shadow-xl"
+        aria-hidden="true"
+      >
+        <!-- Cabinet body -->
+        <rect
+          x="40"
+          y="20"
+          width="200"
+          height="210"
+          rx="8"
+          class="fill-card stroke-border"
+          stroke-width="2"
+        />
+
+        <!-- Drawer 1 -->
+        <rect
+          x="56"
+          y="36"
+          width="168"
+          height="52"
+          rx="4"
+          class="fill-muted stroke-border"
+          stroke-width="1.5"
+        />
+        <rect
+          x="116"
+          y="59"
+          width="48"
+          height="8"
+          rx="4"
+          class="fill-primary/40"
+        />
+        <!-- Drawer 1 label lines -->
+        <rect
+          x="68"
+          y="46"
+          width="80"
+          height="4"
+          rx="2"
+          class="fill-muted-foreground/30"
+        />
+        <rect
+          x="68"
+          y="54"
+          width="56"
+          height="4"
+          rx="2"
+          class="fill-muted-foreground/20"
+        />
+
+        <!-- Drawer 2 -->
+        <rect
+          x="56"
+          y="100"
+          width="168"
+          height="52"
+          rx="4"
+          class="fill-primary/10 stroke-primary/30"
+          stroke-width="1.5"
+        />
+        <rect
+          x="116"
+          y="123"
+          width="48"
+          height="8"
+          rx="4"
+          class="fill-primary/60"
+        />
+        <!-- Drawer 2 label lines -->
+        <rect
+          x="68"
+          y="110"
+          width="80"
+          height="4"
+          rx="2"
+          class="fill-primary/30"
+        />
+        <rect
+          x="68"
+          y="118"
+          width="56"
+          height="4"
+          rx="2"
+          class="fill-primary/20"
+        />
+
+        <!-- Drawer 3 -->
+        <rect
+          x="56"
+          y="164"
+          width="168"
+          height="52"
+          rx="4"
+          class="fill-muted stroke-border"
+          stroke-width="1.5"
+        />
+        <rect
+          x="116"
+          y="187"
+          width="48"
+          height="8"
+          rx="4"
+          class="fill-muted-foreground/40"
+        />
+        <!-- Drawer 3 label lines -->
+        <rect
+          x="68"
+          y="174"
+          width="80"
+          height="4"
+          rx="2"
+          class="fill-muted-foreground/30"
+        />
+        <rect
+          x="68"
+          y="182"
+          width="56"
+          height="4"
+          rx="2"
+          class="fill-muted-foreground/20"
+        />
+
+        <!-- Folder peeking out of drawer 2 -->
+        <path
+          d="M 170 92 L 210 92 L 210 104 L 168 104 Z"
+          rx="2"
+          class="fill-primary/80"
+        />
+        <path d="M 168 88 L 186 88 L 190 92 L 168 92 Z" class="fill-primary" />
+      </svg>
+
+      <!-- Tagline -->
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center justify-center gap-2">
+          <div
+            class="bg-primary text-primary-foreground flex h-8 w-8 shrink-0 items-center justify-center rounded-md"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M21 8V21H3V8" />
+              <path d="M23 3H1V8H23V3Z" />
+              <path d="M10 12H14" />
+            </svg>
+          </div>
+          <span class="text-foreground text-xl font-bold">Strategis Flow</span>
+        </div>
+        <p
+          class="text-muted-foreground max-w-xs text-sm"
+          i18n="@@auth.layout.tagline"
+        >
+          Intelligent Archive Management System — classify, preserve and track
+          your documents with confidence.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right column: auth form -->
+  <div class="flex flex-1 items-center justify-center p-8">
+    <div class="w-full max-w-sm">
+      <router-outlet />
+    </div>
+  </div>
+</div>
