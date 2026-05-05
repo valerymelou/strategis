@@ -1,0 +1,70 @@
+volumes:
+  strategis_local_postgres_data: {}
+  strategis_local_postgres_data_backups: {}
+  strategis_local_redis_data: {}
+
+services:
+  django: &django
+    build:
+      context: .
+      dockerfile: ./compose/local/django/Dockerfile
+    image: strategis_local_django
+    container_name: strategis_local_django
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - /app/.venv
+      - .:/app:z
+    env_file:
+      - ./.envs/.local/.django
+      - ./.envs/.local/.postgres
+    ports:
+      - '8000:8000'
+    command: /start
+
+  postgres:
+    build:
+      context: .
+      dockerfile: ./compose/production/postgres/Dockerfile
+    image: strategis_production_postgres
+    container_name: strategis_local_postgres
+    volumes:
+      - strategis_local_postgres_data:/var/lib/postgresql/18/docker
+      - strategis_local_postgres_data_backups:/backups
+    env_file:
+      - ./.envs/.local/.postgres
+
+  redis:
+    image: docker.io/redis:7.2
+    container_name: strategis_local_redis
+    volumes:
+      - strategis_local_redis_data:/data
+
+  celeryworker:
+    <<: *django
+    image: strategis_local_celeryworker
+    container_name: strategis_local_celeryworker
+    depends_on:
+      - redis
+      - postgres
+    ports: []
+    command: /start-celeryworker
+
+  celerybeat:
+    <<: *django
+    image: strategis_local_celerybeat
+    container_name: strategis_local_celerybeat
+    depends_on:
+      - redis
+      - postgres
+    ports: []
+    command: /start-celerybeat
+
+  flower:
+    <<: *django
+    image: strategis_local_flower
+    container_name: strategis_local_flower
+    ports:
+      - '5555:5555'
+    command: /start-flower
