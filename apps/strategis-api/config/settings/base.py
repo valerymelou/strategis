@@ -83,7 +83,12 @@ THIRD_PARTY_APPS = [
     "drf_spectacular",
 ]
 
-LOCAL_APPS = ["strategis.core", "strategis.profiles", "strategis.users"]
+LOCAL_APPS = [
+    "strategis.core",
+    "strategis.audit",
+    "strategis.profiles",
+    "strategis.users",
+]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -323,9 +328,10 @@ REST_FRAMEWORK = {
     "TIME_FORMAT": "%H:%M",
     "TEST_REQUEST_RENDERER_CLASSES": (
         "rest_framework_json_api.renderers.JSONRenderer",
+        "rest_framework.renderers.MultiPartRenderer",
     ),
     "TEST_REQUEST_DEFAULT_FORMAT": "vnd.api+json",
-    "DEFAULT_SCHEMA_CLASS": "drf_spectacular_jsonapi.schemas.openapi.JsonApiAutoSchema",
+    "DEFAULT_SCHEMA_CLASS": "strategis.core.api.schema.PatchedJsonApiAutoSchema",
     "COERCE_DECIMAL_TO_STRING": False,
     "DEFAULT_THROTTLE_CLASSES": [
         "rest_framework.throttling.AnonRateThrottle",
