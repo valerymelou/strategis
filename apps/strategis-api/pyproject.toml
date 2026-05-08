@@ -38,6 +38,7 @@ dependencies = [
   "python-slugify==8.0.4",
   "redis==7.4.0",
   "sentry-sdk==2.58.0",
+  "django-modeltranslation==0.20.3",
 ]
 
 [dependency-groups]

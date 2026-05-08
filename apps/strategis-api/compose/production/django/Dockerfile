@@ -13,7 +13,12 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
   # dependencies for building Python packages
   build-essential \
   # psycopg dependencies
-  libpq-dev
+  libpq-dev \
+  # GeoDjango dependencies
+  binutils \
+  libproj-dev \
+  gdal-bin \
+  libgdal-dev
 
 
 # Requirements are installed here to ensure they will be cached.
@@ -43,6 +48,11 @@ RUN addgroup --system django \
 RUN apt-get update && apt-get install --no-install-recommends -y \
   # psycopg dependencies
   libpq-dev \
+  # GeoDjango dependencies
+  binutils \
+  libproj-dev \
+  gdal-bin \
+  libgdal-dev \
   # Translations dependencies
   gettext \
   # entrypoint

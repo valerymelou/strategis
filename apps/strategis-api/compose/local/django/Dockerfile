@@ -17,6 +17,11 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
   build-essential \
   # psycopg dependencies
   libpq-dev \
+  # GeoDjango dependencies
+  binutils \
+  libproj-dev \
+  gdal-bin \
+  libgdal-dev \
   gettext \
   wait-for-it
 

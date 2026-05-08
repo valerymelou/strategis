@@ -49,6 +49,7 @@ LOCALE_PATHS = [str(BASE_DIR / "locale")]
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {"default": env.db("DATABASE_URL")}
 DATABASES["default"]["ATOMIC_REQUESTS"] = True
+DATABASES["default"]["ENGINE"] = "django.contrib.gis.db.backends.postgis"
 # https://docs.djangoproject.com/en/stable/ref/settings/#std:setting-DEFAULT_AUTO_FIELD
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
@@ -68,8 +69,10 @@ DJANGO_APPS = [
     "django.contrib.sites",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "modeltranslation",
     # "django.contrib.humanize", # Handy template tags
     "django.contrib.admin",
+    "django.contrib.gis",
     "django.forms",
 ]
 THIRD_PARTY_APPS = [
@@ -80,7 +83,7 @@ THIRD_PARTY_APPS = [
     "drf_spectacular",
 ]
 
-LOCAL_APPS = ["strategis.users"]
+LOCAL_APPS = ["strategis.core", "strategis.profiles", "strategis.users"]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -88,6 +91,12 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#migration-modules
 MIGRATION_MODULES = {"sites": "strategis.contrib.sites.migrations"}
+
+# MODELTRANSLATION
+# ------------------------------------------------------------------------------
+# https://django-modeltranslation.readthedocs.io/en/latest/installation.html
+MODELTRANSLATION_DEFAULT_LANGUAGE = "en"
+MODELTRANSLATION_LANGUAGES = ("en", "fr")
 
 # AUTHENTICATION
 # ------------------------------------------------------------------------------

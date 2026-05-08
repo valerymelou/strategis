@@ -20,13 +20,16 @@ services:
       - ./.envs/.local/.django
       - ./.envs/.local/.postgres
     ports:
-      - '8000:8000'
+      - "8000:8000"
     command: /start
 
   postgres:
     build:
       context: .
       dockerfile: ./compose/production/postgres/Dockerfile
+      platforms:
+        - linux/amd64
+    platform: linux/amd64
     image: strategis_production_postgres
     container_name: strategis_local_postgres
     volumes:
@@ -66,5 +69,5 @@ services:
     image: strategis_local_flower
     container_name: strategis_local_flower
     ports:
-      - '5555:5555'
+      - "5555:5555"
     command: /start-flower
