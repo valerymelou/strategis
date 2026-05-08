@@ -9,7 +9,7 @@ from .models import User
 class UserAdmin(auth_admin.UserAdmin):
     fieldsets = (
         (None, {"fields": ("email", "password")}),
-        (_("Personal info"), {"fields": ("name",)}),
+        (_("Personal info"), {"fields": ("first_name", "last_name")}),
         (
             _("Permissions"),
             {
@@ -24,8 +24,8 @@ class UserAdmin(auth_admin.UserAdmin):
         ),
         (_("Important dates"), {"fields": ("last_login", "date_joined")}),
     )
-    list_display = ["email", "name", "is_superuser", "created", "modified"]
-    search_fields = ["name", "email"]
+    list_display = ["email", "first_name", "last_name", "is_superuser", "created", "modified"]
+    search_fields = ["first_name", "last_name", "email"]
     list_filter = ["is_superuser", "is_staff", "is_active", "groups"]
     ordering = ["id"]
     add_fieldsets = (

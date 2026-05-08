@@ -13,14 +13,19 @@ import { AuthService } from './auth.service';
 const MOCK_USER = new User({
   id: 'abc-123',
   email: 'user@example.com',
-  name: 'Test User',
+  firstName: 'Test',
+  lastName: 'User',
 });
 
 const MOCK_LOGIN_RESPONSE = {
   data: {
     id: 'abc-123',
     type: 'Login',
-    attributes: { email: 'user@example.com', name: 'Test User' },
+    attributes: {
+      email: 'user@example.com',
+      firstName: 'Test',
+      lastName: 'User',
+    },
   },
 };
 

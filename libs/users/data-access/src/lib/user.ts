@@ -6,11 +6,18 @@ export class User extends BaseResource {
   email!: string;
 
   @JsonAttribute()
-  name!: string;
+  firstName!: string;
+
+  @JsonAttribute()
+  lastName!: string;
 
   constructor(data?: Partial<User>) {
     super(data);
 
     Object.assign(this, data);
+  }
+
+  get name(): string {
+    return `${this.firstName} ${this.lastName}`;
   }
 }

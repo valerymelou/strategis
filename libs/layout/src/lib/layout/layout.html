@@ -1,22 +1,19 @@
 <div class="bg-background flex h-screen overflow-hidden">
-  <app-sidebar [open]="sidebarOpen()" />
-
-  <!-- Mobile backdrop — closes sidebar on tap outside -->
   @if (sidebarOpen()) {
-    <div
-      class="fixed inset-0 z-40 bg-black/60 lg:hidden"
-      (click)="closeSidebar()"
-    ></div>
+  <div
+    class="fixed inset-0 z-20 bg-black/30 backdrop-blur-sm lg:hidden"
+    (click)="closeSidebar()"
+    (keydown.escape)="closeSidebar()"
+    tabindex="0"
+  ></div>
   }
 
-  <div
-    class="border-border bg-card m-2 flex flex-1 flex-col overflow-hidden rounded-xl border"
-  >
-    <app-navbar (toggleSidebar)="toggleSidebar()" />
+  <app-sidebar [open]="sidebarOpen()" (closeRequest)="closeSidebar()" />
+
+  <div class="flex flex-1 flex-col overflow-hidden">
+    <app-navbar (hamburgerClick)="toggleSidebar()" />
     <main class="flex-1 overflow-y-auto">
-      <div class="p-4 lg:p-6">
-        <router-outlet />
-      </div>
+      <router-outlet />
     </main>
   </div>
 </div>

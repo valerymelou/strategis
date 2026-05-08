@@ -7,6 +7,6 @@ from .factories import UserFactory
 
 class TestUser(BaseTestCase):
     def test_str_representation(self):
-        user = UserFactory(name="John Doe")
+        user = UserFactory(first_name="John", last_name="Doe")
 
         assert str(user) == "John Doe"

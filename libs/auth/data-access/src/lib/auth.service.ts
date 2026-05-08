@@ -73,6 +73,12 @@ export class AuthService {
   }
 
   private _mapUser(response: JsonApiResponse<User>): User {
-    return new User({ id: response.data.id, ...response.data.attributes });
+    const attrs = response.data.attributes as Record<string, unknown>;
+    return new User({
+      id: response.data.id,
+      email: attrs['email'] as string,
+      firstName: attrs['firstName'] as string,
+      lastName: attrs['lastName'] as string,
+    });
   }
 }

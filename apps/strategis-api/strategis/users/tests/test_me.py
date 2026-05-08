@@ -31,7 +31,8 @@ class TestMeEndpoint:
         data = response.json()["data"]
         assert data["id"] == str(user.id)
         assert data["attributes"]["email"] == user.email
-        assert data["attributes"]["name"] == user.name
+        assert data["attributes"]["first_name"] == user.first_name
+        assert data["attributes"]["last_name"] == user.last_name
 
     def test_me_returns_correct_type(self, authenticated_client):
         response = authenticated_client.get(reverse("v1:user-me"))

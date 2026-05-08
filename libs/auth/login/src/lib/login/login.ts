@@ -13,8 +13,11 @@ import { Input } from '@strategis/shared/ui';
 
 @Component({
   selector: 'app-login',
-  imports: [ReactiveFormsModule, Button, Input],
+  imports: [ReactiveFormsModule, RouterLink, Button, Input],
   templateUrl: './login.html',
+  host: {
+    class: 'flex flex-col min-w-sm',
+  },
 })
 export class Login {
   private readonly authService = inject(AuthService);

@@ -5,8 +5,8 @@ from strategis.users.models import User
 class UserSerializer(BaseSerializer):
     class Meta:
         model = User
-        fields = ["id", "email", "name"]
-        read_only_fields = ["id", "email", "name"]
+        fields = ["id", "email", "first_name", "last_name"]
+        read_only_fields = ["id", "email", "first_name", "last_name"]
 
     class JSONAPIMeta:
         resource_name = "User"

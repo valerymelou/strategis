@@ -1,27 +1,31 @@
-import { Component, computed, inject, input, signal } from '@angular/core';
+import {
+  Component,
+  computed,
+  inject,
+  input,
+  output,
+  signal,
+} from '@angular/core';
+import { firstValueFrom } from 'rxjs';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import {
-  lucideArchive,
-  lucideBuilding2,
-  lucideChevronRight,
-  lucideFileText,
-  lucideFolderOpen,
-  lucideFolderTree,
-  lucideLayoutDashboard,
+  lucideCog,
+  lucideHouse,
+  lucideLayers,
   lucideLogOut,
-  lucideSettings,
-  lucideTrash2,
+  lucidePlus,
+  lucideStar,
+  lucideUser,
+  lucideUsersRound,
 } from '@ng-icons/lucide';
 
 import { AuthService } from '@strategis/auth/data-access';
-import { Button } from '@strategis/shared/ui';
 
 interface NavItem {
   label: string;
   route: string;
   icon: string;
-  badge?: number;
   exact?: boolean;
 }
 
@@ -32,46 +36,87 @@ interface NavSection {
 
 @Component({
   selector: 'app-sidebar',
-  imports: [RouterLink, RouterLinkActive, NgIconComponent, Button],
+  imports: [RouterLink, RouterLinkActive, NgIconComponent],
   providers: [
     provideIcons({
-      lucideArchive,
-      lucideBuilding2,
-      lucideChevronRight,
-      lucideFileText,
-      lucideFolderOpen,
-      lucideFolderTree,
-      lucideLayoutDashboard,
+      lucideHouse,
+      lucideLayers,
+      lucidePlus,
+      lucideStar,
+      lucideUser,
+      lucideUsersRound,
+      lucideCog,
       lucideLogOut,
-      lucideSettings,
-      lucideTrash2,
     }),
   ],
   templateUrl: './sidebar.html',
 })
 export class Sidebar {
-  /** Controlled from Layout on mobile; desktop always shows via CSS. */
-  readonly open = input(false);
-
-  readonly menuOpen = signal(false);
-
   private readonly authService = inject(AuthService);
 
+  readonly open = input<boolean>(false);
+  readonly closeRequest = output<void>();
+
+  readonly menuOpen = signal(false);
   readonly currentUser = this.authService.currentUser;
 
-  /** Two-letter initials derived from name or email. */
   readonly initials = computed(() => {
-    const user = this.currentUser();
-    if (!user) return '??';
-    if (user.name) {
-      return user.name
-        .split(' ')
-        .slice(0, 2)
-        .map((w) => w[0]?.toUpperCase() ?? '')
-        .join('');
-    }
-    return user.email.slice(0, 2).toUpperCase();
+    const first = this.currentUser()?.firstName ?? '';
+    const last = this.currentUser()?.lastName ?? '';
+    return [first, last]
+      .filter(Boolean)
+      .map((w) => w[0].toUpperCase())
+      .join('');
   });
+
+  readonly asideClass = computed(
+    () =>
+      `bg-sidebar fixed inset-y-0 left-0 z-30 flex h-screen w-64 shrink-0 flex-col overflow-hidden transition-transform duration-300 ease-in-out lg:relative lg:translate-x-0 ${this.open() ? 'translate-x-0' : '-translate-x-full'}`,
+  );
+
+  readonly sections: NavSection[] = [
+    {
+      title: $localize`:@@sidebar.section.workspace:WORKSPACE`,
+      items: [
+        {
+          label: $localize`:@@sidebar.item.overview:Overview`,
+          route: '/',
+          icon: 'lucideHouse',
+          exact: true,
+        },
+        {
+          label: $localize`:@@sidebar.item.lots:My lots`,
+          route: '/lots',
+          icon: 'lucideLayers',
+        },
+        {
+          label: $localize`:@@sidebar.item.declareLot:Declare a lot`,
+          route: '/lots/new',
+          icon: 'lucidePlus',
+        },
+      ],
+    },
+    {
+      title: $localize`:@@sidebar.section.account:ACCOUNT`,
+      items: [
+        {
+          label: $localize`:@@sidebar.item.profile:Professional profile`,
+          route: '/profile',
+          icon: 'lucideUser',
+        },
+        {
+          label: $localize`:@@sidebar.item.roles:Actor roles`,
+          route: '/roles',
+          icon: 'lucideUsersRound',
+        },
+        {
+          label: $localize`:@@sidebar.item.subscription:Subscription`,
+          route: '/subscription',
+          icon: 'lucideStar',
+        },
+      ],
+    },
+  ];
 
   toggleMenu(): void {
     this.menuOpen.update((v) => !v);
@@ -81,47 +126,9 @@ export class Sidebar {
     this.menuOpen.set(false);
   }
 
-  logout(): void {
+  async logout(): Promise<void> {
     this.closeMenu();
-    this.authService.logout().subscribe();
+    await firstValueFrom(this.authService.logout());
+    this.closeRequest.emit();
   }
-
-  readonly sections: NavSection[] = [
-    {
-      title: $localize`:@@sidebar.section.workspace:Workspace`,
-      items: [
-        {
-          label: $localize`:@@sidebar.item.dashboard:Dashboard`,
-          route: '/',
-          icon: 'lucideLayoutDashboard',
-          exact: true,
-        },
-        {
-          label: $localize`:@@sidebar.item.documents:Upload Documents`,
-          route: '/documents',
-          icon: 'lucideFileText',
-        },
-        {
-          label: $localize`:@@sidebar.item.directory:Directory`,
-          route: '/collections',
-          icon: 'lucideFolderOpen',
-        },
-        {
-          label: $localize`:@@sidebar.item.eliminations:Eliminations`,
-          route: '/eliminations',
-          icon: 'lucideTrash2',
-        },
-      ],
-    },
-    {
-      title: $localize`:@@sidebar.section.administration:Administration`,
-      items: [
-        {
-          label: $localize`:@@sidebar.item.classificationPlan:Classification Plan`,
-          route: '/admin/classification-plan',
-          icon: 'lucideFolderTree',
-        },
-      ],
-    },
-  ];
 }

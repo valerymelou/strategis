@@ -291,7 +291,6 @@ CELERY_WORKER_HIJACK_ROOT_LOGGER = False
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "strategis.authentication.authentication.CookieJWTAuthentication",
-        "rest_framework.authentication.SessionAuthentication",
     ),
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.IsAuthenticated",
@@ -352,6 +351,10 @@ SPECTACULAR_SETTINGS = {
     "DESCRIPTION": "Documentation of API endpoints of Strategis Flow",
     "VERSION": "1.0.0",
     "SERVE_PERMISSIONS": ["rest_framework.permissions.IsAdminUser"],
+    "SERVE_AUTHENTICATION": [
+        "strategis.authentication.authentication.CookieJWTAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+    ],
     "PREPROCESSING_HOOKS": (
         "drf_spectacular_jsonapi.hooks.fix_nested_path_parameters",
     ),

@@ -1,7 +1,6 @@
 from typing import ClassVar
 
 from django.contrib.auth.models import AbstractUser
-from django.db.models import CharField
 from django.db.models import EmailField
 from django.utils.translation import gettext_lazy as _
 
@@ -17,10 +16,6 @@ class User(BaseModel, AbstractUser):
     check forms.SignupForm and forms.SocialSignupForms accordingly.
     """
 
-    # First and last name do not cover name patterns around the globe
-    name = CharField(_("Name of User"), blank=True, max_length=255)
-    first_name = None  # type: ignore[assignment]
-    last_name = None  # type: ignore[assignment]
     email = EmailField(_("email address"), unique=True)
     username = None  # type: ignore[assignment]
 
@@ -30,4 +25,4 @@ class User(BaseModel, AbstractUser):
     objects: ClassVar[UserManager] = UserManager()
 
     def __str__(self):
-        return self.name
+        return f"{self.first_name} {self.last_name}".strip() or self.email

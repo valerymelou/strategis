@@ -1,98 +1,39 @@
-<header
-  class="border-border bg-card flex h-12 shrink-0 items-center gap-2 border-b px-4 lg:px-6"
->
-  <!-- Mobile: hamburger toggle (hidden on desktop) -->
+<header class="flex h-16 shrink-0 items-center border-b px-7">
   <button
-    type="button"
-    ui-button
+    uiButton
     variant="ghost"
     size="icon"
-    [className]="'text-muted-foreground lg:hidden shrink-0'"
-    (click)="toggleSidebar.emit()"
-    i18n-title="@@navbar.menu.title"
-    title="Toggle menu"
+    class="mr-3 lg:hidden"
+    (click)="hamburgerClick.emit()"
+    aria-label="Toggle sidebar"
+    i18n-aria-label="@@navbar.hamburger.ariaLabel"
   >
     <ng-icon name="lucideMenu" size="18" />
   </button>
 
-  <!-- Left: page title -->
-  <div class="flex-1">
-    <h1
-      class="text-foreground text-base font-semibold"
-      i18n="@@navbar.pageTitle"
+  <p class="flex-1 font-mono text-[10px] tracking-[0.08px]">
+    <span class="text-muted-foreground" i18n="@@navbar.breadcrumb.section"
+      >WORKSPACE</span
     >
-      Dashboard
-    </h1>
-  </div>
+    <span class="text-muted-foreground"> / </span>
+    <span class="text-foreground/60" i18n="@@navbar.breadcrumb.page"
+      >OVERVIEW</span
+    >
+  </p>
 
-  <!-- Center: search -->
-  <div class="hidden w-80 md:flex">
-    <div class="relative w-full">
-      <ng-icon
-        name="lucideSearch"
-        size="16"
-        class="text-muted-foreground pointer-events-none absolute top-1/2 left-3 -translate-y-1/2"
-      />
-      <input
-        type="search"
-        class="border-input bg-muted text-foreground placeholder:text-muted-foreground focus:ring-ring h-9 w-full rounded-md border pr-3 pl-9 text-sm focus:ring-2 focus:outline-none"
-        i18n-placeholder="@@navbar.search.placeholder"
-        placeholder="Search archives..."
-      />
-    </div>
-  </div>
-
-  <!-- Right: actions -->
   <div class="flex items-center gap-1">
-    <!-- AI assistant -->
     <button
-      type="button"
-      ui-button
+      uiButton
       variant="ghost"
       size="icon"
-      [className]="'text-muted-foreground'"
-      i18n-title="@@navbar.aiAssistant.title"
-      title="AI Assistant"
-    >
-      <ng-icon name="lucideWandSparkles" size="18" />
-    </button>
-
-    <!-- Theme toggle -->
-    <button
-      type="button"
-      ui-button
-      variant="ghost"
-      size="icon"
-      [className]="'text-muted-foreground'"
       (click)="toggleTheme()"
-      i18n-title="@@navbar.theme.title"
-      title="Toggle theme"
+      aria-label="Toggle theme"
+      i18n-aria-label="@@navbar.theme.ariaLabel"
     >
       <ng-icon [name]="themeIcon()" size="18" />
     </button>
-
-    <!-- Notifications -->
-    <div class="relative">
-      <button
-        type="button"
-        ui-button
-        variant="ghost"
-        size="icon"
-        [className]="'text-muted-foreground'"
-        i18n-title="@@navbar.notifications.title"
-        title="Notifications"
-      >
-        <ng-icon name="lucideBell" size="18" />
-      </button>
-      <span
-        class="bg-primary pointer-events-none absolute top-1.5 right-1.5 h-2 w-2 rounded-full"
-      ></span>
-    </div>
-
-    <!-- Primary action -->
-    <button type="button" ui-button [className]="'ml-1 gap-2'">
-      <ng-icon name="lucideUpload" size="16" />
-      <span class="hidden sm:inline" i18n="@@navbar.import.label">Import</span>
+    <button uiButton variant="ghost" size="sm" (click)="toggleLanguage()">
+      {{ currentLanguage() | uppercase }}
     </button>
   </div>
 </header>
