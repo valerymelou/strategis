@@ -15,3 +15,5 @@ export * from './lib/table/table';
 export * from './lib/toggle-group/toggle-group';
 export * from './lib/tooltip/tooltip';
 export * from './lib/utils/animate-on-enter.directive';
+export * from './lib/otp-input/otp-input';
+export * from './lib/places-autocomplete/places-autocomplete';

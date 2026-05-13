@@ -86,6 +86,7 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     "strategis.core",
     "strategis.audit",
+    "strategis.authentication",
     "strategis.profiles",
     "strategis.users",
 ]
@@ -342,6 +343,7 @@ REST_FRAMEWORK = {
         "user": "5000/day",
         "email_login": "10/hour",
         "token_refresh": "60/hour",
+        "register": "20/hour",
     },
 }
 

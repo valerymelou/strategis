@@ -2,8 +2,10 @@ import { Injectable, computed, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { Observable, catchError, firstValueFrom, map, of, tap } from 'rxjs';
+import { CreateMixin } from '@vmelou/jsonapi-angular';
 
 import { User, UserService } from '@strategis/users/data-access';
+import { Register } from './register';
 
 interface JsonApiResponse<T> {
   data: {
@@ -21,6 +23,45 @@ export class AuthService {
 
   readonly currentUser = signal<User | null>(null);
   readonly isAuthenticated = computed(() => this.currentUser() !== null);
+  /** True once currentUser has been fetched from /users/me (with profile includes). */
+  readonly userLoaded = signal(false);
+  readonly isEmailVerified = computed(
+    () => this.currentUser()?.isEmailVerified ?? false,
+  );
+
+  private readonly registerMixin = new CreateMixin<Register>(
+    this.http,
+    '/auth/register',
+    Register,
+  );
+
+  register(data: {
+    firstName: string;
+    lastName: string;
+    email: string;
+    password: string;
+  }): Observable<void> {
+    return this.registerMixin
+      .create(data)
+      .pipe(
+        tap((result) => this.currentUser.set(Object.assign(new User(), result))),
+        map(() => void 0),
+      );
+  }
+
+  verifyEmail(code: string): Observable<void> {
+    return this.http
+      .post<void>('/auth/verify-email/', {
+        data: { type: 'EmailVerification', attributes: { code } },
+      })
+      .pipe(map(() => void 0));
+  }
+
+  resendVerification(): Observable<void> {
+    return this.http
+      .post<void>('/auth/resend-verification/', {})
+      .pipe(map(() => void 0));
+  }
 
   login(email: string, password: string): Observable<void> {
     return this.http
@@ -55,9 +96,13 @@ export class AuthService {
 
   loadCurrentUser(): Observable<User | null> {
     return this.userService.getMe().pipe(
-      tap((user) => this.currentUser.set(user)),
+      tap((user) => {
+        this.currentUser.set(user);
+        this.userLoaded.set(true);
+      }),
       catchError(() => {
         this.currentUser.set(null);
+        this.userLoaded.set(true);
         return of(null);
       }),
     );

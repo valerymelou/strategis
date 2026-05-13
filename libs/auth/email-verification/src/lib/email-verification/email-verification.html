@@ -1,0 +1,81 @@
+<div class="flex w-full flex-col">
+  <!-- Title -->
+  <h1
+    class="font-serif text-[36px] leading-14 tracking-[0.288px]"
+    i18n="@@emailVerification.title"
+  >
+    Verify your email
+  </h1>
+
+  <!-- Subtitle -->
+  <p class="text-muted-foreground mt-3 text-sm">
+    <span i18n="@@emailVerification.subtitle">We sent a 6-digit code to</span>
+    <span class="text-foreground ml-1 font-medium">{{ maskedEmail() }}</span>
+  </p>
+
+  <!-- Server error (non-field) -->
+  @if (errorMessage()) {
+  <p class="bg-destructive/10 text-destructive mt-6 rounded px-3 py-2 text-sm">
+    {{ errorMessage() }}
+  </p>
+  }
+
+  <!-- Form -->
+  <form
+    [formGroup]="form"
+    (submit)="submit()"
+    class="mt-10 flex flex-col items-center"
+    novalidate
+  >
+    <!-- OTP input -->
+    <ui-otp-input [formControl]="code" />
+
+    @if (code.invalid && code.touched) {
+    <p
+      class="text-destructive mt-3 text-xs"
+      i18n="@@emailVerification.code.error"
+    >
+      Please enter the 6-digit code.
+    </p>
+    }
+
+    <!-- Submit -->
+    <button
+      type="submit"
+      ui-button
+      [className]="'mt-8 h-12 w-full'"
+      [disabled]="isLoading()"
+    >
+      @if (isLoading()) {
+      <span i18n="@@emailVerification.submit.loading">Verifying…</span>
+      } @else {
+      <span i18n="@@emailVerification.submit.label">Verify →</span>
+      }
+    </button>
+  </form>
+
+  <!-- Resend -->
+  <p class="text-muted-foreground mt-4 text-center text-xs tracking-[0.096px]">
+    @if (resendCountdown() > 0) {
+    <span i18n="@@emailVerification.resend.countdown">
+      Resend code in {{ resendCountdown() }}s
+    </span>
+    } @else {
+    <span i18n="@@emailVerification.resend.prompt"
+      >Didn't receive the code?</span
+    >
+    <button
+      type="button"
+      class="text-foreground ml-1 underline underline-offset-2 disabled:opacity-50"
+      [disabled]="!canResend()"
+      (click)="resend()"
+    >
+      @if (isResending()) {
+      <span i18n="@@emailVerification.resend.loading">Sending…</span>
+      } @else {
+      <span i18n="@@emailVerification.resend.label">Resend</span>
+      }
+    </button>
+    }
+  </p>
+</div>

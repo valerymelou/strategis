@@ -15,6 +15,6 @@ export class UserService {
   );
 
   getMe(): Observable<User> {
-    return this.retrieveMixin.retrieve('me');
+    return this.retrieveMixin.retrieve('me', ['profile', 'profile.actors']);
   }
 }

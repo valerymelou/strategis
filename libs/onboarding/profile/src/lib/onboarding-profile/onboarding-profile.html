@@ -1,0 +1,260 @@
+<div class="flex w-full flex-col">
+  <!-- Step indicator -->
+  <p class="text-muted-foreground mb-2 text-xs" i18n="@@onboardingProfile.step">
+    Step 3 of 5
+  </p>
+
+  <!-- Title -->
+  @if (isEditing) {
+  <h1
+    class="font-serif text-[36px] leading-14 tracking-[0.288px]"
+    i18n="@@onboardingProfile.title.edit"
+  >
+    Edit your profile
+  </h1>
+  } @else {
+  <h1
+    class="font-serif text-[36px] leading-14 tracking-[0.288px]"
+    i18n="@@onboardingProfile.title"
+  >
+    Your professional profile
+  </h1>
+  }
+
+  <!-- Server error (non-field) -->
+  @if (errorMessage()) {
+  <p class="bg-destructive/10 text-destructive mt-6 rounded px-3 py-2 text-sm">
+    {{ errorMessage() }}
+  </p>
+  }
+
+  <!-- Form -->
+  <form
+    [formGroup]="form"
+    (ngSubmit)="submit()"
+    class="mt-10 flex flex-col"
+    novalidate
+  >
+    <!-- Company / full name -->
+    <div class="flex flex-col gap-1.5">
+      <label
+        for="companyName"
+        class="text-foreground text-xs font-medium tracking-[0.096px]"
+        i18n="@@onboardingProfile.companyName.label"
+      >
+        Company or full name
+      </label>
+      <input
+        id="companyName"
+        type="text"
+        ui-input
+        formControlName="companyName"
+        autocomplete="organization"
+        i18n-placeholder="@@onboardingProfile.companyName.placeholder"
+        placeholder="Acme Corp"
+        [class.border-destructive]="companyName.invalid && companyName.touched"
+      />
+      @if (companyName.hasError('required') && companyName.touched) {
+      <p
+        class="text-destructive text-xs"
+        i18n="@@onboardingProfile.companyName.error"
+      >
+        This field is required.
+      </p>
+      } @else if (companyName.hasError('apiError') && companyName.touched) {
+      <p class="text-destructive text-xs">
+        {{ companyName.getError('apiError') }}
+      </p>
+      }
+    </div>
+
+    <!-- Entity type -->
+    <div class="mt-6 flex flex-col gap-2">
+      <span
+        class="text-foreground text-xs font-medium tracking-[0.096px]"
+        i18n="@@onboardingProfile.entityType.label"
+      >
+        Entity type
+      </span>
+      <div class="flex flex-wrap gap-2">
+        @for (type of entityTypes; track type.value) {
+        <label
+          class="border-input has-checked:border-primary has-checked:bg-primary/5 flex cursor-pointer items-center gap-2 rounded-md border px-3 py-2 text-sm transition-colors"
+        >
+          <input
+            type="radio"
+            [value]="type.value"
+            formControlName="entityType"
+            class="accent-primary"
+          />
+          {{ type.label }}
+        </label>
+        }
+      </div>
+    </div>
+
+    <!-- Company registration number (conditional) -->
+    @if (requiresRegistrationNumber) {
+    <div class="mt-6 flex flex-col gap-1.5">
+      <label
+        for="companyRegistrationNumber"
+        class="text-foreground text-xs font-medium tracking-[0.096px]"
+        i18n="@@onboardingProfile.companyRegistrationNumber.label"
+      >
+        Company registration number
+      </label>
+      <input
+        id="companyRegistrationNumber"
+        type="text"
+        ui-input
+        formControlName="companyRegistrationNumber"
+        i18n-placeholder="@@onboardingProfile.companyRegistrationNumber.placeholder"
+        placeholder="RC/DLA/2021/B/1234"
+        [class.border-destructive]="companyRegistrationNumber.invalid && companyRegistrationNumber.touched"
+      />
+      @if (companyRegistrationNumber.hasError('required') && companyRegistrationNumber.touched) {
+      <p
+        class="text-destructive text-xs"
+        i18n="@@onboardingProfile.companyRegistrationNumber.error"
+      >
+        This field is required for your entity type.
+      </p>
+      } @else if (companyRegistrationNumber.hasError('apiError') && companyRegistrationNumber.touched) {
+      <p class="text-destructive text-xs">
+        {{ companyRegistrationNumber.getError('apiError') }}
+      </p>
+      }
+    </div>
+    }
+
+    <!-- Tax ID + Phone (same row) -->
+    <div class="mt-6 flex gap-4">
+      <div class="flex flex-1 flex-col gap-1.5">
+        <label
+          for="taxIdNumber"
+          class="text-foreground text-xs font-medium tracking-[0.096px]"
+          i18n="@@onboardingProfile.taxIdNumber.label"
+        >
+          Tax ID
+        </label>
+        <input
+          id="taxIdNumber"
+          type="text"
+          ui-input
+          formControlName="taxIdNumber"
+          i18n-placeholder="@@onboardingProfile.taxIdNumber.placeholder"
+          placeholder="M123456789"
+          [class.border-destructive]="taxIdNumber.invalid && taxIdNumber.touched"
+        />
+        @if (taxIdNumber.hasError('required') && taxIdNumber.touched) {
+        <p
+          class="text-destructive text-xs"
+          i18n="@@onboardingProfile.taxIdNumber.error"
+        >
+          This field is required.
+        </p>
+        } @else if (taxIdNumber.hasError('apiError') && taxIdNumber.touched) {
+        <p class="text-destructive text-xs">{{ taxIdNumber.getError('apiError') }}</p>
+        }
+      </div>
+
+      <div class="flex flex-1 flex-col gap-1.5">
+        <label
+          for="phone"
+          class="text-foreground text-xs font-medium tracking-[0.096px]"
+          i18n="@@onboardingProfile.phone.label"
+        >
+          Phone
+        </label>
+        <ui-phone-input formControlName="phone" />
+        @if (phone.hasError('required') && phone.touched) {
+        <p
+          class="text-destructive text-xs"
+          i18n="@@onboardingProfile.phone.error"
+        >
+          This field is required.
+        </p>
+        } @else if (phone.hasError('apiError') && phone.touched) {
+        <p class="text-destructive text-xs">{{ phone.getError('apiError') }}</p>
+        }
+      </div>
+    </div>
+
+    <!-- Address + Intervention zone (same row, both optional) -->
+    <div class="mt-6 flex gap-4">
+      <div class="flex flex-1 flex-col gap-1.5">
+        <label
+          for="address"
+          class="text-foreground text-xs font-medium tracking-[0.096px]"
+          i18n="@@onboardingProfile.address.label"
+        >
+          Address
+          <span class="text-muted-foreground ml-1">(optional)</span>
+        </label>
+        <input
+          id="address"
+          type="text"
+          ui-input
+          formControlName="address"
+          autocomplete="street-address"
+          i18n-placeholder="@@onboardingProfile.address.placeholder"
+          placeholder="Rue de la Paix, Douala"
+        />
+        @if (address.hasError('apiError') && address.touched) {
+        <p class="text-destructive text-xs">{{ address.getError('apiError') }}</p>
+        }
+      </div>
+
+      <div class="flex flex-1 flex-col gap-1.5">
+        <label
+          for="interventionZone"
+          class="text-foreground text-xs font-medium tracking-[0.096px]"
+          i18n="@@onboardingProfile.interventionZone.label"
+        >
+          Intervention zone
+          <span class="text-muted-foreground ml-1">(optional)</span>
+        </label>
+        <input
+          id="interventionZone"
+          type="text"
+          ui-input
+          formControlName="interventionZone"
+          i18n-placeholder="@@onboardingProfile.interventionZone.placeholder"
+          placeholder="Littoral, Cameroon"
+        />
+        @if (interventionZone.hasError('apiError') && interventionZone.touched) {
+        <p class="text-destructive text-xs">{{ interventionZone.getError('apiError') }}</p>
+        }
+      </div>
+    </div>
+
+    <!-- Location (Google Places Autocomplete) -->
+    <div class="mt-6 flex flex-col gap-1.5">
+      <label
+        class="text-foreground text-xs font-medium tracking-[0.096px]"
+        i18n="@@onboardingProfile.location.label"
+      >
+        Location
+        <span class="text-muted-foreground ml-1">(optional)</span>
+      </label>
+      <ui-places-autocomplete formControlName="location" />
+      @if (location.hasError('apiError') && location.touched) {
+      <p class="text-destructive text-xs">{{ location.getError('apiError') }}</p>
+      }
+    </div>
+
+    <!-- Submit -->
+    <button
+      type="submit"
+      ui-button
+      [className]="'mt-8 h-12 w-full'"
+      [disabled]="isLoading()"
+    >
+      @if (isLoading()) {
+      <span i18n="@@onboardingProfile.submit.loading">Saving…</span>
+      } @else {
+      <span i18n="@@onboardingProfile.submit.label">Continue →</span>
+      }
+    </button>
+  </form>
+</div>

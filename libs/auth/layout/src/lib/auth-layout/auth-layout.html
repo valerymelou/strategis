@@ -1,7 +1,7 @@
-<div class="flex min-h-screen">
+<div class="flex">
   <!-- Left panel: brand -->
   <aside
-    class="bg-accent hidden w-1/2 shrink-0 flex-col px-12 pt-12 pb-12 lg:flex"
+    class="bg-accent fixed top-0 left-0 h-screen hidden w-1/2 flex-col px-12 pt-12 pb-12 lg:flex"
   >
     <!-- Logo -->
     <a href="/" class="flex items-center gap-3">
@@ -42,7 +42,7 @@
 
   <!-- Right panel: auth content hosted by child routes -->
   <main
-    class="bg-background flex flex-1 flex-col items-center justify-center overflow-y-auto px-12 py-16"
+    class="bg-background ml-[50%] w-1/2 flex flex-col items-center justify-center min-h-screen px-12 py-16"
   >
     <router-outlet />
   </main>

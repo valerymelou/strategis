@@ -1,0 +1,19 @@
+{
+  "name": "onboarding-plan",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/onboarding/plan/src",
+  "prefix": "app",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/onboarding/plan/jest.config.cts",
+        "tsConfig": "libs/onboarding/plan/tsconfig.spec.json"
+      }
+    },
+    "lint": { "executor": "@nx/eslint:lint" }
+  }
+}

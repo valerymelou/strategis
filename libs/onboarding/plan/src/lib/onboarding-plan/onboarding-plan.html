@@ -1,0 +1,101 @@
+<div class="flex w-full flex-col">
+  <!-- Step indicator -->
+  <p class="text-muted-foreground mb-2 text-xs" i18n="@@onboardingPlan.step">Step 4 of 5</p>
+
+  <!-- Title -->
+  <h1
+    class="font-serif text-[36px] leading-14 tracking-[0.288px]"
+    i18n="@@onboardingPlan.title"
+  >
+    Choose your plan
+  </h1>
+
+  <p class="text-muted-foreground mt-3 text-sm" i18n="@@onboardingPlan.subtitle">
+    You can upgrade or downgrade at any time.
+  </p>
+
+  <!-- Plan cards -->
+  <div class="mt-10 flex flex-col gap-4">
+    <!-- Free plan -->
+    <div class="border-input rounded-xl border p-6">
+      <div class="flex items-start justify-between">
+        <div>
+          <h2
+            class="text-lg font-semibold"
+            i18n="@@onboardingPlan.free.title"
+          >
+            Starter
+          </h2>
+          <p class="text-muted-foreground mt-1 text-sm" i18n="@@onboardingPlan.free.description">
+            Get started with core features, no commitment needed.
+          </p>
+        </div>
+        <span
+          class="text-muted-foreground text-sm font-medium"
+          i18n="@@onboardingPlan.free.price"
+        >
+          Free
+        </span>
+      </div>
+      <ul class="text-muted-foreground mt-4 flex flex-col gap-2 text-sm">
+        <li i18n="@@onboardingPlan.free.feature1">✓ Up to 3 projects</li>
+        <li i18n="@@onboardingPlan.free.feature2">✓ Basic analytics</li>
+        <li i18n="@@onboardingPlan.free.feature3">✓ Community support</li>
+      </ul>
+      <button
+        type="button"
+        ui-button
+        variant="outline"
+        [className]="'mt-6 h-11 w-full'"
+        [disabled]="isLoadingPremium()"
+        (click)="selectFree()"
+        i18n="@@onboardingPlan.free.cta"
+      >
+        Continue with Starter →
+      </button>
+    </div>
+
+    <!-- Premium plan -->
+    <div class="border-primary/40 bg-primary/5 rounded-xl border p-6">
+      <div class="flex items-start justify-between">
+        <div>
+          <h2 class="text-lg font-semibold" i18n="@@onboardingPlan.premium.title">
+            Premium
+          </h2>
+          <p class="text-muted-foreground mt-1 text-sm" i18n="@@onboardingPlan.premium.description">
+            Unlock all features and get dedicated support.
+          </p>
+        </div>
+        <span class="text-primary text-sm font-medium" i18n="@@onboardingPlan.premium.price">
+          Contact us
+        </span>
+      </div>
+      <ul class="text-muted-foreground mt-4 flex flex-col gap-2 text-sm">
+        <li i18n="@@onboardingPlan.premium.feature1">✓ Unlimited projects</li>
+        <li i18n="@@onboardingPlan.premium.feature2">✓ Advanced analytics</li>
+        <li i18n="@@onboardingPlan.premium.feature3">✓ Priority support</li>
+        <li i18n="@@onboardingPlan.premium.feature4">✓ Custom integrations</li>
+      </ul>
+      <button
+        type="button"
+        ui-button
+        [className]="'mt-6 h-11 w-full'"
+        [disabled]="isLoadingPremium()"
+        (click)="selectPremium()"
+      >
+        @if (isLoadingPremium()) {
+        <span i18n="@@onboardingPlan.premium.cta.loading">Processing…</span>
+        } @else {
+        <span i18n="@@onboardingPlan.premium.cta">Get Premium →</span>
+        }
+      </button>
+    </div>
+  </div>
+
+  <!-- Server error -->
+  @if (errorMessage()) {
+  <p class="bg-destructive/10 text-destructive mt-4 rounded px-3 py-2 text-sm">
+    {{ errorMessage() }}
+  </p>
+  }
+</div>

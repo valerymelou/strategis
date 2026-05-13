@@ -49,6 +49,10 @@ class ProfessionalProfileSerializer(BaseSerializer):
         model=PremiumUpgradeRequest,
     )
 
+    included_serializers = {
+        "actors": "strategis.profiles.api.serializers.ActorSerializer",
+    }
+
     class Meta:
         model = ProfessionalProfile
         fields = [

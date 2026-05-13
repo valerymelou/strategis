@@ -1,0 +1,68 @@
+<div class="flex gap-2">
+  <div class="relative flex-1">
+    <input
+      #inputEl
+      ui-input
+      type="text"
+      class="w-full"
+      (input)="onInput($event)"
+      (blur)="onBlur()"
+      (keydown)="onKeydown($event)"
+      [disabled]="isDisabled()"
+      i18n-placeholder="@@placesAutocomplete.placeholder"
+      placeholder="e.g. Douala, Cameroon"
+    />
+
+    @if (hasValue()) {
+    <button
+      type="button"
+      class="text-muted-foreground hover:text-foreground absolute right-2.5 top-1/2 -translate-y-1/2 text-xs"
+      (click)="clear()"
+      i18n-aria-label="@@placesAutocomplete.clear"
+      aria-label="Clear location"
+    >
+      ✕
+    </button>
+    }
+
+    @if (showDropdown() && suggestions().length > 0) {
+    <ul
+      class="bg-popover border-border absolute left-0 right-0 top-full z-50 mt-1 overflow-hidden rounded-md border shadow-md"
+      role="listbox"
+    >
+      @for (suggestion of suggestions(); track suggestion.placeId; let i = $index) {
+      <li role="option" [attr.aria-selected]="focusedIndex() === i">
+        <button
+          type="button"
+          class="hover:bg-accent hover:text-accent-foreground w-full px-3 py-2 text-left text-sm transition-colors"
+          [class.bg-accent]="focusedIndex() === i"
+          [class.text-accent-foreground]="focusedIndex() === i"
+          (mousedown)="selectSuggestion(suggestion)"
+        >
+          <span class="font-medium">{{ suggestion.mainText?.text }}</span>
+          @if (suggestion.secondaryText?.text) {
+          <span class="text-muted-foreground ml-1 text-xs">
+            {{ suggestion.secondaryText.text }}
+          </span>
+          }
+        </button>
+      </li>
+      }
+    </ul>
+    }
+  </div>
+
+  <button
+    type="button"
+    class="border-input bg-background text-muted-foreground hover:bg-accent flex shrink-0 items-center gap-1.5 rounded-md border px-3 py-2 text-xs disabled:opacity-50"
+    (click)="useMyLocation()"
+    [disabled]="isLoadingLocation() || isDisabled()"
+  >
+    @if (isLoadingLocation()) {
+    <span i18n="@@placesAutocomplete.locating">Locating…</span>
+    } @else {
+    <span aria-hidden="true">📍</span>
+    <span i18n="@@placesAutocomplete.useMyLocation">My location</span>
+    }
+  </button>
+</div>

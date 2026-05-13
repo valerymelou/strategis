@@ -1,3 +1,4 @@
+import { FormGroup } from '@angular/forms';
 import { ApiError } from '@vmelou/jsonapi';
 
 export interface JsonApiParsedErrors {
@@ -23,4 +24,17 @@ export function parseJsonApiErrors(errors: ApiError[]): JsonApiParsedErrors {
   }
 
   return { fieldErrors, nonFieldErrors };
+}
+
+export function applyApiErrors(
+  form: FormGroup,
+  fieldErrors: Record<string, string[]>,
+): void {
+  for (const [field, messages] of Object.entries(fieldErrors)) {
+    const control = form.get(field);
+    if (control) {
+      control.setErrors({ ...control.errors, apiError: messages[0] });
+      control.markAsTouched();
+    }
+  }
 }

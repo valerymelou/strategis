@@ -19,6 +19,12 @@ class UserViewSet(BaseModelViewSet):
 
     @action(detail=False, methods=["get"], url_path="me")
     def me(self, request):
-        """Return the currently authenticated user."""
-        serializer = self.get_serializer(request.user)
+        """Return the currently authenticated user with profile and actors included."""
+        user = (
+            User.objects
+            .select_related("professional_profile")
+            .prefetch_related("professional_profile__actors")
+            .get(pk=request.user.pk)
+        )
+        serializer = self.get_serializer(user)
         return Response(serializer.data)

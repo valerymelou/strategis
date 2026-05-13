@@ -1,0 +1,19 @@
+{
+  "name": "onboarding-role",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/onboarding/role/src",
+  "prefix": "app",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/onboarding/role/jest.config.cts",
+        "tsConfig": "libs/onboarding/role/tsconfig.spec.json"
+      }
+    },
+    "lint": { "executor": "@nx/eslint:lint" }
+  }
+}

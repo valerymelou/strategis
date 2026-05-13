@@ -24,7 +24,13 @@
       "@strategis/shared/theming": ["./libs/shared/theming/src/index.ts"],
       "@strategis/shared/ui": ["./libs/shared/ui/src/index.ts"],
       "@strategis/users/data-access": ["./libs/users/data-access/src/index.ts"],
-      "@strategis/auth/layout": ["./libs/auth/layout/src/index.ts"]
+      "@strategis/auth/layout": ["./libs/auth/layout/src/index.ts"],
+      "@strategis/auth/email-verification": ["./libs/auth/email-verification/src/index.ts"],
+      "@strategis/profiles/data-access": ["./libs/profiles/data-access/src/index.ts"],
+      "@strategis/onboarding/shell": ["./libs/onboarding/shell/src/index.ts"],
+      "@strategis/onboarding/profile": ["./libs/onboarding/profile/src/index.ts"],
+      "@strategis/onboarding/plan": ["./libs/onboarding/plan/src/index.ts"],
+      "@strategis/onboarding/role": ["./libs/onboarding/role/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

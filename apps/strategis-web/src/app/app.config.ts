@@ -19,6 +19,7 @@ import {
 } from '@strategis/common/http';
 import { WINDOW_TOKEN } from '@strategis/common/browser';
 import { AuthService, httpAuthInterceptor } from '@strategis/auth/data-access';
+import { GOOGLE_MAPS_API_KEY_TOKEN } from '@strategis/shared/ui';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -41,6 +42,10 @@ export const appConfig: ApplicationConfig = {
     {
       provide: API_VERSION_TOKEN,
       useValue: process.env['ENV_API_VERSION'],
+    },
+    {
+      provide: GOOGLE_MAPS_API_KEY_TOKEN,
+      useValue: process.env['ENV_GOOGLE_MAPS_API_KEY'] ?? '',
     },
     {
       provide: WINDOW_TOKEN,

@@ -1,5 +1,7 @@
 import { BaseResource, JsonAttribute, JsonResource } from '@vmelou/jsonapi';
 
+import { ProfessionalProfile } from '@strategis/profiles/data-access';
+
 @JsonResource('User')
 export class User extends BaseResource {
   @JsonAttribute()
@@ -10,6 +12,12 @@ export class User extends BaseResource {
 
   @JsonAttribute()
   lastName!: string;
+
+  @JsonAttribute()
+  isEmailVerified!: boolean;
+
+  @JsonAttribute(ProfessionalProfile)
+  profile?: ProfessionalProfile;
 
   constructor(data?: Partial<User>) {
     super(data);

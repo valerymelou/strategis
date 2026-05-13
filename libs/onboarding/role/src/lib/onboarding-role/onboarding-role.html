@@ -1,0 +1,85 @@
+<div class="flex w-full flex-col">
+  <!-- Step indicator -->
+  <p class="text-muted-foreground mb-2 text-xs" i18n="@@onboardingRole.step">Step 5 of 5</p>
+
+  <!-- Title -->
+  <h1
+    class="font-serif text-[36px] leading-14 tracking-[0.288px]"
+    i18n="@@onboardingRole.title"
+  >
+    Choose your role
+  </h1>
+
+  <p class="text-muted-foreground mt-3 text-sm" i18n="@@onboardingRole.subtitle">
+    Select one or more roles that describe how you'll use the platform.
+  </p>
+
+  <!-- Loading -->
+  @if (isLoadingTypes()) {
+  <div class="mt-10 flex justify-center">
+    <span class="text-muted-foreground text-sm" i18n="@@onboardingRole.loading">Loading roles…</span>
+  </div>
+  } @else {
+  <!-- Actor type cards -->
+  <div class="mt-10 flex flex-wrap gap-2">
+    @for (actorType of actorTypes(); track actorType.id) {
+    <button
+      type="button"
+      class="group relative rounded-lg border px-3 py-2.5 text-left text-sm transition-colors"
+      [class]="
+        isSelected(actorType)
+          ? 'border-primary bg-primary/5'
+          : 'border-input hover:border-primary/50'
+      "
+      (click)="toggle(actorType)"
+    >
+      <div class="flex items-center gap-2">
+        <!-- Checkmark when selected -->
+        @if (isSelected(actorType)) {
+        <span class="text-primary text-xs leading-none">✓</span>
+        }
+
+        <span class="font-medium">{{ actorType.name }}</span>
+
+        @if (actorType.requiresValidation) {
+        <span ui-badge variant="outline" i18n="@@onboardingRole.validationBadge">
+          validation
+        </span>
+        }
+      </div>
+
+      <!-- Tooltip -->
+      @if (actorType.description) {
+      <div
+        class="pointer-events-none invisible absolute bottom-full left-0 z-50 mb-2 w-56 rounded-md border border-border bg-popover px-3 py-2 text-xs text-popover-foreground opacity-0 shadow-lg transition-[opacity,visibility] duration-150 group-hover:visible group-hover:opacity-100"
+      >
+        {{ actorType.description }}
+      </div>
+      }
+    </button>
+    }
+  </div>
+  }
+
+  <!-- Server error -->
+  @if (errorMessage()) {
+  <p class="bg-destructive/10 text-destructive mt-4 rounded px-3 py-2 text-sm">
+    {{ errorMessage() }}
+  </p>
+  }
+
+  <!-- Submit -->
+  <button
+    type="button"
+    ui-button
+    [className]="'mt-8 h-12 w-full'"
+    [disabled]="selectedIds().size === 0 || isLoading()"
+    (click)="submit()"
+  >
+    @if (isLoading()) {
+    <span i18n="@@onboardingRole.submit.loading">Saving…</span>
+    } @else {
+    <span i18n="@@onboardingRole.submit.label">Continue →</span>
+    }
+  </button>
+</div>
