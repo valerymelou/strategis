@@ -4,7 +4,9 @@ import { AuthLayout } from '@strategis/auth/layout';
 import { Login } from '@strategis/auth/login';
 import { Register } from '@strategis/auth/register';
 import { EmailVerification } from '@strategis/auth/email-verification';
-import { authGuard, loginGuard } from '@strategis/auth/data-access';
+import { adminGuard, authGuard, loginGuard } from '@strategis/auth/data-access';
+import { AdminActors, AdminActorDetail } from '@strategis/admin/actors';
+import { AdminPremium, AdminPremiumDetail } from '@strategis/admin/premium';
 import { Layout } from '@strategis/layout';
 import {
   onboardingEntryGuard,
@@ -23,7 +25,19 @@ export const appRoutes: Route[] = [
     component: Layout,
     canActivate: [authGuard],
     resolve: { theme: themeResolver },
-    children: [],
+    children: [
+      {
+        path: 'admin',
+        canActivate: [adminGuard],
+        children: [
+          { path: '', redirectTo: 'actors', pathMatch: 'full' },
+          { path: 'actors', component: AdminActors },
+          { path: 'actors/:id', component: AdminActorDetail },
+          { path: 'premium', component: AdminPremium },
+          { path: 'premium/:id', component: AdminPremiumDetail },
+        ],
+      },
+    ],
   },
   {
     path: 'auth',

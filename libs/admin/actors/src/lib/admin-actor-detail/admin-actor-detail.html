@@ -1,0 +1,371 @@
+<div class="p-6">
+  <!-- Back -->
+  <a
+    routerLink="/admin/actors"
+    class="text-muted-foreground hover:text-foreground mb-6 inline-flex items-center gap-2 text-sm"
+  >
+    <ng-icon name="lucideArrowLeft" size="14" />
+    <span i18n="@@admin.actors.backToList">Back to actors</span>
+  </a>
+
+  @if (isLoading()) {
+  <!-- Header skeleton -->
+  <div class="mb-6 flex items-start gap-3">
+    <div class="flex-1 space-y-2">
+      <div class="bg-muted h-7 w-56 animate-pulse rounded"></div>
+      <div class="bg-muted h-4 w-32 animate-pulse rounded"></div>
+    </div>
+    <div class="bg-muted h-6 w-20 animate-pulse rounded-full"></div>
+  </div>
+  <div class="grid gap-6 lg:grid-cols-3">
+    <div class="space-y-6 lg:col-span-2">
+      <div class="border-border rounded-lg border p-5">
+        <div class="bg-muted mb-4 h-4 w-20 animate-pulse rounded"></div>
+        <div class="grid grid-cols-2 gap-x-6 gap-y-4">
+          @for (i of [1, 2, 3, 4]; track i) {
+          <div class="space-y-1">
+            <div class="bg-muted h-3 w-16 animate-pulse rounded"></div>
+            <div class="bg-muted h-4 w-28 animate-pulse rounded"></div>
+          </div>
+          }
+        </div>
+      </div>
+      <div class="border-border rounded-lg border p-5">
+        <div class="bg-muted mb-4 h-4 w-24 animate-pulse rounded"></div>
+        @for (i of [1, 2]; track i) {
+        <div class="flex items-center justify-between py-3">
+          <div class="bg-muted h-4 w-40 animate-pulse rounded"></div>
+          <div class="bg-muted h-4 w-12 animate-pulse rounded"></div>
+        </div>
+        }
+      </div>
+    </div>
+    <div class="space-y-4">
+      @for (i of [1, 2, 3]; track i) {
+      <div class="border-border rounded-lg border p-5">
+        <div class="bg-muted mb-3 h-4 w-20 animate-pulse rounded"></div>
+        <div class="bg-muted h-9 w-full animate-pulse rounded-md"></div>
+      </div>
+      }
+    </div>
+  </div>
+  } @else if (!actor()) {
+  <p class="text-muted-foreground" i18n="@@admin.actors.notFound">
+    Actor not found.
+  </p>
+  } @else {
+  <!-- Header -->
+  <div class="mb-6 flex flex-wrap items-start gap-3">
+    <div class="flex-1">
+      <h1 class="text-foreground text-2xl font-semibold">
+        {{ actor()!.profile?.companyName ?? '—' }}
+      </h1>
+      <p class="text-muted-foreground mt-1 text-sm">
+        {{ actor()!.actorType?.name ?? '—' }}
+      </p>
+    </div>
+    <span uiBadge [variant]="actor()!.statusVariant" class="text-sm">
+      {{ actor()!.statusLabel }}
+    </span>
+  </div>
+
+  <div class="grid gap-6 lg:grid-cols-3">
+    <!-- Left column: profile + documents -->
+    <div class="space-y-6 lg:col-span-2">
+      <!-- Profile card -->
+      <div class="border-border bg-card rounded-lg border p-5">
+        <h2
+          class="text-foreground mb-4 text-sm font-semibold tracking-wider uppercase"
+          i18n="@@admin.actors.profile"
+        >
+          Profile
+        </h2>
+        <dl class="grid grid-cols-2 gap-x-6 gap-y-3 text-sm">
+          <div>
+            <dt class="text-muted-foreground" i18n="@@admin.actors.entityType">
+              Entity type
+            </dt>
+            <dd class="text-foreground font-medium">
+              {{ actor()!.profile?.entityType ?? '—' }}
+            </dd>
+          </div>
+          <div>
+            <dt class="text-muted-foreground" i18n="@@admin.actors.taxId">
+              Tax ID
+            </dt>
+            <dd class="text-foreground font-medium">
+              {{ actor()!.profile?.taxIdNumber ?? '—' }}
+            </dd>
+          </div>
+          <div>
+            <dt class="text-muted-foreground" i18n="@@admin.actors.phone">
+              Phone
+            </dt>
+            <dd class="text-foreground font-medium">
+              {{ actor()!.profile?.phone ?? '—' }}
+            </dd>
+          </div>
+          <div>
+            <dt class="text-muted-foreground" i18n="@@admin.actors.address">
+              Address
+            </dt>
+            <dd class="text-foreground font-medium">
+              {{ actor()!.profile?.address || '—' }}
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Documents -->
+      <div class="border-border bg-card rounded-lg border p-5">
+        <h2
+          class="text-foreground mb-4 text-sm font-semibold tracking-wider uppercase"
+          i18n="@@admin.actors.documents"
+        >
+          Documents
+        </h2>
+        @if (!actor()!.documents || actor()!.documents!.length === 0) {
+        <p
+          class="text-muted-foreground text-sm"
+          i18n="@@admin.actors.noDocuments"
+        >
+          No documents uploaded yet.
+        </p>
+        } @else {
+        <ul class="divide-border divide-y">
+          @for (doc of actor()!.documents; track doc.id) {
+          <li class="flex items-center justify-between py-3">
+            <div class="flex items-center gap-3">
+              <span class="text-foreground text-sm font-medium"
+                >{{ doc.label || defaultDocLabel }}</span
+              >
+              @if (doc.isRequired) {
+              <span
+                uiBadge
+                variant="secondary"
+                class="text-xs"
+                i18n="@@admin.actors.required"
+                >Required</span
+              >
+              }
+            </div>
+            <a
+              [href]="doc.file"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-primary hover:text-primary/80 inline-flex items-center gap-1 text-sm"
+            >
+              <span i18n="@@admin.actors.download">Open</span>
+              <ng-icon name="lucideExternalLink" size="14" />
+            </a>
+          </li>
+          }
+        </ul>
+        }
+      </div>
+    </div>
+
+    <!-- Right column: actions -->
+    <div class="space-y-4">
+      <!-- Status-based actions -->
+      @if (actor()!.status === 'pending' || actor()!.status ===
+      'awaiting_documents') {
+      <div class="border-border bg-card rounded-lg border p-5">
+        <h2
+          class="text-foreground mb-4 text-sm font-semibold tracking-wider uppercase"
+          i18n="@@admin.actors.actions"
+        >
+          Actions
+        </h2>
+        <div class="space-y-3">
+          <!-- Approve -->
+          <button
+            uiButton
+            class="w-full"
+            [disabled]="isSubmitting()"
+            (click)="approve()"
+            i18n="@@admin.actors.approve"
+          >
+            Approve
+          </button>
+
+          <!-- Reject -->
+          @if (!showRejectForm()) {
+          <button
+            uiButton
+            variant="destructive"
+            class="w-full"
+            (click)="showRejectForm.set(true)"
+            i18n="@@admin.actors.reject"
+          >
+            Reject
+          </button>
+          } @else {
+          <div class="space-y-2">
+            <textarea
+              [formControl]="rejectionReason"
+              rows="3"
+              class="border-border bg-background text-foreground focus:ring-ring w-full rounded-md border px-3 py-2 text-sm focus:ring-2 focus:outline-none"
+              placeholder="Reason for rejection…"
+              i18n-placeholder="@@admin.actors.rejectPlaceholder"
+            ></textarea>
+            <div class="flex gap-2">
+              <button
+                uiButton
+                variant="destructive"
+                class="flex-1"
+                [disabled]="isSubmitting() || !rejectionReason.value?.trim()"
+                (click)="confirmReject()"
+                i18n="@@admin.actors.confirmReject"
+              >
+                Confirm rejection
+              </button>
+              <button
+                uiButton
+                variant="outline"
+                (click)="showRejectForm.set(false)"
+                i18n="@@admin.actors.cancel"
+              >
+                Cancel
+              </button>
+            </div>
+          </div>
+          }
+        </div>
+      </div>
+      } @if (actor()!.status === 'active') {
+      <div class="border-border bg-card rounded-lg border p-5">
+        <h2
+          class="text-foreground mb-4 text-sm font-semibold tracking-wider uppercase"
+          i18n="@@admin.actors.actions"
+        >
+          Actions
+        </h2>
+        <!-- Revoke -->
+        @if (!showRevokeForm()) {
+        <button
+          uiButton
+          variant="destructive"
+          class="w-full"
+          (click)="showRevokeForm.set(true)"
+          i18n="@@admin.actors.revoke"
+        >
+          Revoke
+        </button>
+        } @else {
+        <div class="space-y-2">
+          <textarea
+            [formControl]="revocationReason"
+            rows="3"
+            class="border-border bg-background text-foreground focus:ring-ring w-full rounded-md border px-3 py-2 text-sm focus:ring-2 focus:outline-none"
+            placeholder="Reason for revocation…"
+            i18n-placeholder="@@admin.actors.revokePlaceholder"
+          ></textarea>
+          <div class="flex gap-2">
+            <button
+              uiButton
+              variant="destructive"
+              class="flex-1"
+              [disabled]="isSubmitting() || !revocationReason.value?.trim()"
+              (click)="confirmRevoke()"
+              i18n="@@admin.actors.confirmRevoke"
+            >
+              Confirm revocation
+            </button>
+            <button
+              uiButton
+              variant="outline"
+              (click)="showRevokeForm.set(false)"
+              i18n="@@admin.actors.cancel"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+        }
+      </div>
+      }
+
+      <!-- Reliability level -->
+      <div class="border-border rounded-lg border p-5">
+        <h2
+          class="text-foreground mb-3 text-sm font-semibold tracking-wider uppercase"
+          i18n="@@admin.actors.reliability"
+        >
+          Reliability
+        </h2>
+        <select
+          [formControl]="reliabilityLevel"
+          class="border-border bg-background text-foreground focus:ring-ring mb-3 w-full rounded-md border px-3 py-2 text-sm focus:ring-2 focus:outline-none"
+        >
+          @for (opt of reliabilityOptions; track opt.value) {
+          <option [value]="opt.value">{{ opt.label }}</option>
+          }
+        </select>
+        <button
+          uiButton
+          variant="outline"
+          class="w-full"
+          [disabled]="isSubmitting()"
+          (click)="saveReliability()"
+          i18n="@@admin.actors.saveReliability"
+        >
+          Save reliability
+        </button>
+      </div>
+
+      <!-- Compliance level -->
+      <div class="border-border rounded-lg border p-5">
+        <h2
+          class="text-foreground mb-3 text-sm font-semibold tracking-wider uppercase"
+          i18n="@@admin.actors.compliance"
+        >
+          Compliance
+        </h2>
+        <select
+          [formControl]="complianceLevel"
+          class="border-border bg-background text-foreground focus:ring-ring mb-3 w-full rounded-md border px-3 py-2 text-sm focus:ring-2 focus:outline-none"
+        >
+          @for (opt of complianceOptions; track opt.value) {
+          <option [value]="opt.value">{{ opt.label }}</option>
+          }
+        </select>
+        <button
+          uiButton
+          variant="outline"
+          class="w-full"
+          [disabled]="isSubmitting()"
+          (click)="saveCompliance()"
+          i18n="@@admin.actors.saveCompliance"
+        >
+          Save compliance
+        </button>
+      </div>
+
+      <!-- Category C -->
+      <div class="border-border rounded-lg border p-5">
+        <h2
+          class="text-foreground mb-3 text-sm font-semibold tracking-wider uppercase"
+          i18n="@@admin.actors.categoryC"
+        >
+          Category C
+        </h2>
+        <label class="flex cursor-pointer items-center gap-3">
+          <input
+            type="checkbox"
+            class="h-4 w-4 rounded"
+            [checked]="actor()!.approvedForCategoryC"
+            (change)="toggleCategoryC($any($event.target).checked)"
+          />
+          <span
+            class="text-foreground text-sm"
+            i18n="@@admin.actors.categoryCLabel"
+          >
+            Approved for category C
+          </span>
+        </label>
+      </div>
+    </div>
+  </div>
+  }
+</div>

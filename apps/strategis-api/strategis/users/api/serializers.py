@@ -18,13 +18,14 @@ class UserSerializer(BaseSerializer):
 
     class Meta:
         model = User
-        fields = ["id", "email", "first_name", "last_name", "is_email_verified", "profile"]
+        fields = ["id", "email", "first_name", "last_name", "is_email_verified", "is_staff", "profile"]
         read_only_fields = [
             "id",
             "email",
             "first_name",
             "last_name",
             "is_email_verified",
+            "is_staff",
             "profile",
         ]
 

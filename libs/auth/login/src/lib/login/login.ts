@@ -5,11 +5,12 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 import { AuthService } from '@strategis/auth/data-access';
 import { Button } from '@strategis/shared/ui';
 import { Input } from '@strategis/shared/ui';
+import { WINDOW_TOKEN } from '@strategis/common/browser';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,7 @@ import { Input } from '@strategis/shared/ui';
 })
 export class Login {
   private readonly authService = inject(AuthService);
-  private readonly router = inject(Router);
+  private readonly window = inject(WINDOW_TOKEN);
 
   readonly isLoading = signal(false);
   readonly errorMessage = signal<string | null>(null);
@@ -59,7 +60,7 @@ export class Login {
     this.authService.login(email, password).subscribe({
       next: () => {
         this.isLoading.set(false);
-        this.router.navigate(['/']);
+        this.window.location.href = '/';
       },
       error: () => {
         this.isLoading.set(false);

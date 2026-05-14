@@ -16,6 +16,9 @@ export class User extends BaseResource {
   @JsonAttribute()
   isEmailVerified!: boolean;
 
+  @JsonAttribute()
+  isStaff!: boolean;
+
   @JsonAttribute(ProfessionalProfile)
   profile?: ProfessionalProfile;
 

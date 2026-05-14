@@ -11,10 +11,12 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { NgIconComponent, provideIcons } from '@ng-icons/core';
 import {
   lucideCog,
+  lucideCrown,
   lucideHouse,
   lucideLayers,
   lucideLogOut,
   lucidePlus,
+  lucideShieldCheck,
   lucideStar,
   lucideUser,
   lucideUsersRound,
@@ -47,6 +49,8 @@ interface NavSection {
       lucideUsersRound,
       lucideCog,
       lucideLogOut,
+      lucideShieldCheck,
+      lucideCrown,
     }),
   ],
   templateUrl: './sidebar.html',
@@ -117,6 +121,29 @@ export class Sidebar {
       ],
     },
   ];
+
+  readonly adminSections = computed<NavSection[]>(() => {
+    if (!this.currentUser()?.isStaff) return [];
+    return [
+      {
+        title: $localize`:@@sidebar.section.admin:ADMINISTRATION`,
+        items: [
+          {
+            label: $localize`:@@sidebar.item.actorValidation:Actor Validation`,
+            route: '/admin/actors',
+            icon: 'lucideShieldCheck',
+          },
+          {
+            label: $localize`:@@sidebar.item.premiumRequests:Premium Requests`,
+            route: '/admin/premium',
+            icon: 'lucideCrown',
+          },
+        ],
+      },
+    ];
+  });
+
+  readonly allSections = computed(() => [...this.sections, ...this.adminSections()]);
 
   toggleMenu(): void {
     this.menuOpen.update((v) => !v);

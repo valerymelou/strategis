@@ -1,6 +1,6 @@
 import { BaseResource, JsonAttribute, JsonResource } from '@vmelou/jsonapi';
 
-import { Actor } from './actor';
+import type { Actor } from './actor';
 
 export type EntityType =
   | 'individual'
@@ -48,7 +48,6 @@ export class ProfessionalProfile extends BaseResource {
   @JsonAttribute()
   isActive!: boolean;
 
-  @JsonAttribute(Actor)
   actors?: Actor[];
 
   constructor(data?: Partial<ProfessionalProfile>) {

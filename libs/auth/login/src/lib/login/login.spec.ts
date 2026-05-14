@@ -6,12 +6,12 @@ import { of, throwError } from 'rxjs';
 
 import { AuthService } from '@strategis/auth/data-access';
 import { Login } from './login';
+import { WINDOW_TOKEN } from '@strategis/common/browser';
 
 describe('Login', () => {
   let component: Login;
   let fixture: ComponentFixture<Login>;
   let authService: jest.Mocked<Partial<AuthService>>;
-  let router: Router;
 
   beforeEach(async () => {
     authService = {
@@ -25,12 +25,12 @@ describe('Login', () => {
         provideHttpClientTesting(),
         provideRouter([]),
         { provide: AuthService, useValue: authService },
+        { provide: WINDOW_TOKEN, useValue: window },
       ],
     }).compileComponents();
 
     fixture = TestBed.createComponent(Login);
     component = fixture.componentInstance;
-    router = TestBed.inject(Router);
     await fixture.whenStable();
   });
 
@@ -53,15 +53,6 @@ describe('Login', () => {
       'user@example.com',
       'secret',
     );
-  });
-
-  it('navigates to / on successful login', async () => {
-    const navigateSpy = jest.spyOn(router, 'navigate');
-    component.form.setValue({ email: 'user@example.com', password: 'secret' });
-    component.submit();
-
-    await fixture.whenStable();
-    expect(navigateSpy).toHaveBeenCalledWith(['/']);
   });
 
   it('shows error message on failed login', async () => {

@@ -1,0 +1,103 @@
+<div class="p-6">
+  <!-- Header -->
+  <div class="mb-6 flex items-center justify-between">
+    <div>
+      <h1 class="text-foreground text-2xl font-semibold" i18n="@@admin.actors.title">
+        Actor Validation
+      </h1>
+      <p class="text-muted-foreground mt-1 text-sm" i18n="@@admin.actors.subtitle">
+        Review and manage actor registration requests.
+      </p>
+    </div>
+  </div>
+
+  <!-- Filter bar -->
+  <div class="mb-4 flex items-center gap-3">
+    <select
+      class="border-border bg-background text-foreground focus:ring-ring h-9 rounded-md border px-3 text-sm focus:outline-none focus:ring-2"
+      [value]="statusFilter()"
+      (change)="onStatusChange($event)"
+    >
+      @for (opt of statusOptions; track opt.value) {
+        <option [value]="opt.value">{{ opt.label }}</option>
+      }
+    </select>
+  </div>
+
+  <!-- Table -->
+  <div class="border-border overflow-hidden rounded-lg border">
+    <table uiTable>
+      <thead uiThead>
+        <tr uiTr>
+          <th uiTh i18n="@@admin.actors.col.company">Company</th>
+          <th uiTh i18n="@@admin.actors.col.actorType">Actor type</th>
+          <th uiTh i18n="@@admin.actors.col.status">Status</th>
+          <th uiTh i18n="@@admin.actors.col.documents">Documents</th>
+          <th uiTh i18n="@@admin.actors.col.submitted">Submitted</th>
+          <th uiTh></th>
+        </tr>
+      </thead>
+      <tbody uiTbody>
+        @if (isLoading()) {
+          @for (i of [1, 2, 3, 4, 5]; track i) {
+            <tr uiTr>
+              @for (j of [1, 2, 3, 4, 5, 6]; track j) {
+                <td uiTd>
+                  <div class="bg-muted h-4 animate-pulse rounded"></div>
+                </td>
+              }
+            </tr>
+          }
+        } @else if (actors().length === 0) {
+          <tr uiTr>
+            <td uiTd colspan="6" class="py-16 text-center">
+              <p class="text-muted-foreground text-sm" i18n="@@admin.actors.empty">
+                No actors found.
+              </p>
+            </td>
+          </tr>
+        } @else {
+          @for (actor of actors(); track actor.id) {
+            <tr uiTr>
+              <td uiTd class="font-medium">
+                {{ actor.profile?.companyName ?? '—' }}
+              </td>
+              <td uiTd>{{ actor.actorType?.name ?? '—' }}</td>
+              <td uiTd>
+                <span uiBadge [variant]="actor.statusVariant">{{ actor.statusLabel }}</span>
+              </td>
+              <td uiTd>
+                {{ actor.documents?.length ?? '—' }}
+              </td>
+              <td uiTd class="text-muted-foreground text-sm">
+                {{ actor.created ? (actor.created | date: 'dd MMM yyyy') : '—' }}
+              </td>
+              <td uiTd class="text-right">
+                <a
+                  [routerLink]="['/admin/actors', actor.id]"
+                  class="text-primary hover:text-primary/80 inline-flex items-center gap-1 text-sm font-medium"
+                >
+                  <span i18n="@@admin.actors.view">View</span>
+                  <ng-icon name="lucideArrowRight" size="14" />
+                </a>
+              </td>
+            </tr>
+          }
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pagination -->
+  @if (pagination() && pagination()!.pages > 1) {
+    <div class="mt-4">
+      <ui-paginator
+        [page]="pagination()!.page"
+        [pages]="pagination()!.pages"
+        [count]="pagination()!.count"
+        [pageSize]="20"
+        (pageChange)="onPageChange($event)"
+      />
+    </div>
+  }
+</div>

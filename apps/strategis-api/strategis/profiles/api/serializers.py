@@ -157,6 +157,10 @@ class ProfessionalProfileUpdateSerializer(BaseSerializer):
 class PremiumUpgradeRequestSerializer(BaseSerializer):
     profile = ResourceRelatedField(read_only=True)
 
+    included_serializers = {
+        "profile": "strategis.profiles.api.serializers.ProfessionalProfileSerializer",
+    }
+
     class Meta:
         model = PremiumUpgradeRequest
         fields = [
@@ -194,6 +198,12 @@ class ActorSerializer(BaseSerializer):
     profile = ResourceRelatedField(read_only=True)
     actor_type = ResourceRelatedField(read_only=True)
     documents = ResourceRelatedField(many=True, read_only=True)
+
+    included_serializers = {
+        "profile": "strategis.profiles.api.serializers.ProfessionalProfileSerializer",
+        "actor_type": "strategis.profiles.api.serializers.ActorTypeSerializer",
+        "documents": "strategis.profiles.api.serializers.ActorDocumentSerializer",
+    }
 
     class Meta:
         model = Actor

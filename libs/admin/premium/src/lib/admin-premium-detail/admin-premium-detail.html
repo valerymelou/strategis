@@ -1,0 +1,301 @@
+<div class="p-6">
+  <!-- Back -->
+  <a
+    routerLink="/admin/premium"
+    class="text-muted-foreground hover:text-foreground mb-6 inline-flex items-center gap-2 text-sm"
+  >
+    <ng-icon name="lucideArrowLeft" size="14" />
+    <span i18n="@@admin.premium.backToList">Back to premium requests</span>
+  </a>
+
+  @if (isLoading()) {
+  <!-- Header skeleton -->
+  <div class="mb-6 flex items-start gap-3">
+    <div class="flex-1 space-y-2">
+      <div class="bg-muted h-7 w-56 animate-pulse rounded"></div>
+      <div class="bg-muted h-4 w-40 animate-pulse rounded"></div>
+    </div>
+    <div class="bg-muted h-6 w-20 animate-pulse rounded-full"></div>
+  </div>
+  <div class="grid gap-6 lg:grid-cols-3">
+    <div class="lg:col-span-2">
+      <div class="border-border rounded-lg border p-5">
+        <div class="bg-muted mb-4 h-4 w-20 animate-pulse rounded"></div>
+        <div class="grid grid-cols-2 gap-x-6 gap-y-4">
+          @for (i of [1, 2, 3, 4]; track i) {
+          <div class="space-y-1">
+            <div class="bg-muted h-3 w-16 animate-pulse rounded"></div>
+            <div class="bg-muted h-4 w-28 animate-pulse rounded"></div>
+          </div>
+          }
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="border-border rounded-lg border p-5">
+        <div class="bg-muted mb-4 h-4 w-20 animate-pulse rounded"></div>
+        <div class="bg-muted mb-3 h-16 w-full animate-pulse rounded"></div>
+        <div class="bg-muted h-9 w-full animate-pulse rounded-md"></div>
+        <div class="bg-muted mt-2 h-9 w-full animate-pulse rounded-md"></div>
+      </div>
+    </div>
+  </div>
+  } @else if (!request()) {
+  <p class="text-muted-foreground" i18n="@@admin.premium.notFound">
+    Request not found.
+  </p>
+  } @else {
+  <!-- Header -->
+  <div class="mb-6 flex flex-wrap items-start gap-3">
+    <div class="flex-1">
+      <h1 class="text-foreground text-2xl font-semibold">
+        {{ request()!.profile?.companyName ?? '—' }}
+      </h1>
+      <p
+        class="text-muted-foreground mt-1 text-sm"
+        i18n="@@admin.premium.upgradeRequest"
+      >
+        Premium upgrade request
+      </p>
+    </div>
+    <span uiBadge [variant]="request()!.statusVariant" class="text-sm">
+      {{ request()!.statusLabel }}
+    </span>
+  </div>
+
+  <div class="grid gap-6 lg:grid-cols-3">
+    <!-- Left: profile info -->
+    <div class="lg:col-span-2">
+      <div class="border-border bg-card rounded-lg border p-5">
+        <h2
+          class="text-foreground mb-4 text-sm font-semibold tracking-wider uppercase"
+          i18n="@@admin.premium.profile"
+        >
+          Profile
+        </h2>
+        <dl class="grid grid-cols-2 gap-x-6 gap-y-3 text-sm">
+          <div>
+            <dt class="text-muted-foreground" i18n="@@admin.premium.entityType">
+              Entity type
+            </dt>
+            <dd class="text-foreground font-medium">
+              {{ request()!.profile?.entityType ?? '—' }}
+            </dd>
+          </div>
+          <div>
+            <dt class="text-muted-foreground" i18n="@@admin.premium.taxId">
+              Tax ID
+            </dt>
+            <dd class="text-foreground font-medium">
+              {{ request()!.profile?.taxIdNumber ?? '—' }}
+            </dd>
+          </div>
+          <div>
+            <dt class="text-muted-foreground" i18n="@@admin.premium.phone">
+              Phone
+            </dt>
+            <dd class="text-foreground font-medium">
+              {{ request()!.profile?.phone ?? '—' }}
+            </dd>
+          </div>
+          <div>
+            <dt
+              class="text-muted-foreground"
+              i18n="@@admin.premium.currentTier"
+            >
+              Current tier
+            </dt>
+            <dd class="text-foreground font-medium">
+              <span uiBadge variant="outline"
+                >{{ request()!.profile?.tier ?? '—' }}</span
+              >
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Dates (if activated/rejected) -->
+      @if (request()!.activatedAt || request()!.rejectedAt ||
+      request()!.rejectionReason) {
+      <div class="border-border bg-card mt-4 rounded-lg border p-5">
+        <h2
+          class="text-foreground mb-4 text-sm font-semibold tracking-wider uppercase"
+          i18n="@@admin.premium.history"
+        >
+          History
+        </h2>
+        <dl class="space-y-3 text-sm">
+          @if (request()!.plan) {
+          <div class="flex justify-between">
+            <dt class="text-muted-foreground" i18n="@@admin.premium.plan">
+              Plan
+            </dt>
+            <dd class="text-foreground font-medium capitalize">
+              {{ request()!.plan }}
+            </dd>
+          </div>
+          } @if (request()!.activatedAt) {
+          <div class="flex justify-between">
+            <dt
+              class="text-muted-foreground"
+              i18n="@@admin.premium.activatedAt"
+            >
+              Activated
+            </dt>
+            <dd class="text-foreground font-medium">
+              {{ request()!.activatedAt | date: 'dd MMM yyyy' }}
+            </dd>
+          </div>
+          } @if (request()!.expiresAt) {
+          <div class="flex justify-between">
+            <dt class="text-muted-foreground" i18n="@@admin.premium.expiresAt">
+              Expires
+            </dt>
+            <dd class="text-foreground font-medium">
+              {{ request()!.expiresAt | date: 'dd MMM yyyy' }}
+            </dd>
+          </div>
+          } @if (request()!.rejectedAt) {
+          <div class="flex justify-between">
+            <dt class="text-muted-foreground" i18n="@@admin.premium.rejectedAt">
+              Rejected
+            </dt>
+            <dd class="text-foreground font-medium">
+              {{ request()!.rejectedAt | date: 'dd MMM yyyy' }}
+            </dd>
+          </div>
+          } @if (request()!.rejectionReason) {
+          <div>
+            <dt
+              class="text-muted-foreground mb-1"
+              i18n="@@admin.premium.rejectionReason"
+            >
+              Rejection reason
+            </dt>
+            <dd class="text-foreground">{{ request()!.rejectionReason }}</dd>
+          </div>
+          }
+        </dl>
+      </div>
+      }
+    </div>
+
+    <!-- Right: actions -->
+    <div>
+      @if (request()!.status === 'pending') {
+      <div class="border-border bg-card rounded-lg border p-5">
+        <h2
+          class="text-foreground mb-4 text-sm font-semibold tracking-wider uppercase"
+          i18n="@@admin.premium.actions"
+        >
+          Actions
+        </h2>
+
+        <!-- Plan selector -->
+        <div class="mb-4 space-y-2">
+          <p
+            class="text-foreground text-sm font-medium"
+            i18n="@@admin.premium.selectPlan"
+          >
+            Select plan
+          </p>
+          <div class="space-y-2">
+            <label class="flex cursor-pointer items-center gap-3">
+              <input
+                type="radio"
+                [formControl]="plan"
+                value="monthly"
+                class="h-4 w-4"
+              />
+              <span
+                class="text-foreground text-sm"
+                i18n="@@admin.premium.monthly"
+              >
+                Monthly (30 days)
+              </span>
+            </label>
+            <label class="flex cursor-pointer items-center gap-3">
+              <input
+                type="radio"
+                [formControl]="plan"
+                value="annual"
+                class="h-4 w-4"
+              />
+              <span
+                class="text-foreground text-sm"
+                i18n="@@admin.premium.annual"
+              >
+                Annual (365 days)
+              </span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Activate -->
+        <button
+          uiButton
+          class="mb-3 w-full"
+          [disabled]="isSubmitting()"
+          (click)="activate()"
+          i18n="@@admin.premium.activate"
+        >
+          Activate
+        </button>
+
+        <!-- Reject -->
+        @if (!showRejectForm()) {
+        <button
+          uiButton
+          variant="destructive"
+          class="w-full"
+          (click)="showRejectForm.set(true)"
+          i18n="@@admin.premium.reject"
+        >
+          Reject
+        </button>
+        } @else {
+        <div class="space-y-2">
+          <textarea
+            [formControl]="rejectionReason"
+            rows="3"
+            class="border-border bg-background text-foreground focus:ring-ring w-full rounded-md border px-3 py-2 text-sm focus:ring-2 focus:outline-none"
+            placeholder="Reason for rejection…"
+            i18n-placeholder="@@admin.premium.rejectPlaceholder"
+          ></textarea>
+          <div class="flex gap-2">
+            <button
+              uiButton
+              variant="destructive"
+              class="flex-1"
+              [disabled]="isSubmitting() || !rejectionReason.value?.trim()"
+              (click)="confirmReject()"
+              i18n="@@admin.premium.confirmReject"
+            >
+              Confirm rejection
+            </button>
+            <button
+              uiButton
+              variant="outline"
+              (click)="showRejectForm.set(false)"
+              i18n="@@admin.premium.cancel"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+        }
+      </div>
+      } @else {
+      <div class="border-border bg-card rounded-lg border p-5">
+        <p
+          class="text-muted-foreground text-sm"
+          i18n="@@admin.premium.noActions"
+        >
+          No actions available for this request.
+        </p>
+      </div>
+      }
+    </div>
+  </div>
+  }
+</div>

@@ -17,3 +17,5 @@ export * from './lib/tooltip/tooltip';
 export * from './lib/utils/animate-on-enter.directive';
 export * from './lib/otp-input/otp-input';
 export * from './lib/places-autocomplete/places-autocomplete';
+export * from './lib/toast/toast.service';
+export * from './lib/toast/toast-container';
