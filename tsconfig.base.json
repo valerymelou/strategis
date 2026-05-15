@@ -28,6 +28,12 @@
       "@strategis/auth/email-verification": [
         "./libs/auth/email-verification/src/index.ts"
       ],
+      "@strategis/auth/forgot-password": [
+        "./libs/auth/forgot-password/src/index.ts"
+      ],
+      "@strategis/auth/reset-password": [
+        "./libs/auth/reset-password/src/index.ts"
+      ],
       "@strategis/profiles/data-access": [
         "./libs/profiles/data-access/src/index.ts"
       ],

@@ -5,6 +5,8 @@ from rest_framework.routers import SimpleRouter
 
 from strategis.authentication.api.views import LoginView
 from strategis.authentication.api.views import LogoutView
+from strategis.authentication.api.views import PasswordResetConfirmView
+from strategis.authentication.api.views import PasswordResetRequestView
 from strategis.authentication.api.views import RegisterView
 from strategis.authentication.api.views import ResendVerificationView
 from strategis.authentication.api.views import TokenRefreshView
@@ -25,5 +27,19 @@ urlpatterns = [
     path("auth/refresh/", TokenRefreshView.as_view(), name="token-refresh"),
     path("auth/register/", RegisterView.as_view(), name="register"),
     path("auth/verify-email/", VerifyEmailView.as_view(), name="verify-email"),
-    path("auth/resend-verification/", ResendVerificationView.as_view(), name="resend-verification"),
+    path(
+        "auth/resend-verification/",
+        ResendVerificationView.as_view(),
+        name="resend-verification",
+    ),
+    path(
+        "auth/password-reset/",
+        PasswordResetRequestView.as_view(),
+        name="password-reset",
+    ),
+    path(
+        "auth/password-reset/confirm/",
+        PasswordResetConfirmView.as_view(),
+        name="password-reset-confirm",
+    ),
 ]

@@ -50,8 +50,8 @@ describe('Register', () => {
       firstName: 'Jane',
       lastName: 'Doe',
       email: 'jane@example.com',
-      password: 'secret123',
-      confirmPassword: 'secret123',
+      password: 'Secret123@',
+      confirmPassword: 'Secret123@',
     });
     component.submit();
 
@@ -59,7 +59,7 @@ describe('Register', () => {
       firstName: 'Jane',
       lastName: 'Doe',
       email: 'jane@example.com',
-      password: 'secret123',
+      password: 'Secret123@',
     });
   });
 
@@ -69,8 +69,8 @@ describe('Register', () => {
       firstName: 'Jane',
       lastName: 'Doe',
       email: 'jane@example.com',
-      password: 'secret123',
-      confirmPassword: 'secret123',
+      password: 'Secret123@',
+      confirmPassword: 'Secret123@',
     });
     component.submit();
 
@@ -86,13 +86,15 @@ describe('Register', () => {
       firstName: 'Jane',
       lastName: 'Doe',
       email: 'jane@example.com',
-      password: 'secret123',
-      confirmPassword: 'secret123',
+      password: 'Secret123@',
+      confirmPassword: 'Secret123@',
     });
     component.submit();
 
     await fixture.whenStable();
-    expect(component.errorMessage()).toBe('A user with that email already exists.');
+    expect(component.errorMessage()).toBe(
+      'A user with that email already exists.',
+    );
   });
 
   it('validates password mismatch', () => {
@@ -100,8 +102,8 @@ describe('Register', () => {
       firstName: 'Jane',
       lastName: 'Doe',
       email: 'jane@example.com',
-      password: 'secret123',
-      confirmPassword: 'different',
+      password: 'Secret123@',
+      confirmPassword: 'Different1@',
     });
     component.form.controls.confirmPassword.markAsTouched();
 

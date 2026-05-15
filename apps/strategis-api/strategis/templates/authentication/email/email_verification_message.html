@@ -1,0 +1,17 @@
+{% extends "email/base.html" %}
+{% load i18n %}
+
+{% block content %}
+<h2 style="margin: 0 0 16px; font-size: 20px; font-weight: 600; color: #111827;">
+  {% translate "Verify your email address" %}
+</h2>
+<p style="margin: 0 0 24px; font-size: 15px; color: #374151; line-height: 1.6;">
+  {% translate "Use the code below to verify your email address. It expires in 10 minutes." %}
+</p>
+<div style="background-color: #f3f4f6; border-radius: 8px; padding: 20px; text-align: center; margin-bottom: 24px;">
+  <span style="font-size: 32px; font-weight: 700; letter-spacing: 8px; color: #111827; font-family: monospace;">{{ code }}</span>
+</div>
+<p style="margin: 0; font-size: 13px; color: #6b7280;">
+  {% translate "If you did not create an account, you can safely ignore this email." %}
+</p>
+{% endblock content %}

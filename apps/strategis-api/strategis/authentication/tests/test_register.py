@@ -13,10 +13,10 @@ VALID_PAYLOAD = {
     "data": {
         "type": "Register",
         "attributes": {
-            "first_name": "Jane",
-            "last_name": "Doe",
+            "firstName": "Jane",
+            "lastName": "Doe",
             "email": "jane@example.com",
-            "password": "secret1234",
+            "password": "Secret1234@",
         },
     },
 }
@@ -78,7 +78,11 @@ class TestRegisterView:
         payload = {
             "data": {
                 "type": "Register",
-                "attributes": {"first_name": "Jane", "last_name": "Doe", "password": "secret1234"},
+                "attributes": {
+                    "first_name": "Jane",
+                    "last_name": "Doe",
+                    "password": "secret1234",
+                },
             },
         }
         response = api_client.post(url, payload, format="vnd.api+json")

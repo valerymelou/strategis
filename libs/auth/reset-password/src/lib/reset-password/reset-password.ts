@@ -1,4 +1,4 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import {
   AbstractControl,
   FormControl,
@@ -8,7 +8,7 @@ import {
   ValidatorFn,
   Validators,
 } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
 import {
   AuthService,
@@ -30,32 +30,26 @@ const passwordsMatch: ValidatorFn = (
 };
 
 @Component({
-  selector: 'app-register',
+  selector: 'app-reset-password',
   imports: [ReactiveFormsModule, RouterLink, Button, Input],
-  templateUrl: './register.html',
+  templateUrl: './reset-password.html',
   host: { class: 'flex flex-col min-w-sm' },
 })
-export class Register {
+export class ResetPassword {
   private readonly authService = inject(AuthService);
+  private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
 
   readonly isLoading = signal(false);
   readonly errorMessage = signal<string | null>(null);
+  readonly success = signal(false);
+
+  private get token(): string {
+    return this.route.snapshot.paramMap.get('token') ?? '';
+  }
 
   readonly form = new FormGroup(
     {
-      firstName: new FormControl('', {
-        nonNullable: true,
-        validators: [Validators.required],
-      }),
-      lastName: new FormControl('', {
-        nonNullable: true,
-        validators: [Validators.required],
-      }),
-      email: new FormControl('', {
-        nonNullable: true,
-        validators: [Validators.required, Validators.email],
-      }),
       password: new FormControl('', {
         nonNullable: true,
         validators: [Validators.required, passwordStrengthValidator],
@@ -68,15 +62,6 @@ export class Register {
     { validators: passwordsMatch },
   );
 
-  get firstName() {
-    return this.form.controls.firstName;
-  }
-  get lastName() {
-    return this.form.controls.lastName;
-  }
-  get email() {
-    return this.form.controls.email;
-  }
   get password() {
     return this.form.controls.password;
   }
@@ -85,11 +70,9 @@ export class Register {
   }
   get passwordsMismatch() {
     return (
-      this.form.hasError('passwordsMismatch') &&
-      this.confirmPassword.touched
+      this.form.hasError('passwordsMismatch') && this.confirmPassword.touched
     );
   }
-
   get passwordRules() {
     return checkPasswordRules(this.password.value);
   }
@@ -99,22 +82,31 @@ export class Register {
       this.form.markAllAsTouched();
       return;
     }
+    if (!this.token) {
+      this.errorMessage.set(
+        $localize`:@@resetPassword.error.missingToken:Invalid or expired reset link.`,
+      );
+      return;
+    }
 
     this.isLoading.set(true);
     this.errorMessage.set(null);
 
-    const { firstName, lastName, email, password } = this.form.getRawValue();
-
-    this.authService.register({ firstName, lastName, email, password }).subscribe({
+    const { password } = this.form.getRawValue();
+    this.authService.confirmPasswordReset(this.token, password).subscribe({
       next: () => {
         this.isLoading.set(false);
-        this.router.navigate(['/auth/verify']);
+        this.success.set(true);
+        setTimeout(() => this.router.navigate(['/auth/login']), 3000);
       },
       error: (errors: ApiError[]) => {
         this.isLoading.set(false);
         const { fieldErrors, nonFieldErrors } = parseJsonApiErrors(errors);
         applyApiErrors(this.form, fieldErrors);
-        this.errorMessage.set(nonFieldErrors[0] ?? null);
+        this.errorMessage.set(
+          nonFieldErrors[0] ??
+            $localize`:@@resetPassword.error.generic:Failed to reset password. The link may have expired.`,
+        );
       },
     });
   }

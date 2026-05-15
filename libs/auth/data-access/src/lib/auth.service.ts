@@ -94,6 +94,22 @@ export class AuthService {
     return this.http.post<void>('/auth/refresh/', {}).pipe(map(() => void 0));
   }
 
+  requestPasswordReset(email: string): Observable<void> {
+    return this.http
+      .post<void>('/auth/password-reset/', {
+        data: { type: 'PasswordResetRequest', attributes: { email } },
+      })
+      .pipe(map(() => void 0));
+  }
+
+  confirmPasswordReset(token: string, password: string): Observable<void> {
+    return this.http
+      .post<void>('/auth/password-reset/confirm/', {
+        data: { type: 'PasswordResetConfirm', attributes: { token, password } },
+      })
+      .pipe(map(() => void 0));
+  }
+
   loadCurrentUser(): Observable<User | null> {
     return this.userService.getMe().pipe(
       tap((user) => {

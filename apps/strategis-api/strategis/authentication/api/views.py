@@ -1,7 +1,6 @@
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.contrib.auth.backends import ModelBackend
-from django.core.mail import send_mail
 from django.utils.translation import gettext_lazy as _
 from rest_framework import status
 from rest_framework.exceptions import AuthenticationFailed
@@ -17,10 +16,14 @@ from rest_framework_simplejwt.serializers import TokenRefreshSerializer
 from rest_framework_simplejwt.tokens import RefreshToken
 
 from strategis.authentication.models import EmailVerificationCode
+from strategis.authentication.models import PasswordResetToken
 from strategis.users.api.serializers import UserSerializer
+from strategis.utils.mail import send_mail
 
 from .serializers import EmailVerificationSerializer
 from .serializers import LoginSerializer
+from .serializers import PasswordResetConfirmSerializer
+from .serializers import PasswordResetRequestSerializer
 from .serializers import RegisterSerializer
 
 User = get_user_model()
@@ -180,14 +183,9 @@ class RegisterRateThrottle(AnonRateThrottle):
 def _send_verification_email(user, code: str) -> None:
     """Send the 6-digit verification code to the user's email."""
     send_mail(
-        subject=_("Verify your email address"),
-        message=_(
-            "Your verification code is: %(code)s\n\nThis code expires in 10 minutes.",
-        )
-        % {"code": code},
-        from_email=settings.DEFAULT_FROM_EMAIL,
-        recipient_list=[user.email],
-        fail_silently=False,
+        "authentication/email/email_verification",
+        user.email,
+        {"code": code},
     )
 
 
@@ -225,7 +223,9 @@ class RegisterView(APIView):
         email = data["email"]
 
         if User.objects.filter(email=email).exists():
-            raise ValidationError({"email": _("A user with this email already exists.")})
+            raise ValidationError(
+                {"email": _("A user with this email already exists.")},
+            )
 
         user = User.objects.create_user(
             email=email,
@@ -310,5 +310,106 @@ class ResendVerificationView(APIView):
 
         verification = EmailVerificationCode.create_for_user(user)
         _send_verification_email(user, verification.code)
+
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class PasswordResetRateThrottle(AnonRateThrottle):
+    """Rate-limit password reset requests (scope: password_reset)."""
+
+    scope = "password_reset"
+
+
+def _send_password_reset_email(user, token: str) -> None:
+    """Send the password reset link to the user's email."""
+    reset_url = f"{settings.FRONTEND_URL}/auth/reset-password/{token}"
+    send_mail(
+        "authentication/email/password_reset",
+        user.email,
+        {"reset_url": reset_url},
+    )
+
+
+class PasswordResetRequestView(APIView):
+    """
+    POST /v1/auth/password-reset/
+
+    Accepts an email address and sends a password reset link if the account
+    exists.  Always returns 204 to avoid leaking whether an email is registered.
+
+    Request body::
+
+        {
+          "data": {
+            "type": "PasswordResetRequest",
+            "attributes": { "email": "jane@example.com" }
+          }
+        }
+    """
+
+    resource_name = "PasswordResetRequest"
+    permission_classes = [AllowAny]
+    throttle_classes = [PasswordResetRateThrottle]
+
+    def post(self, request):
+        serializer = PasswordResetRequestSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        email = serializer.validated_data["email"]
+        try:
+            user = User.objects.get(email=email, is_active=True)
+            reset_token = PasswordResetToken.create_for_user(user)
+            _send_password_reset_email(user, reset_token.token)
+        except User.DoesNotExist:
+            # Intentionally silent — do not reveal whether the email exists.
+            pass
+
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+class PasswordResetConfirmView(APIView):
+    """
+    POST /v1/auth/password-reset/confirm/
+
+    Validates the reset token and sets the user's new password.
+
+    Request body::
+
+        {
+          "data": {
+            "type": "PasswordResetConfirm",
+            "attributes": { "token": "...", "password": "NewPass1!" }
+          }
+        }
+    """
+
+    resource_name = "PasswordResetConfirm"
+    permission_classes = [AllowAny]
+
+    def post(self, request):
+        serializer = PasswordResetConfirmSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        token_value = serializer.validated_data["token"]
+        new_password = serializer.validated_data["password"]
+
+        try:
+            reset_token = PasswordResetToken.objects.select_related("user").get(
+                token=token_value,
+            )
+        except PasswordResetToken.DoesNotExist as exception:
+            raise ValidationError(
+                {"token": _("Invalid or expired reset link.")},
+            ) from exception
+
+        if not reset_token.is_valid:
+            raise ValidationError({"token": _("Invalid or expired reset link.")})
+
+        user = reset_token.user
+        user.set_password(new_password)
+        user.save(update_fields=["password"])
+
+        reset_token.is_used = True
+        reset_token.save(update_fields=["is_used"])
 
         return Response(status=status.HTTP_204_NO_CONTENT)

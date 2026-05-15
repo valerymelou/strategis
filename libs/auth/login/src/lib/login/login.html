@@ -42,13 +42,22 @@
 
     <!-- Password -->
     <div class="mt-6 flex flex-col gap-1.5">
-      <label
-        for="password"
-        class="text-foreground text-xs font-medium tracking-[0.096px]"
-        i18n="@@login.password.label"
-      >
-        Password
-      </label>
+      <div class="flex items-center justify-between">
+        <label
+          for="password"
+          class="text-foreground text-xs font-medium tracking-[0.096px]"
+          i18n="@@login.password.label"
+        >
+          Password
+        </label>
+        <a
+          routerLink="/auth/forgot-password"
+          class="text-muted-foreground hover:text-foreground text-xs underline underline-offset-2 transition-colors"
+          i18n="@@login.password.forgot"
+        >
+          Forgot password?
+        </a>
+      </div>
       <input
         id="password"
         type="password"

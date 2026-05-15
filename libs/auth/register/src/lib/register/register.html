@@ -132,15 +132,44 @@
       >
         Password is required.
       </p>
-      } @else if (password.hasError('minlength') && password.touched) {
-      <p
-        class="text-destructive text-xs"
-        i18n="@@register.password.error.minlength"
-      >
-        Password must be at least 8 characters.
-      </p>
       } @else if (password.hasError('apiError') && password.touched) {
       <p class="text-destructive text-xs">{{ password.getError('apiError') }}</p>
+      }
+
+      <!-- Password strength checklist -->
+      @if (password.value.length > 0) {
+      <ul class="mt-1 space-y-0.5">
+        <li class="flex items-center gap-1.5 text-xs"
+          [class.text-green-600]="passwordRules.minLength"
+          [class.text-muted-foreground]="!passwordRules.minLength">
+          <span>{{ passwordRules.minLength ? '✓' : '○' }}</span>
+          <span i18n="@@register.password.rule.minLength">At least 8 characters</span>
+        </li>
+        <li class="flex items-center gap-1.5 text-xs"
+          [class.text-green-600]="passwordRules.uppercase"
+          [class.text-muted-foreground]="!passwordRules.uppercase">
+          <span>{{ passwordRules.uppercase ? '✓' : '○' }}</span>
+          <span i18n="@@register.password.rule.uppercase">One uppercase letter</span>
+        </li>
+        <li class="flex items-center gap-1.5 text-xs"
+          [class.text-green-600]="passwordRules.lowercase"
+          [class.text-muted-foreground]="!passwordRules.lowercase">
+          <span>{{ passwordRules.lowercase ? '✓' : '○' }}</span>
+          <span i18n="@@register.password.rule.lowercase">One lowercase letter</span>
+        </li>
+        <li class="flex items-center gap-1.5 text-xs"
+          [class.text-green-600]="passwordRules.digit"
+          [class.text-muted-foreground]="!passwordRules.digit">
+          <span>{{ passwordRules.digit ? '✓' : '○' }}</span>
+          <span i18n="@@register.password.rule.digit">One number</span>
+        </li>
+        <li class="flex items-center gap-1.5 text-xs"
+          [class.text-green-600]="passwordRules.special"
+          [class.text-muted-foreground]="!passwordRules.special">
+          <span>{{ passwordRules.special ? '✓' : '○' }}</span>
+          <span i18n="@@register.password.rule.special">One special character</span>
+        </li>
+      </ul>
       }
     </div>
 

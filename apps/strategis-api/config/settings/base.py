@@ -344,6 +344,7 @@ REST_FRAMEWORK = {
         "email_login": "10/hour",
         "token_refresh": "60/hour",
         "register": "20/hour",
+        "password_reset": "10/hour",
     },
 }
 
@@ -354,6 +355,8 @@ JSON_API_FORMAT_TYPES = "capitalize"
 JSON_API_UNIFORM_EXCEPTIONS = True
 
 # django-cors-headers - https://github.com/adamchainz/django-cors-headers#setup
+FRONTEND_URL = env("FRONTEND_URL", default="http://localhost:4200")
+
 CORS_ALLOWED_ORIGINS = env.list(
     "DJANGO_CORS_ALLOWED_ORIGINS",
     default=["http://localhost:4200"],

@@ -16,9 +16,14 @@ export const httpAuthInterceptor: HttpInterceptorFn = (req, next) => {
         return authService.refreshToken().pipe(
           switchMap(() => next(req)),
           catchError((refreshError) => {
-            // Refresh failed — clear client state and redirect to login
+            // Refresh failed — clear client state.
+            // Only redirect to login when NOT already on a public auth route
+            // (e.g. /auth/reset-password visited while unauthenticated).
             authService.currentUser.set(null);
-            router.navigate(['/auth/login']);
+            const onAuthRoute = window.location.pathname.startsWith('/auth/');
+            if (!onAuthRoute) {
+              router.navigate(['/auth/login']);
+            }
             return throwError(() => refreshError);
           }),
         );

@@ -4,6 +4,8 @@ import { AuthLayout } from '@strategis/auth/layout';
 import { Login } from '@strategis/auth/login';
 import { Register } from '@strategis/auth/register';
 import { EmailVerification } from '@strategis/auth/email-verification';
+import { ForgotPassword } from '@strategis/auth/forgot-password';
+import { ResetPassword } from '@strategis/auth/reset-password';
 import { adminGuard, authGuard, loginGuard } from '@strategis/auth/data-access';
 import { AdminActors, AdminActorDetail } from '@strategis/admin/actors';
 import { AdminPremium, AdminPremiumDetail } from '@strategis/admin/premium';
@@ -62,6 +64,8 @@ export const appRoutes: Route[] = [
       { path: 'login', component: Login, canActivate: [loginGuard] },
       { path: 'register', component: Register, canActivate: [loginGuard] },
       { path: 'verify', component: EmailVerification },
+      { path: 'forgot-password', component: ForgotPassword, canActivate: [loginGuard] },
+      { path: 'reset-password/:token', component: ResetPassword },
       { path: '', redirectTo: 'login', pathMatch: 'full' },
     ],
   },
