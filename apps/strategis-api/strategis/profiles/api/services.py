@@ -23,12 +23,16 @@ User = get_user_model()
 def _staff_emails() -> list[str]:
     """Return email addresses of all active staff users."""
     return list(
-        User.objects.filter(is_staff=True, is_active=True).values_list("email", flat=True)
+        User.objects.filter(is_staff=True, is_active=True).values_list(
+            "email",
+            flat=True,
+        ),
     )
 
 
 def _frontend_url() -> str:
     return getattr(settings, "FRONTEND_URL", "http://localhost:4200")
+
 
 # ---------------------------------------------------------------------------
 # Professional Profile
