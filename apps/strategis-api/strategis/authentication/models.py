@@ -90,7 +90,7 @@ class PasswordResetToken(BaseModel):
         """Invalidate existing tokens for this user and create a fresh one."""
         cls.objects.filter(user=user, is_used=False).update(is_used=True)
         expires_at = timezone.now() + timezone.timedelta(
-            hours=PASSWORD_RESET_EXPIRY_HOURS
+            hours=PASSWORD_RESET_EXPIRY_HOURS,
         )
         return cls.objects.create(
             user=user,

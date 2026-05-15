@@ -3,6 +3,7 @@ from django.conf import settings
 from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APIClient
+from rest_framework_simplejwt.token_blacklist.models import BlacklistedToken
 from rest_framework_simplejwt.tokens import RefreshToken
 
 from strategis.users.tests.factories import UserFactory
@@ -51,8 +52,6 @@ class TestLogoutView:
         assert response.cookies[settings.AUTH_REFRESH_COOKIE]["max-age"] == 0
 
     def test_logout_blacklists_refresh_token(self, client_with_cookies):
-        from rest_framework_simplejwt.token_blacklist.models import BlacklistedToken
-
         client, refresh_str = client_with_cookies
         # Extract jti BEFORE logout so we can verify it's blacklisted afterward
         jti = RefreshToken(refresh_str).payload["jti"]

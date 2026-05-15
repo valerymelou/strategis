@@ -100,7 +100,11 @@ class TestVerifyEmailView:
 
         assert response.status_code == status.HTTP_400_BAD_REQUEST
 
-    def test_verify_already_used_code_returns_400(self, authenticated_client, valid_code):
+    def test_verify_already_used_code_returns_400(
+        self,
+        authenticated_client,
+        valid_code,
+    ):
         valid_code.is_used = True
         valid_code.save()
         url = reverse(VERIFY_URL)
