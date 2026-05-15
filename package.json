@@ -22,6 +22,7 @@
     "@vmelou/jsonapi-angular": "^0.4.4",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "cookie-parser": "^1.4.7",
     "rxjs": "~7.8.0",
     "tailwind-merge": "^3.5.0"
   },

@@ -6,10 +6,14 @@
   "sourceRoot": "apps/strategis-web/src",
   "tags": [],
   "i18n": {
-    "sourceLocale": "en",
+    "sourceLocale": {
+      "code": "en",
+      "subPath": ""
+    },
     "locales": {
       "fr": {
-        "translation": "apps/strategis-web/src/locale/fr/messages.fr.xlf"
+        "translation": "apps/strategis-web/src/locale/fr/messages.fr.xlf",
+        "subPath": ""
       }
     }
   },
@@ -32,12 +36,16 @@
       },
       "configurations": {
         "production": {
-          "localize": ["en", "fr"],
+          "sourceMap": {
+            "scripts": true
+          },
+          "localize": ["en"],
+          "outputPath": "dist/apps/strategis-web/en",
           "budgets": [
             {
               "type": "initial",
               "maximumWarning": "500kb",
-              "maximumError": "1mb"
+              "maximumError": "1.5mb"
             },
             {
               "type": "anyComponentStyle",
@@ -46,6 +54,26 @@
             }
           ],
           "outputHashing": "all"
+        },
+        "fr": {
+          "sourceMap": {
+            "scripts": true
+          },
+          "localize": ["fr"],
+          "outputPath": "dist/apps/strategis-web/fr",
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1.5mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "4kb",
+              "maximumError": "8kb"
+            }
+          ],
+          "index": "apps/strategis-web/src/locale/fr/index.html"
         },
         "development": {
           "localize": ["en"],
@@ -102,6 +130,18 @@
         "buildTarget": "strategis-web:build",
         "staticFilePath": "dist/apps/strategis-web/browser",
         "spa": true
+      }
+    },
+    "copy-proxy": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "cp apps/strategis-web/src/proxy.mjs dist/apps/strategis-web/proxy.mjs"
+      }
+    },
+    "package": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "nx build strategis-web --configuration=production && nx build strategis-web --configuration=fr && nx run strategis-web:copy-proxy"
       }
     }
   }
