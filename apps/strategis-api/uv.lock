@@ -1897,7 +1897,7 @@ requires-dist = [
     { name = "django-environ", specifier = "==0.13.0" },
     { name = "django-filter", specifier = "==25.2" },
     { name = "django-model-utils", specifier = "==5.0.0" },
-    { name = "django-modeltranslation", specifier = ">=0.20.3" },
+    { name = "django-modeltranslation", specifier = "==0.20.3" },
     { name = "django-redis", specifier = "==6.0.0" },
     { name = "django-storages", extras = ["google"], specifier = "==1.14.6" },
     { name = "djangorestframework", specifier = "==3.17.1" },
