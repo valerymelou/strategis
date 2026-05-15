@@ -11,8 +11,8 @@ services:
       test: ["CMD", "curl", "-f", "http://localhost:5000/health/"]
       interval: 30s
       timeout: 10s
-      retries: 3
-      start_period: 10s
+      retries: 5
+      start_period: 60s
 
   celeryworker:
     <<: *django
@@ -50,12 +50,12 @@ services:
       - 5555
     command: /start-flower
     healthcheck:
-      test: [
+      test:
+        [
           "CMD-SHELL",
-          'curl -f --user "${CELERY_FLOWER_USER}:${CELERY_FLOWER_PASSWORD}"
-          http://localhost:5555/',
+          'curl -f --user "$CELERY_FLOWER_USER:$CELERY_FLOWER_PASSWORD" http://localhost:5555/',
         ]
       interval: 30s
       timeout: 10s
-      retries: 3
-      start_period: 10s
+      retries: 5
+      start_period: 60s
