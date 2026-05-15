@@ -1,7 +1,7 @@
 # ----------------------------
 # Stage 1: Build the Angular App
 # ----------------------------
-FROM node:25-alpine as builder
+FROM node:26-alpine as builder
 
 WORKDIR /app
 
@@ -48,7 +48,7 @@ RUN if [ -n "$SENTRY_AUTH_TOKEN" ]; then \
 # ----------------------------
 # Stage 2: Serve the App
 # ----------------------------
-FROM node:25-alpine
+FROM node:26-alpine
 
 WORKDIR /app
 
