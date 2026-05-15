@@ -4,6 +4,16 @@ set -o errexit
 set -o pipefail
 set -o nounset
 
+# Check if the Base64 credentials exist
+if [ -n "${GCP_CREDENTIALS_B64-}" ]; then
+    echo "Decoding Google Cloud Credentials..."
+    # Decode the var into a file
+    echo "$GCP_CREDENTIALS_B64" | base64 -d > /tmp/gcp-key.json
+
+    # Tell Google SDKs where to find it
+    export GOOGLE_APPLICATION_CREDENTIALS="/tmp/gcp-key.json"
+fi
+
 if [ -z "${POSTGRES_USER}" ]; then
     base_postgres_image_default_user='postgres'
     export POSTGRES_USER="${base_postgres_image_default_user}"
