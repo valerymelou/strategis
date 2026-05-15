@@ -27,6 +27,22 @@ export const appRoutes: Route[] = [
     resolve: { theme: themeResolver },
     children: [
       {
+        path: 'profile',
+        loadComponent: () => import('@strategis/profile').then((m) => m.MyProfile),
+      },
+      {
+        path: 'roles',
+        loadComponent: () => import('@strategis/roles').then((m) => m.MyRoles),
+      },
+      {
+        path: 'roles/:id',
+        loadComponent: () => import('@strategis/roles').then((m) => m.MyRoleDetail),
+      },
+      {
+        path: 'subscription',
+        loadComponent: () => import('@strategis/subscription').then((m) => m.MySubscription),
+      },
+      {
         path: 'admin',
         canActivate: [adminGuard],
         children: [

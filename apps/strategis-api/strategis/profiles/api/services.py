@@ -186,7 +186,7 @@ def create_actor(
     status = (
         Actor.Status.ACTIVE
         if not actor_type.requires_validation
-        else Actor.Status.PENDING
+        else Actor.Status.AWAITING_DOCUMENTS
     )
     return Actor.objects.create(
         profile=profile,

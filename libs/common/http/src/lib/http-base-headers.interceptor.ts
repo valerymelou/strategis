@@ -11,8 +11,12 @@ export const httpBaseHeadersInterceptor: HttpInterceptorFn = (
   const apiVersion = inject(API_VERSION_TOKEN);
 
   if (!request.url.startsWith('http')) {
-    let headers = request.headers.set('Content-Type', `${apiContentType}`);
-    headers = headers.set('Accept', `${apiContentType}; version=${apiVersion}`);
+    const isMultipart = request.body instanceof FormData;
+
+    let headers = request.headers.set('Accept', `${apiContentType}; version=${apiVersion}`);
+    if (!isMultipart) {
+      headers = headers.set('Content-Type', `${apiContentType}`);
+    }
 
     const apiRequest = request.clone({ headers });
 

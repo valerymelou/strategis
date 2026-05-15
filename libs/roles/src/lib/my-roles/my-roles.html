@@ -1,0 +1,149 @@
+<div class="p-6 space-y-8">
+
+  <!-- Loading skeleton -->
+  @if (isLoading()) {
+  <div class="space-y-6">
+    <div class="bg-muted h-6 w-32 animate-pulse rounded"></div>
+    <div class="space-y-3">
+      @for (i of [1, 2]; track i) {
+      <div class="border-border rounded-lg border p-4 flex items-center justify-between">
+        <div class="space-y-1.5">
+          <div class="bg-muted h-4 w-40 animate-pulse rounded"></div>
+          <div class="bg-muted h-3 w-20 animate-pulse rounded"></div>
+        </div>
+        <div class="bg-muted h-5 w-16 animate-pulse rounded-full"></div>
+      </div>
+      }
+    </div>
+    <div class="bg-muted h-6 w-32 animate-pulse rounded"></div>
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      @for (i of [1, 2, 3, 4]; track i) {
+      <div class="border-border rounded-lg border p-4">
+        <div class="bg-muted mb-2 h-4 w-32 animate-pulse rounded"></div>
+        <div class="bg-muted h-3 w-full animate-pulse rounded"></div>
+      </div>
+      }
+    </div>
+  </div>
+  } @else {
+
+  <!-- ── SECTION 1: My current roles ── -->
+  <section>
+    <h2
+      class="text-foreground mb-3 text-base font-semibold"
+      i18n="@@roles.myRoles.myRolesTitle"
+    >
+      My roles
+    </h2>
+
+    @if (actors().length === 0) {
+    <p class="text-muted-foreground text-sm" i18n="@@roles.myRoles.noRoles">
+      You haven't registered for any role yet.
+    </p>
+    } @else {
+    <ul class="divide-border border-border overflow-hidden rounded-lg border divide-y">
+      @for (actor of actors(); track actor.id) {
+      <li class="bg-card flex items-center justify-between gap-4 px-4 py-3"
+        [class.bg-amber-50]="actor.status === 'awaiting_documents'">
+        <div class="min-w-0 flex-1">
+          <p class="text-foreground truncate font-medium">
+            {{ actor.actorType?.name ?? actor.actorTypeId }}
+          </p>
+          @if (actor.actorType?.requiresValidation) {
+          <p class="text-muted-foreground mt-0.5 text-xs" i18n="@@roles.myRoles.requiresValidation">
+            Requires validation
+          </p>
+          }
+        </div>
+
+        <div class="flex shrink-0 items-center gap-3">
+          <span uiBadge [variant]="actor.statusVariant">{{ actor.statusLabel }}</span>
+
+          @if (actor.status === 'awaiting_documents') {
+          <a
+            [routerLink]="['/roles', actor.id]"
+            class="text-primary hover:text-primary/80 inline-flex items-center gap-1 text-sm font-medium"
+          >
+            <ng-icon name="lucideUpload" size="14" />
+            <span i18n="@@roles.myRoles.uploadDocuments">Upload docs</span>
+          </a>
+          } @else {
+          <a
+            [routerLink]="['/roles', actor.id]"
+            class="text-muted-foreground hover:text-foreground inline-flex items-center gap-1 text-sm"
+          >
+            <span i18n="@@roles.myRoles.view">View</span>
+            <ng-icon name="lucideArrowRight" size="14" />
+          </a>
+          }
+        </div>
+      </li>
+      }
+    </ul>
+    }
+  </section>
+
+  <!-- ── SECTION 2: Add new roles ── -->
+  @let availableTypes = actorTypes().filter(t => !isOwned(t.id ?? ''));
+
+  @if (availableTypes.length > 0) {
+  <section>
+    <h2
+      class="text-foreground mb-1 text-base font-semibold"
+      i18n="@@roles.myRoles.addRolesTitle"
+    >
+      Add roles
+    </h2>
+    <p class="text-muted-foreground mb-4 text-sm" i18n="@@roles.myRoles.addRolesSubtitle">
+      Select one or more roles to register for.
+    </p>
+
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      @for (actorType of availableTypes; track actorType.id) {
+      <button
+        type="button"
+        class="border-border hover:border-primary hover:bg-primary hover:text-primary-foreground group relative rounded-lg border p-4 text-left transition-colors"
+        [class.border-primary]="isSelected(actorType.id ?? '')"
+        [class.bg-primary/5]="isSelected(actorType.id ?? '')"
+        (click)="toggle(actorType.id ?? '')"
+      >
+        <div class="mb-1 flex items-start justify-between gap-2">
+          <span class="text-foreground group-hover:text-primary-foreground text-sm font-medium transition-colors">{{ actorType.name }}</span>
+          @if (isSelected(actorType.id ?? '')) {
+          <ng-icon name="lucideCheck" size="14" class="text-primary group-hover:text-primary-foreground shrink-0 mt-0.5 transition-colors" />
+          }
+        </div>
+        @if (actorType.description) {
+        <p class="text-muted-foreground group-hover:text-primary-foreground/80 text-xs transition-colors">{{ actorType.description }}</p>
+        }
+        @if (actorType.requiresValidation) {
+        <span
+          uiBadge
+          variant="secondary"
+          class="mt-2 text-xs group-hover:bg-primary-foreground/20 group-hover:text-primary-foreground group-hover:border-primary-foreground/30 transition-colors"
+          i18n="@@roles.myRoles.requiresValidation"
+        >
+          Requires validation
+        </span>
+        }
+      </button>
+      }
+    </div>
+
+    @if (selectedIds().size > 0) {
+    <div class="mt-4">
+      <button
+        uiButton
+        type="button"
+        [disabled]="isAdding()"
+        (click)="addRoles()"
+        i18n="@@roles.myRoles.addSelected"
+      >
+        Add selected roles
+      </button>
+    </div>
+    }
+  </section>
+  }
+  }
+</div>

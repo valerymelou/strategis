@@ -38,7 +38,10 @@
       "@strategis/onboarding/plan": ["./libs/onboarding/plan/src/index.ts"],
       "@strategis/onboarding/role": ["./libs/onboarding/role/src/index.ts"],
       "@strategis/admin/actors": ["./libs/admin/actors/src/index.ts"],
-      "@strategis/admin/premium": ["./libs/admin/premium/src/index.ts"]
+      "@strategis/admin/premium": ["./libs/admin/premium/src/index.ts"],
+      "@strategis/profile": ["./libs/profile/src/index.ts"],
+      "@strategis/roles": ["./libs/roles/src/index.ts"],
+      "@strategis/subscription": ["./libs/subscription/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

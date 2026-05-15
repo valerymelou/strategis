@@ -145,6 +145,12 @@ export class Sidebar {
 
   readonly allSections = computed(() => [...this.sections, ...this.adminSections()]);
 
+  readonly tierLabel = computed(() =>
+    this.currentUser()?.profile?.tier === 'PREMIUM'
+      ? $localize`:@@sidebar.tier.premium:Premium`
+      : $localize`:@@sidebar.tier.free:Free plan`,
+  );
+
   toggleMenu(): void {
     this.menuOpen.update((v) => !v);
   }

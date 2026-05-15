@@ -1,0 +1,209 @@
+<div class="space-y-6 p-6">
+  <!-- Header -->
+  <div>
+    <h1
+      class="text-foreground text-2xl font-semibold"
+      i18n="@@subscription.title"
+    >
+      My Subscription
+    </h1>
+    <p
+      class="text-muted-foreground mt-1 text-sm"
+      i18n="@@subscription.subtitle"
+    >
+      View and manage your current subscription plan.
+    </p>
+  </div>
+
+  <!-- Current plan card -->
+  <div class="border-border bg-card space-y-4 rounded-lg border p-6">
+    <div class="flex items-center justify-between">
+      <h2
+        class="text-foreground text-lg font-medium"
+        i18n="@@subscription.currentPlan"
+      >
+        Current Plan
+      </h2>
+
+      @if (tier() === 'PREMIUM') {
+      <span uiBadge variant="default" i18n="@@subscription.tier.premium"
+        >Premium</span
+      >
+      } @else {
+      <span uiBadge variant="secondary" i18n="@@subscription.tier.free"
+        >Free plan</span
+      >
+      }
+    </div>
+
+    @if (tier() === 'PREMIUM' && latestRequest().activatedAt) {
+    <div class="text-muted-foreground space-y-1 text-sm">
+      <p>
+        <span i18n="@@subscription.activatedAt">Activated:</span>
+        {{ latestRequest()!.activatedAt | date: 'dd MMM yyyy' }}
+      </p>
+      <p>
+        <span i18n="@@subscription.expiresAt">Expires:</span>
+        {{ latestRequest()!.expiresAt | date: 'dd MMM yyyy' }}
+      </p>
+    </div>
+    }
+  </div>
+
+  <!-- Status callout for latest request -->
+  @if (latestRequest()) { @switch (latestRequest()!.status) { @case ('pending')
+  {
+  <div
+    class="flex items-start gap-3 rounded-lg border border-blue-200 bg-blue-50 p-4"
+  >
+    <ng-icon
+      name="lucideRefreshCw"
+      size="16"
+      class="mt-0.5 shrink-0 text-blue-500"
+    />
+    <p
+      class="text-sm text-blue-800"
+      i18n="@@subscription.status.pendingMessage"
+    >
+      Your upgrade request is under review.
+    </p>
+  </div>
+  } @case ('rejected') {
+  <div
+    class="bg-destructive/10 border-destructive/20 space-y-3 rounded-lg border p-4"
+  >
+    <div class="flex items-start gap-3">
+      <div class="flex-1">
+        <p
+          class="text-destructive text-sm font-medium"
+          i18n="@@subscription.status.rejectedTitle"
+        >
+          Your upgrade request was rejected.
+        </p>
+        @if (latestRequest()!.rejectionReason) {
+        <p class="text-destructive/80 mt-1 text-sm">
+          {{ latestRequest()!.rejectionReason }}
+        </p>
+        }
+      </div>
+    </div>
+    <button
+      uiButton
+      variant="destructive"
+      size="sm"
+      [disabled]="isRequesting()"
+      (click)="requestUpgrade()"
+    >
+      <ng-icon name="lucideArrowUpCircle" />
+      <span i18n="@@subscription.action.requestAgain">Request again</span>
+    </button>
+  </div>
+  } @case ('expired') {
+  <div class="space-y-3 rounded-lg border border-amber-200 bg-amber-50 p-4">
+    <p
+      class="text-sm text-amber-800"
+      i18n="@@subscription.status.expiredMessage"
+    >
+      Your premium subscription has expired.
+    </p>
+    <button
+      uiButton
+      variant="outline"
+      size="sm"
+      [disabled]="isRequesting()"
+      (click)="requestUpgrade()"
+    >
+      <ng-icon name="lucideRefreshCw" />
+      <span i18n="@@subscription.action.renew">Renew</span>
+    </button>
+  </div>
+  } } }
+
+  <!-- Upgrade CTA (free user, no pending request) -->
+  @if (tier() === 'FREE' && !hasPendingRequest()) {
+  <div class="border-border space-y-4 rounded-lg border p-6">
+    <div>
+      <h3
+        class="text-foreground font-medium"
+        i18n="@@subscription.upgrade.title"
+      >
+        Upgrade to Premium
+      </h3>
+      <p
+        class="text-muted-foreground mt-1 text-sm"
+        i18n="@@subscription.upgrade.description"
+      >
+        Get access to premium features and unlock your full potential.
+      </p>
+    </div>
+    <button uiButton [disabled]="isRequesting()" (click)="requestUpgrade()">
+      <ng-icon name="lucideArrowUpCircle" />
+      <span i18n="@@subscription.action.requestUpgrade"
+        >Request premium upgrade</span
+      >
+    </button>
+  </div>
+  }
+
+  <!-- Request history table -->
+  @if (requests().length > 0) {
+  <div>
+    <h3
+      class="text-foreground mb-3 text-base font-medium"
+      i18n="@@subscription.history.title"
+    >
+      Request History
+    </h3>
+    <div class="border-border overflow-hidden rounded-lg border">
+      <table class="w-full text-sm">
+        <thead class="bg-muted/50">
+          <tr>
+            <th
+              class="text-muted-foreground px-4 py-3 text-left font-medium"
+              i18n="@@subscription.history.col.date"
+            >
+              Date
+            </th>
+            <th
+              class="text-muted-foreground px-4 py-3 text-left font-medium"
+              i18n="@@subscription.history.col.plan"
+            >
+              Plan
+            </th>
+            <th
+              class="text-muted-foreground px-4 py-3 text-left font-medium"
+              i18n="@@subscription.history.col.status"
+            >
+              Status
+            </th>
+          </tr>
+        </thead>
+        <tbody class="divide-border divide-y">
+          @for (req of requests(); track req.id) {
+          <tr class="hover:bg-muted/30 transition-colors">
+            <td class="text-foreground px-4 py-3">
+              {{ req.created ? (req.created | date: 'dd MMM yyyy') : '—' }}
+            </td>
+            <td class="text-foreground px-4 py-3 capitalize">{{ req.plan }}</td>
+            <td class="px-4 py-3">
+              <span uiBadge [variant]="req.statusVariant"
+                >{{ req.statusLabel }}</span
+              >
+            </td>
+          </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </div>
+  }
+
+  <!-- Loading skeleton -->
+  @if (isLoading()) {
+  <div class="space-y-3">
+    @for (i of [1, 2, 3]; track i) {
+    <div class="bg-muted h-12 animate-pulse rounded-lg"></div>
+    }
+  </div>
+  }
+</div>

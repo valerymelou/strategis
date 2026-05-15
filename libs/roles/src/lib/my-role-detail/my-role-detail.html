@@ -1,0 +1,280 @@
+<div class="p-6">
+  <!-- Back link -->
+  <a
+    routerLink="/roles"
+    class="text-muted-foreground hover:text-foreground mb-6 inline-flex items-center gap-2 text-sm"
+  >
+    <ng-icon name="lucideArrowLeft" size="14" />
+    <span i18n="@@roles.detail.back">Back to roles</span>
+  </a>
+
+  @if (isLoading()) {
+  <!-- Skeleton -->
+  <div class="mb-6 flex items-start gap-3">
+    <div class="flex-1 space-y-2">
+      <div class="bg-muted h-7 w-56 animate-pulse rounded"></div>
+      <div class="bg-muted h-4 w-32 animate-pulse rounded"></div>
+    </div>
+    <div class="bg-muted h-6 w-20 animate-pulse rounded-full"></div>
+  </div>
+  <div class="space-y-6">
+    <div class="border-border rounded-lg border p-5">
+      <div class="bg-muted mb-4 h-4 w-24 animate-pulse rounded"></div>
+      <div class="grid grid-cols-2 gap-4">
+        @for (i of [1, 2, 3, 4]; track i) {
+        <div class="space-y-1">
+          <div class="bg-muted h-3 w-20 animate-pulse rounded"></div>
+          <div class="bg-muted h-4 w-32 animate-pulse rounded"></div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+  } @else if (!actor()) {
+  <p class="text-muted-foreground" i18n="@@roles.detail.notFound">
+    Role not found.
+  </p>
+  } @else {
+  <!-- Header -->
+  <div class="mb-6 flex flex-wrap items-start gap-3">
+    <div class="flex-1">
+      <h1 class="text-foreground text-2xl font-semibold">
+        {{ actor()!.actorType?.name ?? '—' }}
+      </h1>
+    </div>
+    <span uiBadge [variant]="actor()!.statusVariant">
+      {{ actor()!.statusLabel }}
+    </span>
+  </div>
+
+  <!-- Availability toggle -->
+  <div class="border-border bg-card mb-6 rounded-lg border p-5">
+    <label class="flex cursor-pointer items-center gap-3">
+      <input
+        type="checkbox"
+        class="h-4 w-4 rounded"
+        [checked]="actor()!.isAvailable"
+        [disabled]="actor()!.status !== 'active'"
+        (change)="toggleAvailability()"
+      />
+      <span class="text-foreground text-sm" i18n="@@roles.detail.available">
+        Available
+      </span>
+    </label>
+  </div>
+
+  <!-- Rejection / Revocation callout -->
+  @if (actor()!.rejectionReason) {
+  <div class="border-destructive bg-destructive/10 mb-6 rounded-lg border p-4">
+    <h3
+      class="text-destructive mb-1 text-sm font-semibold"
+      i18n="@@roles.detail.rejectionReason"
+    >
+      Rejection reason
+    </h3>
+    <p class="text-destructive text-sm">{{ actor()!.rejectionReason }}</p>
+  </div>
+  } @if (actor()!.revocationReason) {
+  <div class="border-destructive bg-destructive/10 mb-6 rounded-lg border p-4">
+    <h3
+      class="text-destructive mb-1 text-sm font-semibold"
+      i18n="@@roles.detail.revocationReason"
+    >
+      Revocation reason
+    </h3>
+    <p class="text-destructive text-sm">{{ actor()!.revocationReason }}</p>
+  </div>
+  }
+
+  <!-- Awaiting documents callout -->
+  @if (actor()!.status === 'awaiting_documents') {
+  <div class="border-primary bg-primary/5 mb-6 rounded-lg border p-4">
+    <p class="text-primary text-sm" i18n="@@roles.detail.awaitingDocuments">
+      Your application is awaiting required documents. Please upload them below.
+    </p>
+  </div>
+  }
+
+  <!-- Info card -->
+  <div class="border-border bg-card mb-6 rounded-lg border p-5">
+    <h2
+      class="text-foreground mb-4 text-sm font-semibold tracking-wider uppercase"
+      i18n="@@roles.detail.info"
+    >
+      Details
+    </h2>
+    <dl class="grid grid-cols-2 gap-x-6 gap-y-3 text-sm">
+      <div>
+        <dt
+          class="text-muted-foreground"
+          i18n="@@roles.detail.reliabilityLevel"
+        >
+          Reliability level
+        </dt>
+        <dd class="text-foreground font-medium">
+          {{ actor()!.reliabilityLevel }}
+        </dd>
+      </div>
+      <div>
+        <dt class="text-muted-foreground" i18n="@@roles.detail.complianceLevel">
+          Compliance level
+        </dt>
+        <dd class="text-foreground font-medium">
+          {{ actor()!.complianceLevel}}
+        </dd>
+      </div>
+      <div>
+        <dt class="text-muted-foreground" i18n="@@roles.detail.categoryC">
+          Category C
+        </dt>
+        <dd class="text-foreground font-medium">
+          {{ actor()!.approvedForCategoryC ? yesLabel : noLabel }}
+        </dd>
+      </div>
+      <div>
+        <dt class="text-muted-foreground" i18n="@@roles.detail.validatedAt">
+          Validated at
+        </dt>
+        <dd class="text-foreground font-medium">
+          {{ actor()!.validatedAt|date:'medium' }}
+        </dd>
+      </div>
+    </dl>
+  </div>
+
+  <!-- Documents card -->
+  <div class="border-border bg-card rounded-lg border p-5">
+    <h2
+      class="text-foreground mb-4 text-sm font-semibold tracking-wider uppercase"
+      i18n="@@roles.detail.documents"
+    >
+      Documents
+    </h2>
+
+    @if (!actor()!.documents || actor()!.documents!.length === 0) {
+    <p
+      class="text-muted-foreground mb-4 text-sm"
+      i18n="@@roles.detail.noDocuments"
+    >
+      No documents uploaded yet.
+    </p>
+    } @else {
+    <ul class="divide-border mb-4 divide-y">
+      @for (doc of actor()!.documents; track doc.id) {
+      <li class="flex items-center justify-between py-3">
+        <div class="flex items-center gap-3">
+          <span class="text-foreground text-sm font-medium">
+            {{ doc.label || docDefaultLabel }}
+          </span>
+          @if (doc.isRequired) {
+          <span
+            uiBadge
+            variant="secondary"
+            class="text-xs"
+            i18n="@@roles.detail.required"
+          >
+            Required
+          </span>
+          }
+        </div>
+        <div class="flex items-center gap-3">
+          <a
+            [href]="doc.file"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-primary hover:text-primary/80 inline-flex items-center gap-1 text-sm"
+          >
+            <span i18n="@@roles.detail.open">Open</span>
+            <ng-icon name="lucideExternalLink" size="14" />
+          </a>
+          @if (canUpload()) {
+          <button
+            type="button"
+            class="text-destructive hover:text-destructive/80 inline-flex items-center text-sm"
+            (click)="deleteDocument(doc.id??'')"
+            [attr.aria-label]="deleteDocLabel"
+          >
+            <ng-icon name="lucideTrash2" size="14" />
+          </button>
+          }
+        </div>
+      </li>
+      }
+    </ul>
+    }
+
+    <!-- Upload section -->
+    @if (canUpload()) { @if (!showUploadForm()) {
+    <button
+      uiButton
+      variant="outline"
+      type="button"
+      (click)="showUploadForm.set(true)"
+      i18n="@@roles.detail.addDocuments"
+    >
+      Add documents
+    </button>
+    } @else {
+    <div class="space-y-4">
+      <div>
+        <label
+          for="fileInput"
+          class="text-foreground mb-1 block text-sm font-medium"
+          i18n="@@roles.detail.selectFiles"
+        >
+          Select files
+        </label>
+        <input
+          id="fileInput"
+          #fileInput
+          type="file"
+          multiple
+          class="border-border text-foreground focus:ring-ring block w-full rounded-md border px-3 py-2 text-sm focus:ring-2 focus:outline-none"
+          (change)="onFilesChange($event)"
+        />
+      </div>
+
+      @if (selectedFiles().length > 0) {
+      <div class="space-y-2">
+        @for (file of selectedFiles(); track $index) {
+        <div class="flex items-center gap-3">
+          <span class="text-muted-foreground flex-1 truncate text-sm">
+            {{ file.name }}
+          </span>
+          <input
+            type="text"
+            class="border-border bg-background text-foreground focus:ring-ring rounded-md border px-2 py-1 text-sm focus:ring-2 focus:outline-none"
+            [placeholder]="labelPlaceholder"
+            [value]="fileLabels()[$index]"
+            (input)="updateLabel($index, $any($event.target).value)"
+          />
+        </div>
+        }
+      </div>
+      }
+
+      <div class="flex gap-2">
+        <button
+          uiButton
+          type="button"
+          [disabled]="isUploading() || selectedFiles().length === 0"
+          (click)="submitDocuments()"
+          i18n="@@roles.detail.submit"
+        >
+          Submit documents
+        </button>
+        <button
+          uiButton
+          variant="outline"
+          type="button"
+          (click)="showUploadForm.set(false)"
+          i18n="@@roles.detail.cancel"
+        >
+          Cancel
+        </button>
+      </div>
+    </div>
+    } }
+  </div>
+  }
+</div>

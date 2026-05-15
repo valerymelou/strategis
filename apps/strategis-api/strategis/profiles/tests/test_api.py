@@ -284,11 +284,11 @@ class TestActorCreate(BaseAPITestCase):
             },
         }
 
-    def test_creates_pending_actor_when_validation_required(self):
+    def test_creates_awaiting_documents_actor_when_validation_required(self):
         resp = self.client.post(self.url, self._payload())
         assert resp.status_code == status.HTTP_201_CREATED
         actor = Actor.objects.get(profile=self.profile, actor_type=self.actor_type)
-        assert actor.status == Actor.Status.PENDING
+        assert actor.status == Actor.Status.AWAITING_DOCUMENTS
 
     def test_creates_active_actor_when_no_validation_required(self):
         at = ActorTypeFactory(requires_validation=False, is_active=True)
