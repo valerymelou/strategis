@@ -1,0 +1,91 @@
+name: CI API
+
+env:
+  DOCKER_BUILDKIT: 1
+  COMPOSE_DOCKER_CLI_BUILD: 1
+
+on:
+  pull_request:
+    branches: ["master", "develop"]
+    paths:
+      - "apps/strategis-api/**"
+      - ".github/workflows/ci-api.yml"
+      - ".github/workflows/cd-api.yml"
+
+  push:
+    branches: ["master", "develop"]
+    paths:
+      - "apps/strategis-api/**"
+      - ".github/workflows/ci-api.yml"
+      - ".github/workflows/cd-api.yml"
+
+concurrency:
+  group: ${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v6
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: "true"
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version-file: "apps/strategis-api/.python-version"
+
+      - name: Lint with ruff
+        run: uv run ruff check .
+        working-directory: apps/strategis-api
+
+  # With no caching at all the entire ci process takes 3m to complete!
+  pytest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v6
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and cache local backend
+        uses: docker/bake-action@v6
+        with:
+          push: false
+          load: true
+          files: docker-compose.local.yml
+          targets: django
+          source: .
+          workdir: apps/strategis-api
+          set: |
+            django.cache-from=type=gha,scope=django-cached-tests
+            django.cache-to=type=gha,scope=django-cached-tests,mode=max
+            postgres.cache-from=type=gha,scope=postgres-cached-tests
+            postgres.cache-to=type=gha,scope=postgres-cached-tests,mode=max
+
+      - name: Check DB Migrations
+        run:
+          docker compose -f docker-compose.local.yml run --rm django python manage.py
+          makemigrations --check
+        working-directory: apps/strategis-api
+
+      - name: Run DB Migrations
+        run:
+          docker compose -f docker-compose.local.yml run --rm django python manage.py
+          migrate
+        working-directory: apps/strategis-api
+
+      - name: Run Django Tests
+        run: docker compose -f docker-compose.local.yml run django pytest
+        working-directory: apps/strategis-api
+
+      - name: Tear down the Stack
+        run: docker compose -f docker-compose.local.yml down
+        working-directory: apps/strategis-api
