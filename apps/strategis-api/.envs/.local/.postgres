@@ -1,0 +1,7 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=strategis
+POSTGRES_USER=ebWebBTAGFzNQjrokjWDBSTJMXrQdswT
+POSTGRES_PASSWORD=uGYzqPxXI9WxazJGYMCrojsJC35owo1ilg3s9N36oVdcTHBuD5gqgW7fnBIX0lqK
