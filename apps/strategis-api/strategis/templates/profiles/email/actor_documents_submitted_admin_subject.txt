@@ -1,0 +1,1 @@
+{% load i18n %}{% blocktranslate trimmed with actor_type=actor.actor_type.name company=actor.profile.company_name %}Documents submitted for review: {{ actor_type }} — {{ company }}{% endblocktranslate %}

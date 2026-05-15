@@ -1,0 +1,15 @@
+{% extends "email/base.html" %}
+{% load i18n %}
+
+{% block content %}
+<h2 style="margin: 0 0 16px; font-size: 20px; font-weight: 600; color: #111827;">
+  {% translate "New premium upgrade request" %}
+</h2>
+<p style="margin: 0 0 16px; font-size: 15px; color: #374151; line-height: 1.6;">
+  {% blocktranslate with company=upgrade_request.profile.company_name %}{{ company }} has requested a premium subscription upgrade and is awaiting your review.{% endblocktranslate %}
+</p>
+<a href="{{ frontend_url }}/admin/premium/{{ upgrade_request.pk }}"
+   style="display: inline-block; background-color: #111827; color: #ffffff; font-size: 14px; font-weight: 600; text-decoration: none; padding: 12px 24px; border-radius: 8px; margin-bottom: 24px;">
+  {% translate "Review request" %}
+</a>
+{% endblock content %}

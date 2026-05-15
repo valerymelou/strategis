@@ -1,0 +1,20 @@
+{% extends "email/base.html" %}
+{% load i18n %}
+
+{% block content %}
+<h2 style="margin: 0 0 16px; font-size: 20px; font-weight: 600; color: #111827;">
+  {% blocktranslate with actor_type=actor.actor_type.name %}Your {{ actor_type }} role has been revoked{% endblocktranslate %}
+</h2>
+<p style="margin: 0 0 16px; font-size: 15px; color: #374151; line-height: 1.6;">
+  {% blocktranslate with actor_type=actor.actor_type.name %}Your <strong>{{ actor_type }}</strong> role has been revoked and you can no longer operate under it on Strategis Flow.{% endblocktranslate %}
+</p>
+{% if actor.revocation_reason %}
+<div style="background-color: #fef2f2; border-left: 4px solid #ef4444; padding: 16px; border-radius: 4px; margin-bottom: 24px;">
+  <p style="margin: 0; font-size: 14px; color: #7f1d1d; font-weight: 600;">{% translate "Reason" %}</p>
+  <p style="margin: 8px 0 0; font-size: 14px; color: #7f1d1d;">{{ actor.revocation_reason }}</p>
+</div>
+{% endif %}
+<p style="margin: 0 0 24px; font-size: 14px; color: #6b7280;">
+  {% translate "If you believe this was an error, please contact our support team." %}
+</p>
+{% endblock content %}

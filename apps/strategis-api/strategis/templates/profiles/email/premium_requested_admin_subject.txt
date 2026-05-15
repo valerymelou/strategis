@@ -1,0 +1,1 @@
+{% load i18n %}{% blocktranslate trimmed with company=upgrade_request.profile.company_name %}New premium upgrade request from {{ company }}{% endblocktranslate %}

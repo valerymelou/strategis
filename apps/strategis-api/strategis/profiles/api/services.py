@@ -2,6 +2,8 @@ from __future__ import annotations
 
 from datetime import timedelta
 
+from django.conf import settings
+from django.contrib.auth import get_user_model
 from django.db import transaction
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
@@ -11,8 +13,22 @@ from strategis.profiles.models import Actor
 from strategis.profiles.models import ActorDocument
 from strategis.profiles.models import PremiumUpgradeRequest
 from strategis.profiles.models import ProfessionalProfile
+from strategis.utils.mail import send_mail
 
 from .exceptions import BusinessRuleViolation
+
+User = get_user_model()
+
+
+def _staff_emails() -> list[str]:
+    """Return email addresses of all active staff users."""
+    return list(
+        User.objects.filter(is_staff=True, is_active=True).values_list("email", flat=True)
+    )
+
+
+def _frontend_url() -> str:
+    return getattr(settings, "FRONTEND_URL", "http://localhost:4200")
 
 # ---------------------------------------------------------------------------
 # Professional Profile
@@ -57,7 +73,17 @@ def request_premium_upgrade(profile: ProfessionalProfile) -> PremiumUpgradeReque
             ),
             code="duplicate_premium_request",
         )
-    return PremiumUpgradeRequest.objects.create(profile=profile)
+    upgrade_request = PremiumUpgradeRequest.objects.create(profile=profile)
+
+    staff_emails = _staff_emails()
+    if staff_emails:
+        send_mail(
+            "profiles/email/premium_requested_admin",
+            staff_emails,
+            {"upgrade_request": upgrade_request, "frontend_url": _frontend_url()},
+        )
+
+    return upgrade_request
 
 
 # ---------------------------------------------------------------------------
@@ -111,7 +137,11 @@ def activate_premium(
         detail={"plan": plan, "expires_at": request_obj.expires_at.isoformat()},
     )
 
-    # TODO: trigger premium_activated email
+    send_mail(
+        "profiles/email/premium_activated",
+        request_obj.profile.user.email,
+        {"upgrade_request": request_obj, "frontend_url": _frontend_url()},
+    )
 
     return request_obj
 
@@ -144,7 +174,11 @@ def reject_premium(
         detail={"reason": reason},
     )
 
-    # TODO: trigger premium_rejected email
+    send_mail(
+        "profiles/email/premium_rejected",
+        request_obj.profile.user.email,
+        {"upgrade_request": request_obj, "frontend_url": _frontend_url()},
+    )
 
     return request_obj
 
@@ -188,12 +222,23 @@ def create_actor(
         if not actor_type.requires_validation
         else Actor.Status.AWAITING_DOCUMENTS
     )
-    return Actor.objects.create(
+    actor = Actor.objects.create(
         profile=profile,
         actor_type=actor_type,
         status=status,
         **validated_data,
     )
+
+    if actor_type.requires_validation:
+        staff_emails = _staff_emails()
+        if staff_emails:
+            send_mail(
+                "profiles/email/actor_created_admin",
+                staff_emails,
+                {"actor": actor, "frontend_url": _frontend_url()},
+            )
+
+    return actor
 
 
 @transaction.atomic
@@ -215,7 +260,11 @@ def validate_actor(actor: Actor, admin_user) -> Actor:
         object_id=actor.pk,
         detail={},
     )
-    # TODO: trigger actor_validated email
+    send_mail(
+        "profiles/email/actor_validated",
+        actor.profile.user.email,
+        {"actor": actor, "frontend_url": _frontend_url()},
+    )
     return actor
 
 
@@ -237,7 +286,11 @@ def reject_actor(actor: Actor, reason: str, admin_user) -> Actor:
         object_id=actor.pk,
         detail={"reason": reason},
     )
-    # TODO: trigger actor_rejected email
+    send_mail(
+        "profiles/email/actor_rejected",
+        actor.profile.user.email,
+        {"actor": actor, "frontend_url": _frontend_url()},
+    )
     return actor
 
 
@@ -259,7 +312,11 @@ def revoke_actor(actor: Actor, reason: str, admin_user) -> Actor:
         object_id=actor.pk,
         detail={"reason": reason},
     )
-    # TODO: trigger actor_revoked email
+    send_mail(
+        "profiles/email/actor_revoked",
+        actor.profile.user.email,
+        {"actor": actor, "frontend_url": _frontend_url()},
+    )
     return actor
 
 
@@ -305,6 +362,12 @@ def set_category_c_approval(actor: Actor, approved, admin_user) -> Actor:
         object_id=actor.pk,
         detail={"approved": approved},
     )
+    if approved:
+        send_mail(
+            "profiles/email/category_c_approved",
+            actor.profile.user.email,
+            {"actor": actor, "frontend_url": _frontend_url()},
+        )
     return actor
 
 
@@ -359,9 +422,21 @@ def create_actor_documents(actor: Actor, files: list[dict]) -> list[ActorDocumen
                 is_required=True,
             ),
         )
-    # TODO: trigger actor_validation_request email to admins
+    created = ActorDocument.objects.bulk_create(documents)
 
-    return ActorDocument.objects.bulk_create(documents)
+    staff_emails = _staff_emails()
+    if staff_emails:
+        send_mail(
+            "profiles/email/actor_documents_submitted_admin",
+            staff_emails,
+            {
+                "actor": actor,
+                "document_count": len(created),
+                "frontend_url": _frontend_url(),
+            },
+        )
+
+    return created
 
 
 def delete_actor_document(document: ActorDocument) -> None:

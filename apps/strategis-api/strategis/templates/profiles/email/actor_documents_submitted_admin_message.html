@@ -1,0 +1,15 @@
+{% extends "email/base.html" %}
+{% load i18n %}
+
+{% block content %}
+<h2 style="margin: 0 0 16px; font-size: 20px; font-weight: 600; color: #111827;">
+  {% translate "Documents submitted for review" %}
+</h2>
+<p style="margin: 0 0 16px; font-size: 15px; color: #374151; line-height: 1.6;">
+  {% blocktranslate with company=actor.profile.company_name actor_type=actor.actor_type.name count=document_count %}{{ company }} has submitted {{ count }} document(s) for their <strong>{{ actor_type }}</strong> role.{% endblocktranslate %}
+</p>
+<a href="{{ frontend_url }}/admin/actors/{{ actor.pk }}"
+   style="display: inline-block; background-color: #111827; color: #ffffff; font-size: 14px; font-weight: 600; text-decoration: none; padding: 12px 24px; border-radius: 8px; margin-bottom: 24px;">
+  {% translate "Review documents" %}
+</a>
+{% endblock content %}

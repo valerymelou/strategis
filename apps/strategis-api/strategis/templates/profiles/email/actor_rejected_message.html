@@ -1,0 +1,20 @@
+{% extends "email/base.html" %}
+{% load i18n %}
+
+{% block content %}
+<h2 style="margin: 0 0 16px; font-size: 20px; font-weight: 600; color: #111827;">
+  {% blocktranslate with actor_type=actor.actor_type.name %}Your {{ actor_type }} role application was not approved{% endblocktranslate %}
+</h2>
+<p style="margin: 0 0 16px; font-size: 15px; color: #374151; line-height: 1.6;">
+  {% blocktranslate with actor_type=actor.actor_type.name %}After review, your application for the <strong>{{ actor_type }}</strong> role could not be approved at this time.{% endblocktranslate %}
+</p>
+{% if actor.rejection_reason %}
+<div style="background-color: #fef2f2; border-left: 4px solid #ef4444; padding: 16px; border-radius: 4px; margin-bottom: 24px;">
+  <p style="margin: 0; font-size: 14px; color: #7f1d1d; font-weight: 600;">{% translate "Reason" %}</p>
+  <p style="margin: 8px 0 0; font-size: 14px; color: #7f1d1d;">{{ actor.rejection_reason }}</p>
+</div>
+{% endif %}
+<p style="margin: 0 0 24px; font-size: 14px; color: #6b7280;">
+  {% translate "If you have questions or believe this decision was made in error, please contact our support team." %}
+</p>
+{% endblock content %}

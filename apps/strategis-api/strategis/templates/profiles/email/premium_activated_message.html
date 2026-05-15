@@ -1,0 +1,22 @@
+{% extends "email/base.html" %}
+{% load i18n %}
+
+{% block content %}
+<h2 style="margin: 0 0 16px; font-size: 20px; font-weight: 600; color: #111827;">
+  {% translate "Your premium subscription is now active" %}
+</h2>
+<p style="margin: 0 0 16px; font-size: 15px; color: #374151; line-height: 1.6;">
+  {% blocktranslate with company=upgrade_request.profile.company_name %}Welcome to Premium, {{ company }}! Your subscription is now active and you have access to all premium features.{% endblocktranslate %}
+</p>
+<div style="background-color: #f0fdf4; border-left: 4px solid #22c55e; padding: 16px; border-radius: 4px; margin-bottom: 24px;">
+  <p style="margin: 0; font-size: 14px; color: #14532d; font-weight: 600;">{% translate "Subscription details" %}</p>
+  <p style="margin: 8px 0 0; font-size: 14px; color: #15803d;">
+    {% blocktranslate with plan=upgrade_request.get_plan_display %}Plan: {{ plan }}{% endblocktranslate %}<br>
+    {% blocktranslate with expires=upgrade_request.expires_at|date:"N j, Y" %}Valid until: {{ expires }}{% endblocktranslate %}
+  </p>
+</div>
+<a href="{{ frontend_url }}/subscription"
+   style="display: inline-block; background-color: #111827; color: #ffffff; font-size: 14px; font-weight: 600; text-decoration: none; padding: 12px 24px; border-radius: 8px; margin-bottom: 24px;">
+  {% translate "View my subscription" %}
+</a>
+{% endblock content %}

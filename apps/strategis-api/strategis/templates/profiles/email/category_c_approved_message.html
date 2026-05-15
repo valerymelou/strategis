@@ -1,0 +1,15 @@
+{% extends "email/base.html" %}
+{% load i18n %}
+
+{% block content %}
+<h2 style="margin: 0 0 16px; font-size: 20px; font-weight: 600; color: #111827;">
+  {% translate "Category C approval granted" %}
+</h2>
+<p style="margin: 0 0 16px; font-size: 15px; color: #374151; line-height: 1.6;">
+  {% blocktranslate with actor_type=actor.actor_type.name %}Your <strong>{{ actor_type }}</strong> role has been approved for Category C operations on Strategis Flow.{% endblocktranslate %}
+</p>
+<a href="{{ frontend_url }}/roles/{{ actor.pk }}"
+   style="display: inline-block; background-color: #111827; color: #ffffff; font-size: 14px; font-weight: 600; text-decoration: none; padding: 12px 24px; border-radius: 8px; margin-bottom: 24px;">
+  {% translate "View my role" %}
+</a>
+{% endblock content %}

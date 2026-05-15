@@ -7339,7 +7339,7 @@ express@^4.21.2, express@^4.22.1:
 
 express@^5.2.1:
   version "5.2.1"
-  resolved "https://registry.npmjs.org/express/-/express-5.2.1.tgz"
+  resolved "https://registry.yarnpkg.com/express/-/express-5.2.1.tgz#8f21d15b6d327f92b4794ecf8cb08a72f956ac04"
   integrity sha512-hIS4idWWai69NezIdRt2xFVofaF4j+6INOpJlVOLDO8zXGpUVEVzIYk12UUi2JzjEzWL3IOAxcTubgz9Po0yXw==
   dependencies:
     accepts "^2.0.0"
