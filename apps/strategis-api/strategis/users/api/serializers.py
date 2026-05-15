@@ -1,7 +1,6 @@
 from rest_framework_json_api.relations import ResourceRelatedField
 
 from strategis.core.api.serializers import BaseSerializer
-from strategis.profiles.models import ProfessionalProfile
 from strategis.users.models import User
 
 
@@ -18,7 +17,15 @@ class UserSerializer(BaseSerializer):
 
     class Meta:
         model = User
-        fields = ["id", "email", "first_name", "last_name", "is_email_verified", "is_staff", "profile"]
+        fields = [
+            "id",
+            "email",
+            "first_name",
+            "last_name",
+            "is_email_verified",
+            "is_staff",
+            "profile",
+        ]
         read_only_fields = [
             "id",
             "email",

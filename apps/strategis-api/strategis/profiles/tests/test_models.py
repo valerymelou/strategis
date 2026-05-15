@@ -1,15 +1,13 @@
 from __future__ import annotations
 
 from strategis.core.tests import BaseTestCase
-from strategis.profiles.models import Actor, PremiumUpgradeRequest
+from strategis.profiles.models import PremiumUpgradeRequest
 
-from .factories import (
-    ActorDocumentFactory,
-    ActorFactory,
-    ActorTypeFactory,
-    PremiumUpgradeRequestFactory,
-    ProfessionalProfileFactory,
-)
+from .factories import ActorDocumentFactory
+from .factories import ActorFactory
+from .factories import ActorTypeFactory
+from .factories import PremiumUpgradeRequestFactory
+from .factories import ProfessionalProfileFactory
 
 
 class TestProfessionalProfile(BaseTestCase):

@@ -11,7 +11,9 @@ class TestAuditLog(BaseTestCase):
     def test_str_representation(self):
         object_id = uuid.uuid4()
         log = AuditLogFactory(
-            action="lot.validated", object_type="WasteLot", object_id=object_id
+            action="lot.validated",
+            object_type="WasteLot",
+            object_id=object_id,
         )
 
         assert str(log) == f"lot.validated on WasteLot({object_id})"

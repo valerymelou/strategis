@@ -46,7 +46,7 @@ class EmailVerificationCode(BaseModel):
         return not self.is_used and timezone.now() < self.expires_at
 
     @classmethod
-    def create_for_user(cls, user) -> "EmailVerificationCode":
+    def create_for_user(cls, user) -> EmailVerificationCode:
         """Invalidate any existing codes and create a fresh one."""
         cls.objects.filter(user=user, is_used=False).update(is_used=True)
         expires_at = timezone.now() + timezone.timedelta(minutes=OTP_EXPIRY_MINUTES)
@@ -86,10 +86,12 @@ class PasswordResetToken(BaseModel):
         return not self.is_used and timezone.now() < self.expires_at
 
     @classmethod
-    def create_for_user(cls, user) -> "PasswordResetToken":
+    def create_for_user(cls, user) -> PasswordResetToken:
         """Invalidate existing tokens for this user and create a fresh one."""
         cls.objects.filter(user=user, is_used=False).update(is_used=True)
-        expires_at = timezone.now() + timezone.timedelta(hours=PASSWORD_RESET_EXPIRY_HOURS)
+        expires_at = timezone.now() + timezone.timedelta(
+            hours=PASSWORD_RESET_EXPIRY_HOURS
+        )
         return cls.objects.create(
             user=user,
             token=secrets.token_urlsafe(48),

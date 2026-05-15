@@ -1,6 +1,6 @@
-exclude: '^docs/|/migrations/|devcontainer.json|^apps/strategis-web|^libs/''
+exclude: '^docs/|/migrations/|devcontainer.json|^apps/strategis-web|^libs/'
 default_stages: [pre-commit]
-minimum_pre_commit_version: "3.2.0"
+minimum_pre_commit_version: '3.2.0'
 
 default_language_version:
   python: python3.14

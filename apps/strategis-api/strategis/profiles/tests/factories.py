@@ -1,16 +1,15 @@
 from __future__ import annotations
 
 import factory
-from factory import Faker, SubFactory
+from factory import Faker
+from factory import SubFactory
 from factory.django import DjangoModelFactory
 
-from strategis.profiles.models import (
-    Actor,
-    ActorDocument,
-    ActorType,
-    PremiumUpgradeRequest,
-    ProfessionalProfile,
-)
+from strategis.profiles.models import Actor
+from strategis.profiles.models import ActorDocument
+from strategis.profiles.models import ActorType
+from strategis.profiles.models import PremiumUpgradeRequest
+from strategis.profiles.models import ProfessionalProfile
 from strategis.users.tests.factories import UserFactory
 
 
