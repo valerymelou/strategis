@@ -1,70 +1,61 @@
-volumes:
-  production_postgres_data: {}
-  production_postgres_data_backups: {}
-  production_traefik: {}
-  
-  production_redis_data: {}
-  
-
-
 services:
   django: &django
-    build:
-      context: .
-      dockerfile: ./compose/production/django/Dockerfile
-
-    image: strategis_production_django
-    depends_on:
-      - postgres
-      - redis
+    image: ghcr.io/valerymelou/strategis-api/django:${TAG}
+    pull_policy: always
+    expose:
+      - 5000
     env_file:
       - ./.envs/.production/.django
-      - ./.envs/.production/.postgres
     command: /start
-
-  postgres:
-    build:
-      context: .
-      dockerfile: ./compose/production/postgres/Dockerfile
-    image: strategis_production_postgres
-    volumes:
-      - production_postgres_data:/var/lib/postgresql/18/docker
-      - production_postgres_data_backups:/backups
-    env_file:
-      - ./.envs/.production/.postgres
-
-  traefik:
-    build:
-      context: .
-      dockerfile: ./compose/production/traefik/Dockerfile
-    image: strategis_production_traefik
-    depends_on:
-      - django
-    volumes:
-      - production_traefik:/etc/traefik/acme
-    ports:
-      - '0.0.0.0:80:80'
-      - '0.0.0.0:443:443'
-      - '0.0.0.0:5555:5555'
-
-  redis:
-    image: docker.io/redis:7.2
-    
-    volumes:
-      - production_redis_data:/data
-    
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
 
   celeryworker:
     <<: *django
-    image: strategis_production_celeryworker
+    image: ghcr.io/valerymelou/strategis-api/django:${TAG}
+    pull_policy: always
     command: /start-celeryworker
+    healthcheck:
+      test: [
+          "CMD-SHELL",
+          "/entrypoint celery -A config.celery_app inspect ping -d
+          celery@$(hostname)",
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
 
   celerybeat:
     <<: *django
-    image: strategis_production_celerybeat
+    image: ghcr.io/valerymelou/strategis-api/django:${TAG}
+    pull_policy: always
     command: /start-celerybeat
+    healthcheck:
+      test: ["CMD-SHELL", "/entrypoint celery -A config.celery_app --version"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
 
   flower:
     <<: *django
-    image: strategis_production_flower
+    image: ghcr.io/valerymelou/strategis-api/django:${TAG}
+    pull_policy: always
+    expose:
+      - 5555
     command: /start-flower
+    healthcheck:
+      test: [
+          "CMD-SHELL",
+          'curl -f --user "${CELERY_FLOWER_USER}:${CELERY_FLOWER_PASSWORD}"
+          http://localhost:5555/',
+        ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s

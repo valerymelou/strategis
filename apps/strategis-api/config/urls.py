@@ -1,13 +1,20 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.http import JsonResponse
 from django.urls import include
 from django.urls import path
 from django.views import defaults as default_views
 from drf_spectacular.views import SpectacularAPIView
 from drf_spectacular.views import SpectacularSwaggerView
 
+
+def health_check(_):
+    return JsonResponse({"status": "ok"})
+
+
 urlpatterns = [
+    path("health/", health_check),
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
     *static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT),
