@@ -63,7 +63,7 @@ server.use(
 );
 
 // SPA fallback — serve the locale-specific index.html for all remaining routes
-server.get('*', (req, res) => {
+server.get('/*path', (req, res) => {
   const locale = detectLocale(req);
   res.setHeader('Vary', 'Cookie');
   res.setHeader('Content-Language', locale);
