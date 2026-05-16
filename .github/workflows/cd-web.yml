@@ -76,6 +76,7 @@ jobs:
             ENV_API_ROOT=${{ vars.ENV_API_ROOT}}
             ENV_API_VERSION=${{ vars.ENV_API_VERSION}}
             ENV_API_CONTENT_TYPE=${{ vars.ENV_API_CONTENT_TYPE}}
+            ENV_GOOGLE_MAPS_API_KEY=${{ secrets.ENV_GOOGLE_MAPS_API_KEY }}
             ENV_SENTRY_DSN=${{ secrets.ENV_SENTRY_DSN }}
             SENTRY_AUTH_TOKEN=${{ secrets.SENTRY_AUTH_TOKEN }}
             SENTRY_ORG=codersblend
