@@ -12,6 +12,7 @@ import { AdminPremium, AdminPremiumDetail } from '@strategis/admin/premium';
 import { Layout } from '@strategis/layout';
 import {
   onboardingEntryGuard,
+  profileCompletionGuard,
   profileStepGuard,
   planStepGuard,
   roleStepGuard,
@@ -25,7 +26,7 @@ export const appRoutes: Route[] = [
   {
     path: '',
     component: Layout,
-    canActivate: [authGuard],
+    canActivate: [authGuard, profileCompletionGuard],
     resolve: { theme: themeResolver },
     children: [
       {

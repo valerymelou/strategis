@@ -26,7 +26,7 @@ export class MySubscription implements OnInit {
   readonly isRequesting = signal(false);
 
   readonly tier = computed(
-    () => this.authService.currentUser()?.profile?.tier ?? 'FREE',
+    () => this.authService.currentUser()?.profile?.tier ?? 'free',
   );
   readonly latestRequest = computed(() => this.requests()[0] ?? null);
   readonly hasPendingRequest = computed(() =>

@@ -1343,7 +1343,7 @@
     </unit>
     <unit id="myProfile.badge.free">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:10,14</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:11,16</note>
       </notes>
       <segment>
         <source>Free plan</source>
@@ -1359,15 +1359,15 @@
     </unit>
     <unit id="myProfile.edit.title">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:73,75</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:94,97</note>
       </notes>
       <segment>
-        <source>Edit profile</source>
+        <source> Edit profile </source>
       </segment>
     </unit>
     <unit id="myProfile.editButton">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:21,25</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:23,27</note>
       </notes>
       <segment>
         <source> Edit profile </source>
@@ -1375,7 +1375,7 @@
     </unit>
     <unit id="myProfile.field.address">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:56,58</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:73,75</note>
       </notes>
       <segment>
         <source> Address </source>
@@ -1383,8 +1383,8 @@
     </unit>
     <unit id="myProfile.field.companyReg">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:42,44</note>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:93,95</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:53,55</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:124,126</note>
       </notes>
       <segment>
         <source> Company registration number </source>
@@ -1392,8 +1392,8 @@
     </unit>
     <unit id="myProfile.field.entityType">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:28,30</note>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:79,81</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:33,35</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:104,106</note>
       </notes>
       <segment>
         <source> Entity type </source>
@@ -1401,7 +1401,7 @@
     </unit>
     <unit id="myProfile.field.interventionZone">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:63,65</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:83,85</note>
       </notes>
       <segment>
         <source> Intervention zone </source>
@@ -1409,7 +1409,7 @@
     </unit>
     <unit id="myProfile.field.phone">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:49,51</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:63,65</note>
       </notes>
       <segment>
         <source> Phone </source>
@@ -1417,8 +1417,8 @@
     </unit>
     <unit id="myProfile.field.taxId">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:35,37</note>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:86,88</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:43,45</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:114,116</note>
       </notes>
       <segment>
         <source> Tax ID </source>
@@ -1426,17 +1426,17 @@
     </unit>
     <unit id="myProfile.form.address.label">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:152,155</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:186,189</note>
       </notes>
       <segment>
         <source> Address <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
-            type="other" dispStart="&lt;span class=&quot;ml-1 text-muted-foreground&quot;&gt;"
+            type="other" dispStart="&lt;span class=&quot;text-muted-foreground ml-1&quot;&gt;"
             dispEnd="&lt;/span&gt;">(optional)</pc></source>
       </segment>
     </unit>
     <unit id="myProfile.form.address.placeholder">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:162,164</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:196,198</note>
       </notes>
       <segment>
         <source>Rue de la Paix, Douala</source>
@@ -1444,7 +1444,7 @@
     </unit>
     <unit id="myProfile.form.cancel">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:229,232</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:267,270</note>
       </notes>
       <segment>
         <source> Cancel </source>
@@ -1452,7 +1452,7 @@
     </unit>
     <unit id="myProfile.form.companyName.label">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:113,116</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:144,147</note>
       </notes>
       <segment>
         <source> Company or full name </source>
@@ -1460,7 +1460,7 @@
     </unit>
     <unit id="myProfile.form.companyName.placeholder">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:122,123</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:153,154</note>
       </notes>
       <segment>
         <source>Acme Corp</source>
@@ -1468,17 +1468,17 @@
     </unit>
     <unit id="myProfile.form.interventionZone.label">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:175,178</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:211,214</note>
       </notes>
       <segment>
         <source> Intervention zone <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
-            type="other" dispStart="&lt;span class=&quot;ml-1 text-muted-foreground&quot;&gt;"
+            type="other" dispStart="&lt;span class=&quot;text-muted-foreground ml-1&quot;&gt;"
             dispEnd="&lt;/span&gt;">(optional)</pc></source>
       </segment>
     </unit>
     <unit id="myProfile.form.interventionZone.placeholder">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:184,186</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:220,222</note>
       </notes>
       <segment>
         <source>Littoral, Cameroon</source>
@@ -1486,17 +1486,17 @@
     </unit>
     <unit id="myProfile.form.location.label">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:198,201</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:238,241</note>
       </notes>
       <segment>
         <source> Location <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
-            type="other" dispStart="&lt;span class=&quot;ml-1 text-muted-foreground&quot;&gt;"
+            type="other" dispStart="&lt;span class=&quot;text-muted-foreground ml-1&quot;&gt;"
             dispEnd="&lt;/span&gt;">(optional)</pc></source>
       </segment>
     </unit>
     <unit id="myProfile.form.phone.label">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:136,138</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:170,172</note>
       </notes>
       <segment>
         <source> Phone </source>
@@ -1504,7 +1504,7 @@
     </unit>
     <unit id="myProfile.form.submit.label">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:217,221</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:255,259</note>
       </notes>
       <segment>
         <source>Save changes</source>
@@ -1512,7 +1512,7 @@
     </unit>
     <unit id="myProfile.form.submit.loading">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:215,217</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:253,255</note>
       </notes>
       <segment>
         <source>Saving…</source>
@@ -2814,7 +2814,7 @@
     </unit>
     <unit id="sidebar.item.actorValidation">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:132</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:139</note>
       </notes>
       <segment>
         <source>Actor Validation</source>
@@ -2846,7 +2846,7 @@
     </unit>
     <unit id="sidebar.item.premiumRequests">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:137</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:144</note>
       </notes>
       <segment>
         <source>Premium Requests</source>
@@ -2854,7 +2854,7 @@
     </unit>
     <unit id="sidebar.item.profile">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:107</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:113</note>
       </notes>
       <segment>
         <source>Professional profile</source>
@@ -2862,7 +2862,7 @@
     </unit>
     <unit id="sidebar.item.roles">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:112</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:118</note>
       </notes>
       <segment>
         <source>Actor roles</source>
@@ -2870,7 +2870,7 @@
     </unit>
     <unit id="sidebar.item.subscription">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:117</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:123</note>
       </notes>
       <segment>
         <source>Subscription</source>
@@ -2878,7 +2878,7 @@
     </unit>
     <unit id="sidebar.menu.accountSettings">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.html:94,97</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.html:96,99</note>
       </notes>
       <segment>
         <source>Account settings</source>
@@ -2886,15 +2886,23 @@
     </unit>
     <unit id="sidebar.menu.logout">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.html:101,103</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.html:103,105</note>
       </notes>
       <segment>
         <source>Logout</source>
       </segment>
     </unit>
+    <unit id="sidebar.role.administrator">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.html:125,127</note>
+      </notes>
+      <segment>
+        <source>Administrator</source>
+      </segment>
+    </unit>
     <unit id="sidebar.section.account">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:104</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:110</note>
       </notes>
       <segment>
         <source>ACCOUNT</source>
@@ -2902,7 +2910,7 @@
     </unit>
     <unit id="sidebar.section.admin">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:129</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:136</note>
       </notes>
       <segment>
         <source>ADMINISTRATION</source>
@@ -2926,7 +2934,7 @@
     </unit>
     <unit id="sidebar.tier.free">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:151</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:162</note>
       </notes>
       <segment>
         <source>Free plan</source>
@@ -2934,7 +2942,7 @@
     </unit>
     <unit id="sidebar.tier.premium">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:150</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:161</note>
       </notes>
       <segment>
         <source>Premium</source>

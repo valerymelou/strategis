@@ -25,7 +25,7 @@
         Current Plan
       </h2>
 
-      @if (tier() === 'PREMIUM') {
+      @if (tier() === 'premium') {
       <span uiBadge variant="default" i18n="@@subscription.tier.premium"
         >Premium</span
       >
@@ -36,7 +36,7 @@
       }
     </div>
 
-    @if (tier() === 'PREMIUM' && latestRequest().activatedAt) {
+    @if (tier() === 'premium' && latestRequest().activatedAt) {
     <div class="text-muted-foreground space-y-1 text-sm">
       <p>
         <span i18n="@@subscription.activatedAt">Activated:</span>
@@ -120,7 +120,7 @@
   } } }
 
   <!-- Upgrade CTA (free user, no pending request) -->
-  @if (tier() === 'FREE' && !hasPendingRequest()) {
+  @if (tier() === 'free' && !hasPendingRequest()) {
   <div class="border-border space-y-4 rounded-lg border p-6">
     <div>
       <h3

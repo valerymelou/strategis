@@ -9,7 +9,7 @@ export type EntityType =
   | 'public_institution'
   | 'other';
 
-export type ProfileTier = 'FREE' | 'PREMIUM';
+export type ProfileTier = 'free' | 'premium';
 
 export interface GeoJsonPoint {
   type: 'Point';

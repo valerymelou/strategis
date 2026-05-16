@@ -167,7 +167,7 @@
       </notes>
       <segment state="translated">
         <source>Actor type</source>
-        <target>Type d'acteur</target>
+        <target>Type d&apos;acteur</target>
       </segment>
     </unit>
     <unit id="admin.actors.col.company">
@@ -332,7 +332,7 @@
       </notes>
       <segment state="translated">
         <source> Entity type </source>
-        <target> Type d'entité </target>
+        <target> Type d&apos;entité </target>
       </segment>
     </unit>
     <unit id="admin.actors.error.approveFailed">
@@ -342,7 +342,7 @@
       </notes>
       <segment state="translated">
         <source>Failed to approve actor.</source>
-        <target>Échec de l'approbation de l'acteur.</target>
+        <target>Échec de l&apos;approbation de l&apos;acteur.</target>
       </segment>
     </unit>
     <unit id="admin.actors.error.categoryCFailed">
@@ -352,7 +352,7 @@
       </notes>
       <segment state="translated">
         <source>Failed to update category C approval.</source>
-        <target>Échec de la mise à jour de l'approbation de la catégorie C.</target>
+        <target>Échec de la mise à jour de l&apos;approbation de la catégorie C.</target>
       </segment>
     </unit>
     <unit id="admin.actors.error.complianceFailed">
@@ -372,7 +372,7 @@
       </notes>
       <segment state="translated">
         <source>Failed to load actor.</source>
-        <target>Échec du chargement de l'acteur.</target>
+        <target>Échec du chargement de l&apos;acteur.</target>
       </segment>
     </unit>
     <unit id="admin.actors.error.rejectFailed">
@@ -382,7 +382,7 @@
       </notes>
       <segment state="translated">
         <source>Failed to reject actor.</source>
-        <target>Échec du rejet de l'acteur.</target>
+        <target>Échec du rejet de l&apos;acteur.</target>
       </segment>
     </unit>
     <unit id="admin.actors.error.reliabilityFailed">
@@ -402,7 +402,7 @@
       </notes>
       <segment state="translated">
         <source>Failed to revoke actor.</source>
-        <target>Échec de la révocation de l'acteur.</target>
+        <target>Échec de la révocation de l&apos;acteur.</target>
       </segment>
     </unit>
     <unit id="admin.actors.filter.active">
@@ -635,7 +635,7 @@
       </notes>
       <segment state="translated">
         <source> Review and manage actor registration requests. </source>
-        <target> Examinez et gérez les demandes d'enregistrement d'acteurs. </target>
+        <target> Examinez et gérez les demandes d&apos;enregistrement d&apos;acteurs. </target>
       </segment>
     </unit>
     <unit id="admin.actors.success.approved">
@@ -724,7 +724,7 @@
       </notes>
       <segment state="translated">
         <source> Actor Validation </source>
-        <target> Validation d'acteur </target>
+        <target> Validation d&apos;acteur </target>
       </segment>
     </unit>
     <unit id="admin.actors.view">
@@ -868,7 +868,7 @@
       </notes>
       <segment state="translated">
         <source> Entity type </source>
-        <target> Type d'entité </target>
+        <target> Type d&apos;entité </target>
       </segment>
     </unit>
     <unit id="admin.premium.error.activateFailed">
@@ -878,7 +878,7 @@
       </notes>
       <segment state="translated">
         <source>Failed to activate request.</source>
-        <target>Échec de l'activation de la demande.</target>
+        <target>Échec de l&apos;activation de la demande.</target>
       </segment>
     </unit>
     <unit id="admin.premium.error.loadFailed">
@@ -1240,7 +1240,7 @@
       </notes>
       <segment state="translated">
         <source>Didn&apos;t receive the code?</source>
-        <target>Vous n'avez pas reçu le code ?</target>
+        <target>Vous n&apos;avez pas reçu le code ?</target>
       </segment>
     </unit>
     <unit id="emailVerification.submit.label">
@@ -1473,7 +1473,7 @@
             equivEnd="CLOSE_LINK" type="link"
             dispStart="&lt;a routerLink=&quot;/auth/register&quot; class=&quot;text-foreground ml-1 underline underline-offset-2&quot; &gt;"
             dispEnd="&lt;/a &gt;">Create one</pc></source>
-        <target> Vous n'avez pas de compte ? <pc id="0" equivStart="START_LINK"
+        <target> Vous n&apos;avez pas de compte ? <pc id="0" equivStart="START_LINK"
             equivEnd="CLOSE_LINK" type="link"
             dispStart="&lt;a routerLink=&quot;/auth/register&quot; class=&quot;text-foreground ml-1 underline underline-offset-2&quot; &gt;"
             dispEnd="&lt;/a &gt;">En créer un</pc></target>
@@ -1508,7 +1508,7 @@
     </unit>
     <unit id="myProfile.badge.free">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:10,14</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:11,16</note>
       </notes>
       <segment state="translated">
         <source>Free plan</source>
@@ -1526,16 +1526,16 @@
     </unit>
     <unit id="myProfile.edit.title">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:73,75</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:94,97</note>
       </notes>
       <segment state="translated">
-        <source>Edit profile</source>
-        <target>Modifier le profil</target>
+        <source> Edit profile </source>
+        <target> Modifier le profil </target>
       </segment>
     </unit>
     <unit id="myProfile.editButton">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:21,25</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:23,27</note>
       </notes>
       <segment state="translated">
         <source> Edit profile </source>
@@ -1544,7 +1544,7 @@
     </unit>
     <unit id="myProfile.field.address">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:56,58</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:73,75</note>
       </notes>
       <segment state="translated">
         <source> Address </source>
@@ -1553,36 +1553,36 @@
     </unit>
     <unit id="myProfile.field.companyReg">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:42,44</note>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:93,95</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:53,55</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:124,126</note>
       </notes>
       <segment state="translated">
         <source> Company registration number </source>
-        <target> Numéro d'immatriculation de l'entreprise </target>
+        <target> Numéro d&apos;immatriculation de l&apos;entreprise </target>
       </segment>
     </unit>
     <unit id="myProfile.field.entityType">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:28,30</note>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:79,81</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:33,35</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:104,106</note>
       </notes>
       <segment state="translated">
         <source> Entity type </source>
-        <target> Type d'entité </target>
+        <target> Type d&apos;entité </target>
       </segment>
     </unit>
     <unit id="myProfile.field.interventionZone">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:63,65</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:83,85</note>
       </notes>
       <segment state="translated">
         <source> Intervention zone </source>
-        <target> Zone d'intervention </target>
+        <target> Zone d&apos;intervention </target>
       </segment>
     </unit>
     <unit id="myProfile.field.phone">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:49,51</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:63,65</note>
       </notes>
       <segment state="translated">
         <source> Phone </source>
@@ -1591,8 +1591,8 @@
     </unit>
     <unit id="myProfile.field.taxId">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:35,37</note>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:86,88</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:43,45</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:114,116</note>
       </notes>
       <segment state="translated">
         <source> Tax ID </source>
@@ -1601,11 +1601,11 @@
     </unit>
     <unit id="myProfile.form.address.label">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:152,155</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:186,189</note>
       </notes>
       <segment state="translated">
         <source> Address <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
-            type="other" dispStart="&lt;span class=&quot;ml-1 text-muted-foreground&quot;&gt;"
+            type="other" dispStart="&lt;span class=&quot;text-muted-foreground ml-1&quot;&gt;"
             dispEnd="&lt;/span&gt;">(optional)</pc></source>
         <target> Adresse <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
             type="other" dispStart="&lt;span class=&quot;ml-1 text-muted-foreground&quot;&gt;"
@@ -1614,7 +1614,7 @@
     </unit>
     <unit id="myProfile.form.address.placeholder">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:162,164</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:196,198</note>
       </notes>
       <segment state="translated">
         <source>Rue de la Paix, Douala</source>
@@ -1623,7 +1623,7 @@
     </unit>
     <unit id="myProfile.form.cancel">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:229,232</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:267,270</note>
       </notes>
       <segment state="translated">
         <source> Cancel </source>
@@ -1632,7 +1632,7 @@
     </unit>
     <unit id="myProfile.form.companyName.label">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:113,116</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:144,147</note>
       </notes>
       <segment state="translated">
         <source> Company or full name </source>
@@ -1641,7 +1641,7 @@
     </unit>
     <unit id="myProfile.form.companyName.placeholder">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:122,123</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:153,154</note>
       </notes>
       <segment state="translated">
         <source>Acme Corp</source>
@@ -1650,13 +1650,13 @@
     </unit>
     <unit id="myProfile.form.interventionZone.label">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:175,178</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:211,214</note>
       </notes>
       <segment state="translated">
         <source> Intervention zone <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
-            type="other" dispStart="&lt;span class=&quot;ml-1 text-muted-foreground&quot;&gt;"
+            type="other" dispStart="&lt;span class=&quot;text-muted-foreground ml-1&quot;&gt;"
             dispEnd="&lt;/span&gt;">(optional)</pc></source>
-        <target> Zone d'intervention <pc id="0" equivStart="START_TAG_SPAN"
+        <target> Zone d&apos;intervention <pc id="0" equivStart="START_TAG_SPAN"
             equivEnd="CLOSE_TAG_SPAN" type="other"
             dispStart="&lt;span class=&quot;ml-1 text-muted-foreground&quot;&gt;"
             dispEnd="&lt;/span&gt;">(optionnel)</pc></target>
@@ -1664,7 +1664,7 @@
     </unit>
     <unit id="myProfile.form.interventionZone.placeholder">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:184,186</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:220,222</note>
       </notes>
       <segment state="translated">
         <source>Littoral, Cameroon</source>
@@ -1673,11 +1673,11 @@
     </unit>
     <unit id="myProfile.form.location.label">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:198,201</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:238,241</note>
       </notes>
       <segment state="translated">
         <source> Location <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
-            type="other" dispStart="&lt;span class=&quot;ml-1 text-muted-foreground&quot;&gt;"
+            type="other" dispStart="&lt;span class=&quot;text-muted-foreground ml-1&quot;&gt;"
             dispEnd="&lt;/span&gt;">(optional)</pc></source>
         <target> Localisation <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
             type="other" dispStart="&lt;span class=&quot;ml-1 text-muted-foreground&quot;&gt;"
@@ -1686,7 +1686,7 @@
     </unit>
     <unit id="myProfile.form.phone.label">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:136,138</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:170,172</note>
       </notes>
       <segment state="translated">
         <source> Phone </source>
@@ -1695,7 +1695,7 @@
     </unit>
     <unit id="myProfile.form.submit.label">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:217,221</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:255,259</note>
       </notes>
       <segment state="translated">
         <source>Save changes</source>
@@ -1704,7 +1704,7 @@
     </unit>
     <unit id="myProfile.form.submit.loading">
       <notes>
-        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:215,217</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:253,255</note>
       </notes>
       <segment state="translated">
         <source>Saving…</source>
@@ -1717,7 +1717,7 @@
       </notes>
       <segment state="translated">
         <source>Something went wrong. Please try again.</source>
-        <target>Une erreur s'est produite. Veuillez réessayer.</target>
+        <target>Une erreur s&apos;est produite. Veuillez réessayer.</target>
       </segment>
     </unit>
     <unit id="myProfile.submit.success">
@@ -1792,7 +1792,7 @@
       </notes>
       <segment state="translated">
         <source>✓ Up to 3 projects</source>
-        <target>✓ Jusqu'à 3 projets</target>
+        <target>✓ Jusqu&apos;à 3 projets</target>
       </segment>
     </unit>
     <unit id="onboardingPlan.free.feature2">
@@ -1996,7 +1996,7 @@
       </notes>
       <segment state="translated">
         <source> Company or full name </source>
-        <target> Nom de l'entreprise ou nom complet </target>
+        <target> Nom de l&apos;entreprise ou nom complet </target>
       </segment>
     </unit>
     <unit id="onboardingProfile.companyName.placeholder">
@@ -2016,7 +2016,7 @@
       </notes>
       <segment state="translated">
         <source> This field is required for your entity type. </source>
-        <target> Ce champ est obligatoire pour votre type d'entité. </target>
+        <target> Ce champ est obligatoire pour votre type d&apos;entité. </target>
       </segment>
     </unit>
     <unit id="onboardingProfile.companyRegistrationNumber.label">
@@ -2026,7 +2026,7 @@
       </notes>
       <segment state="translated">
         <source> Company registration number </source>
-        <target> Numéro d'enregistrement de l'entreprise </target>
+        <target> Numéro d&apos;enregistrement de l&apos;entreprise </target>
       </segment>
     </unit>
     <unit id="onboardingProfile.companyRegistrationNumber.placeholder">
@@ -2066,7 +2066,7 @@
       </notes>
       <segment state="translated">
         <source> Entity type </source>
-        <target> Type d'entité </target>
+        <target> Type d&apos;entité </target>
       </segment>
     </unit>
     <unit id="onboardingProfile.entityType.ngo">
@@ -2108,7 +2108,7 @@
         <source> Intervention zone <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
             type="other" dispStart="&lt;span class=&quot;text-muted-foreground ml-1&quot;&gt;"
             dispEnd="&lt;/span&gt;">(optional)</pc></source>
-        <target> Zone d'intervention <pc id="0" equivStart="START_TAG_SPAN"
+        <target> Zone d&apos;intervention <pc id="0" equivStart="START_TAG_SPAN"
             equivEnd="CLOSE_TAG_SPAN" type="other"
             dispStart="&lt;span class=&quot;text-muted-foreground ml-1&quot;&gt;"
             dispEnd="&lt;/span&gt;">(optionnel)</pc></target>
@@ -3065,7 +3065,7 @@
       </notes>
       <segment state="translated">
         <source>Failed to add roles.</source>
-        <target>Impossible d'ajouter les rôles.</target>
+        <target>Impossible d&apos;ajouter les rôles.</target>
       </segment>
     </unit>
     <unit id="roles.error.loadFailed">
@@ -3170,7 +3170,7 @@
     </unit>
     <unit id="sidebar.item.actorValidation">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:132</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:139</note>
       </notes>
       <segment state="translated">
         <source>Actor Validation</source>
@@ -3206,7 +3206,7 @@
     </unit>
     <unit id="sidebar.item.premiumRequests">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:137</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:144</note>
       </notes>
       <segment state="translated">
         <source>Premium Requests</source>
@@ -3215,7 +3215,7 @@
     </unit>
     <unit id="sidebar.item.profile">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:107</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:113</note>
       </notes>
       <segment state="translated">
         <source>Professional profile</source>
@@ -3224,16 +3224,16 @@
     </unit>
     <unit id="sidebar.item.roles">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:112</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:118</note>
       </notes>
       <segment state="translated">
         <source>Actor roles</source>
-        <target>Rôles d'acteur</target>
+        <target>Rôles d&apos;acteur</target>
       </segment>
     </unit>
     <unit id="sidebar.item.subscription">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:117</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:123</note>
       </notes>
       <segment state="translated">
         <source>Subscription</source>
@@ -3242,7 +3242,7 @@
     </unit>
     <unit id="sidebar.menu.accountSettings">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.html:94,97</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.html:96,99</note>
       </notes>
       <segment state="translated">
         <source>Account settings</source>
@@ -3251,16 +3251,25 @@
     </unit>
     <unit id="sidebar.menu.logout">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.html:101,103</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.html:103,105</note>
       </notes>
       <segment state="translated">
         <source>Logout</source>
         <target>Déconnexion</target>
       </segment>
     </unit>
+    <unit id="sidebar.role.administrator">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.html:125,127</note>
+      </notes>
+      <segment state="translated">
+        <source>Administrator</source>
+        <target>Administrateur</target>
+      </segment>
+    </unit>
     <unit id="sidebar.section.account">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:104</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:110</note>
       </notes>
       <segment state="translated">
         <source>ACCOUNT</source>
@@ -3269,7 +3278,7 @@
     </unit>
     <unit id="sidebar.section.admin">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:129</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:136</note>
       </notes>
       <segment state="translated">
         <source>ADMINISTRATION</source>
@@ -3291,12 +3300,12 @@
       </notes>
       <segment state="translated">
         <source> Waste flow orchestration platform </source>
-        <target> Plateforme d'orchestration des flux de déchets </target>
+        <target> Plateforme d&apos;orchestration des flux de déchets </target>
       </segment>
     </unit>
     <unit id="sidebar.tier.free">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:151</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:162</note>
       </notes>
       <segment state="translated">
         <source>Free plan</source>
@@ -3305,7 +3314,7 @@
     </unit>
     <unit id="sidebar.tier.premium">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:150</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:161</note>
       </notes>
       <segment state="translated">
         <source>Premium</source>
@@ -3368,7 +3377,7 @@
       </notes>
       <segment state="translated">
         <source>Failed to load subscription data.</source>
-        <target>Impossible de charger les données d'abonnement.</target>
+        <target>Impossible de charger les données d&apos;abonnement.</target>
       </segment>
     </unit>
     <unit id="subscription.error.upgradeFailed">
@@ -3447,7 +3456,7 @@
       </notes>
       <segment state="translated">
         <source> Your upgrade request is under review. </source>
-        <target> Votre demande de mise à niveau est en cours d'examen. </target>
+        <target> Votre demande de mise à niveau est en cours d&apos;examen. </target>
       </segment>
     </unit>
     <unit id="subscription.status.rejectedTitle">
@@ -3467,7 +3476,7 @@
       </notes>
       <segment state="translated">
         <source> View and manage your current subscription plan. </source>
-        <target> Affichage et gestion de votre plan d'abonnement actuel. </target>
+        <target> Affichage et gestion de votre plan d&apos;abonnement actuel. </target>
       </segment>
     </unit>
     <unit id="subscription.success.upgradeRequested">

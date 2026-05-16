@@ -78,6 +78,37 @@ export const planStepGuard: CanActivateFn = () => {
 };
 
 /**
+ * Ensures users have completed onboarding before accessing the main app.
+ * Admins bypass this check — they never need a profile.
+ * Non-admin users without a profile are redirected to /onboarding/profile.
+ */
+export const profileCompletionGuard: CanActivateFn = () => {
+  const auth = inject(AuthService);
+  const onboarding = inject(OnboardingService);
+  const router = inject(Router);
+
+  if (!auth.isAuthenticated()) {
+    return router.createUrlTree(['/auth/login']);
+  }
+
+  // Admins skip profile requirement
+  if (auth.currentUser()?.isStaff) {
+    return true;
+  }
+
+  const load$ = onboarding.loaded() ? of(void 0) : onboarding.loadState();
+
+  return load$.pipe(
+    map(() => {
+      if (!onboarding.hasProfile()) {
+        return router.createUrlTree(['/onboarding/profile']);
+      }
+      return true;
+    }),
+  );
+};
+
+/**
  * Allows access to /onboarding/role only when profile exists.
  * If actor already exists, redirect to /.
  * If no profile, redirect to /onboarding/profile.

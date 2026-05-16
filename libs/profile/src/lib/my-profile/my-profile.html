@@ -1,13 +1,15 @@
 @if (!showEditForm()) {
 <!-- View mode -->
-<div class="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
+<div class="bg-card text-card-foreground rounded-lg border p-6 shadow-sm">
   <div class="flex items-start justify-between gap-4">
     <div class="flex flex-col gap-1">
       <h2 class="text-xl font-semibold">{{ profile()?.companyName }}</h2>
-      @if (profile()?.tier === 'PREMIUM') {
+      @if (profile()?.tier === 'premium') {
       <span ui-badge i18n="@@myProfile.badge.premium">Premium</span>
       } @else {
-      <span ui-badge variant="secondary" i18n="@@myProfile.badge.free">Free plan</span>
+      <span ui-badge variant="secondary" i18n="@@myProfile.badge.free"
+        >Free plan</span
+      >
       }
     </div>
 
@@ -24,42 +26,60 @@
 
   <dl class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
     <div class="flex flex-col gap-1">
-      <dt class="text-xs font-medium text-muted-foreground" i18n="@@myProfile.field.entityType">
+      <dt
+        class="text-muted-foreground text-xs font-medium"
+        i18n="@@myProfile.field.entityType"
+      >
         Entity type
       </dt>
       <dd class="text-sm">{{ profile()?.entityType }}</dd>
     </div>
 
     <div class="flex flex-col gap-1">
-      <dt class="text-xs font-medium text-muted-foreground" i18n="@@myProfile.field.taxId">
+      <dt
+        class="text-muted-foreground text-xs font-medium"
+        i18n="@@myProfile.field.taxId"
+      >
         Tax ID
       </dt>
       <dd class="text-sm">{{ profile()?.taxIdNumber }}</dd>
     </div>
 
     <div class="flex flex-col gap-1">
-      <dt class="text-xs font-medium text-muted-foreground" i18n="@@myProfile.field.companyReg">
+      <dt
+        class="text-muted-foreground text-xs font-medium"
+        i18n="@@myProfile.field.companyReg"
+      >
         Company registration number
       </dt>
       <dd class="text-sm">{{ profile()?.companyRegistrationNumber || '—' }}</dd>
     </div>
 
     <div class="flex flex-col gap-1">
-      <dt class="text-xs font-medium text-muted-foreground" i18n="@@myProfile.field.phone">
+      <dt
+        class="text-muted-foreground text-xs font-medium"
+        i18n="@@myProfile.field.phone"
+      >
         Phone
       </dt>
       <dd class="text-sm">{{ profile()?.phone || '—' }}</dd>
     </div>
 
     <div class="flex flex-col gap-1">
-      <dt class="text-xs font-medium text-muted-foreground" i18n="@@myProfile.field.address">
+      <dt
+        class="text-muted-foreground text-xs font-medium"
+        i18n="@@myProfile.field.address"
+      >
         Address
       </dt>
       <dd class="text-sm">{{ profile()?.address || '—' }}</dd>
     </div>
 
     <div class="flex flex-col gap-1">
-      <dt class="text-xs font-medium text-muted-foreground" i18n="@@myProfile.field.interventionZone">
+      <dt
+        class="text-muted-foreground text-xs font-medium"
+        i18n="@@myProfile.field.interventionZone"
+      >
         Intervention zone
       </dt>
       <dd class="text-sm">{{ profile()?.interventionZone || '—' }}</dd>
@@ -69,27 +89,38 @@
 
 } @else {
 <!-- Edit mode -->
-<div class="rounded-lg border bg-card text-card-foreground shadow-sm p-6">
-  <h2 class="text-xl font-semibold" i18n="@@myProfile.edit.title">Edit profile</h2>
+<div class="bg-card text-card-foreground rounded-lg border p-6 shadow-sm">
+  <h2 class="text-xl font-semibold" i18n="@@myProfile.edit.title">
+    Edit profile
+  </h2>
 
   <!-- Static non-patchable fields -->
   <dl class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-3">
     <div class="flex flex-col gap-1">
-      <dt class="text-xs font-medium text-muted-foreground" i18n="@@myProfile.field.entityType">
+      <dt
+        class="text-muted-foreground text-xs font-medium"
+        i18n="@@myProfile.field.entityType"
+      >
         Entity type
       </dt>
       <dd class="text-sm">{{ profile()?.entityType }}</dd>
     </div>
 
     <div class="flex flex-col gap-1">
-      <dt class="text-xs font-medium text-muted-foreground" i18n="@@myProfile.field.taxId">
+      <dt
+        class="text-muted-foreground text-xs font-medium"
+        i18n="@@myProfile.field.taxId"
+      >
         Tax ID
       </dt>
       <dd class="text-sm">{{ profile()?.taxIdNumber }}</dd>
     </div>
 
     <div class="flex flex-col gap-1">
-      <dt class="text-xs font-medium text-muted-foreground" i18n="@@myProfile.field.companyReg">
+      <dt
+        class="text-muted-foreground text-xs font-medium"
+        i18n="@@myProfile.field.companyReg"
+      >
         Company registration number
       </dt>
       <dd class="text-sm">{{ profile()?.companyRegistrationNumber || '—' }}</dd>
@@ -107,7 +138,7 @@
     <div class="flex flex-col gap-1.5">
       <label
         for="companyName"
-        class="text-xs font-medium tracking-[0.096px] text-foreground"
+        class="text-foreground text-xs font-medium tracking-[0.096px]"
         i18n="@@myProfile.form.companyName.label"
       >
         Company or full name
@@ -123,21 +154,24 @@
         [class.border-destructive]="companyName.invalid && companyName.touched"
       />
       @if (companyName.hasError('apiError') && companyName.touched) {
-      <p class="text-xs text-destructive">{{ companyName.getError('apiError') }}</p>
+      <p class="text-destructive text-xs">
+        {{ companyName.getError('apiError') }}
+      </p>
       }
     </div>
 
     <!-- Phone -->
     <div class="flex flex-col gap-1.5">
       <label
-        class="text-xs font-medium tracking-[0.096px] text-foreground"
+        class="text-foreground text-xs font-medium tracking-[0.096px]"
         i18n="@@myProfile.form.phone.label"
+        for="phone"
       >
         Phone
       </label>
-      <ui-phone-input formControlName="phone" />
+      <ui-phone-input formControlName="phone" id="phone" />
       @if (phone.hasError('apiError') && phone.touched) {
-      <p class="text-xs text-destructive">{{ phone.getError('apiError') }}</p>
+      <p class="text-destructive text-xs">{{ phone.getError('apiError') }}</p>
       }
     </div>
 
@@ -146,11 +180,11 @@
       <div class="flex flex-1 flex-col gap-1.5">
         <label
           for="address"
-          class="text-xs font-medium tracking-[0.096px] text-foreground"
+          class="text-foreground text-xs font-medium tracking-[0.096px]"
           i18n="@@myProfile.form.address.label"
         >
           Address
-          <span class="ml-1 text-muted-foreground">(optional)</span>
+          <span class="text-muted-foreground ml-1">(optional)</span>
         </label>
         <input
           id="address"
@@ -162,18 +196,20 @@
           placeholder="Rue de la Paix, Douala"
         />
         @if (address.hasError('apiError') && address.touched) {
-        <p class="text-xs text-destructive">{{ address.getError('apiError') }}</p>
+        <p class="text-destructive text-xs">
+          {{ address.getError('apiError') }}
+        </p>
         }
       </div>
 
       <div class="flex flex-1 flex-col gap-1.5">
         <label
           for="interventionZone"
-          class="text-xs font-medium tracking-[0.096px] text-foreground"
+          class="text-foreground text-xs font-medium tracking-[0.096px]"
           i18n="@@myProfile.form.interventionZone.label"
         >
           Intervention zone
-          <span class="ml-1 text-muted-foreground">(optional)</span>
+          <span class="text-muted-foreground ml-1">(optional)</span>
         </label>
         <input
           id="interventionZone"
@@ -183,8 +219,11 @@
           i18n-placeholder="@@myProfile.form.interventionZone.placeholder"
           placeholder="Littoral, Cameroon"
         />
-        @if (interventionZone.hasError('apiError') && interventionZone.touched) {
-        <p class="text-xs text-destructive">{{ interventionZone.getError('apiError') }}</p>
+        @if (interventionZone.hasError('apiError') && interventionZone.touched)
+        {
+        <p class="text-destructive text-xs">
+          {{ interventionZone.getError('apiError') }}
+        </p>
         }
       </div>
     </div>
@@ -192,25 +231,24 @@
     <!-- Location -->
     <div class="flex flex-col gap-1.5">
       <label
-        class="text-xs font-medium tracking-[0.096px] text-foreground"
+        class="text-foreground text-xs font-medium tracking-[0.096px]"
         i18n="@@myProfile.form.location.label"
+        for="location"
       >
         Location
-        <span class="ml-1 text-muted-foreground">(optional)</span>
+        <span class="text-muted-foreground ml-1">(optional)</span>
       </label>
-      <ui-places-autocomplete formControlName="location" />
+      <ui-places-autocomplete formControlName="location" id="location" />
       @if (location.hasError('apiError') && location.touched) {
-      <p class="text-xs text-destructive">{{ location.getError('apiError') }}</p>
+      <p class="text-destructive text-xs">
+        {{ location.getError('apiError') }}
+      </p>
       }
     </div>
 
     <!-- Actions -->
     <div class="flex gap-3">
-      <button
-        type="submit"
-        ui-button
-        [disabled]="isSubmitting()"
-      >
+      <button type="submit" ui-button [disabled]="isSubmitting()">
         @if (isSubmitting()) {
         <span i18n="@@myProfile.form.submit.loading">Saving…</span>
         } @else {

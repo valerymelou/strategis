@@ -100,27 +100,34 @@ export class Sidebar {
         },
       ],
     },
-    {
-      title: $localize`:@@sidebar.section.account:ACCOUNT`,
-      items: [
-        {
-          label: $localize`:@@sidebar.item.profile:Professional profile`,
-          route: '/profile',
-          icon: 'lucideUser',
-        },
-        {
-          label: $localize`:@@sidebar.item.roles:Actor roles`,
-          route: '/roles',
-          icon: 'lucideUsersRound',
-        },
-        {
-          label: $localize`:@@sidebar.item.subscription:Subscription`,
-          route: '/subscription',
-          icon: 'lucideStar',
-        },
-      ],
-    },
   ];
+
+  readonly profileSection = computed<NavSection[]>(() => {
+    if (this.currentUser()?.isStaff) return [];
+
+    return [
+      {
+        title: $localize`:@@sidebar.section.account:ACCOUNT`,
+        items: [
+          {
+            label: $localize`:@@sidebar.item.profile:Professional profile`,
+            route: '/profile',
+            icon: 'lucideUser',
+          },
+          {
+            label: $localize`:@@sidebar.item.roles:Actor roles`,
+            route: '/roles',
+            icon: 'lucideUsersRound',
+          },
+          {
+            label: $localize`:@@sidebar.item.subscription:Subscription`,
+            route: '/subscription',
+            icon: 'lucideStar',
+          },
+        ],
+      },
+    ];
+  });
 
   readonly adminSections = computed<NavSection[]>(() => {
     if (!this.currentUser()?.isStaff) return [];
@@ -143,10 +150,14 @@ export class Sidebar {
     ];
   });
 
-  readonly allSections = computed(() => [...this.sections, ...this.adminSections()]);
+  readonly allSections = computed(() => [
+    ...this.sections,
+    ...this.profileSection(),
+    ...this.adminSections(),
+  ]);
 
   readonly tierLabel = computed(() =>
-    this.currentUser()?.profile?.tier === 'PREMIUM'
+    this.currentUser()?.profile?.tier === 'premium'
       ? $localize`:@@sidebar.tier.premium:Premium`
       : $localize`:@@sidebar.tier.free:Free plan`,
   );
