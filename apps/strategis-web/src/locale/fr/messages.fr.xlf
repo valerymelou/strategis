@@ -1,3 +1,3587 @@
 <xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en" trgLang="fr">
-  <file id="ngi18n" original="ng.template"/>
+  <file id="ngi18n" original="ng.template">
+    <unit id="3885497195825665706">
+      <notes>
+        <note category="location">libs/shared/ui/src/lib/paginator/paginator.html:28</note>
+      </notes>
+      <segment state="translated">
+        <source>Next</source>
+        <target>Suivant</target>
+      </segment>
+    </unit>
+    <unit id="4452427314943113135">
+      <notes>
+        <note category="location">libs/shared/ui/src/lib/paginator/paginator.html:16</note>
+      </notes>
+      <segment state="translated">
+        <source>Previous</source>
+        <target>Précédent</target>
+      </segment>
+    </unit>
+    <unit id="451274430253853039">
+      <notes>
+        <note category="location">libs/shared/ui/src/lib/paginator/paginator.html:4,6</note>
+      </notes>
+      <segment state="translated">
+        <source>Showing <ph id="0" equiv="INTERPOLATION" disp="{{ from() }}" />–<ph id="1"
+            equiv="INTERPOLATION_1" disp="{{ to() }}" /> of <ph id="2" equiv="INTERPOLATION_2"
+            disp="{{ count() }}" /> results</source>
+        <target>Affichage <ph id="0" equiv="INTERPOLATION" disp="{{ from() }}" />–<ph id="1"
+            equiv="INTERPOLATION_1" disp="{{ to() }}" /> sur <ph id="2" equiv="INTERPOLATION_2"
+            disp="{{ count() }}" /> résultats</target>
+      </segment>
+    </unit>
+    <unit id="6453098595803131790">
+      <notes>
+        <note category="location">libs/shared/ui/src/lib/paginator/paginator.html:19,21</note>
+      </notes>
+      <segment state="translated">
+        <source>Page <ph id="0" equiv="INTERPOLATION" disp="{{ page() }}" /> of <ph id="1"
+            equiv="INTERPOLATION_1" disp="{{ pages() }}" /></source>
+        <target>Page <ph id="0" equiv="INTERPOLATION" disp="{{ page() }}" /> sur <ph id="1"
+            equiv="INTERPOLATION_1" disp="{{ pages() }}" /></target>
+      </segment>
+    </unit>
+    <unit id="actor.status.active">
+      <notes>
+        <note category="location">libs/profiles/data-access/src/lib/actor.ts:77</note>
+      </notes>
+      <segment state="translated">
+        <source>Active</source>
+        <target>Actif</target>
+      </segment>
+    </unit>
+    <unit id="actor.status.awaitingDocuments">
+      <notes>
+        <note category="location">libs/profiles/data-access/src/lib/actor.ts:76</note>
+      </notes>
+      <segment state="translated">
+        <source>Awaiting docs</source>
+        <target>En attente de documents</target>
+      </segment>
+    </unit>
+    <unit id="actor.status.pending">
+      <notes>
+        <note category="location">libs/profiles/data-access/src/lib/actor.ts:75</note>
+      </notes>
+      <segment state="translated">
+        <source>Pending</source>
+        <target>En attente</target>
+      </segment>
+    </unit>
+    <unit id="actor.status.rejected">
+      <notes>
+        <note category="location">libs/profiles/data-access/src/lib/actor.ts:78</note>
+      </notes>
+      <segment state="translated">
+        <source>Rejected</source>
+        <target>Rejeté</target>
+      </segment>
+    </unit>
+    <unit id="actor.status.revoked">
+      <notes>
+        <note category="location">libs/profiles/data-access/src/lib/actor.ts:79</note>
+      </notes>
+      <segment state="translated">
+        <source>Revoked</source>
+        <target>Révoqué</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.actions">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:178,180</note>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:242,244</note>
+      </notes>
+      <segment state="translated">
+        <source> Actions </source>
+        <target> Actions </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.address">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:110,112</note>
+      </notes>
+      <segment state="translated">
+        <source> Address </source>
+        <target> Adresse </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.approve">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:189,192</note>
+      </notes>
+      <segment state="translated">
+        <source> Approve </source>
+        <target> Approuver </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.backToList">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:8,12</note>
+      </notes>
+      <segment state="translated">
+        <source>Back to actors</source>
+        <target>Retour aux acteurs</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.cancel">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:229,230</note>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:281,282</note>
+      </notes>
+      <segment state="translated">
+        <source> Cancel </source>
+        <target> Annuler </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.categoryC">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:351,353</note>
+      </notes>
+      <segment state="translated">
+        <source> Category C </source>
+        <target> Catégorie C </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.categoryCLabel">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:364,366</note>
+      </notes>
+      <segment state="translated">
+        <source> Approved for category C </source>
+        <target> Approuvé pour la catégorie C </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.col.actorType">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.html:33,34</note>
+      </notes>
+      <segment state="translated">
+        <source>Actor type</source>
+        <target>Type d'acteur</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.col.company">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.html:32,33</note>
+      </notes>
+      <segment state="translated">
+        <source>Company</source>
+        <target>Entreprise</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.col.documents">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.html:35,36</note>
+      </notes>
+      <segment state="translated">
+        <source>Documents</source>
+        <target>Documents</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.col.status">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.html:34,35</note>
+      </notes>
+      <segment state="translated">
+        <source>Status</source>
+        <target>Statut</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.col.submitted">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.html:36,38</note>
+      </notes>
+      <segment state="translated">
+        <source>Submitted</source>
+        <target>Soumis</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.compliance">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:323,325</note>
+      </notes>
+      <segment state="translated">
+        <source> Compliance </source>
+        <target> Conformité </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.compliance.approved">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:55</note>
+      </notes>
+      <segment state="translated">
+        <source>Approved</source>
+        <target>Approuvé</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.compliance.atRisk">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:58</note>
+      </notes>
+      <segment state="translated">
+        <source>At risk</source>
+        <target>À risque</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.compliance.compliant">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:57</note>
+      </notes>
+      <segment state="translated">
+        <source>Compliant</source>
+        <target>Conforme</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.compliance.nonCompliant">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:59</note>
+      </notes>
+      <segment state="translated">
+        <source>Non-compliant</source>
+        <target>Non conforme</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.compliance.validated">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:56</note>
+      </notes>
+      <segment state="translated">
+        <source>Validated</source>
+        <target>Validé</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.confirmReject">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:221,223</note>
+      </notes>
+      <segment state="translated">
+        <source> Confirm rejection </source>
+        <target> Confirmer le rejet </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.confirmRevoke">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:273,275</note>
+      </notes>
+      <segment state="translated">
+        <source> Confirm revocation </source>
+        <target> Confirmer la révocation </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.docDefaultLabel">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:40</note>
+      </notes>
+      <segment state="translated">
+        <source>Document</source>
+        <target>Document</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.documents">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:125,127</note>
+      </notes>
+      <segment state="translated">
+        <source> Documents </source>
+        <target> Documents </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.download">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:158,159</note>
+      </notes>
+      <segment state="translated">
+        <source>Open</source>
+        <target>Ouvrir</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.empty">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.html:55,56</note>
+      </notes>
+      <segment state="translated">
+        <source> No actors found. </source>
+        <target> Aucun acteur trouvé. </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.entityType">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:86,88</note>
+      </notes>
+      <segment state="translated">
+        <source> Entity type </source>
+        <target> Type d'entité </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.error.approveFailed">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:97</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to approve actor.</source>
+        <target>Échec de l'approbation de l'acteur.</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.error.categoryCFailed">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:192</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to update category C approval.</source>
+        <target>Échec de la mise à jour de l'approbation de la catégorie C.</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.error.complianceFailed">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:173</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to update compliance level.</source>
+        <target>Échec de la mise à jour du niveau de conformité.</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.error.loadFailed">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:82</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to load actor.</source>
+        <target>Échec du chargement de l'acteur.</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.error.rejectFailed">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:116</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to reject actor.</source>
+        <target>Échec du rejet de l'acteur.</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.error.reliabilityFailed">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:154</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to update reliability level.</source>
+        <target>Échec de la mise à jour du niveau de fiabilité.</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.error.revokeFailed">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:135</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to revoke actor.</source>
+        <target>Échec de la révocation de l'acteur.</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.filter.active">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.ts:55</note>
+      </notes>
+      <segment state="translated">
+        <source>Active</source>
+        <target>Actif</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.filter.all">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.ts:52</note>
+      </notes>
+      <segment state="translated">
+        <source>All statuses</source>
+        <target>Tous les statuts</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.filter.awaitingDocuments">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.ts:54</note>
+      </notes>
+      <segment state="translated">
+        <source>Awaiting documents</source>
+        <target>En attente de documents</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.filter.pending">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.ts:53</note>
+      </notes>
+      <segment state="translated">
+        <source>Pending</source>
+        <target>En attente</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.filter.rejected">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.ts:56</note>
+      </notes>
+      <segment state="translated">
+        <source>Rejected</source>
+        <target>Rejeté</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.filter.revoked">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.ts:57</note>
+      </notes>
+      <segment state="translated">
+        <source>Revoked</source>
+        <target>Révoqué</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.noDocuments">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:132,134</note>
+      </notes>
+      <segment state="translated">
+        <source> No documents uploaded yet. </source>
+        <target> Aucun document téléchargé. </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.notFound">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:54,57</note>
+      </notes>
+      <segment state="translated">
+        <source> Actor not found. </source>
+        <target> Acteur non trouvé. </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.phone">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:102,104</note>
+      </notes>
+      <segment state="translated">
+        <source> Phone </source>
+        <target> Téléphone </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.profile">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:81,83</note>
+      </notes>
+      <segment state="translated">
+        <source> Profile </source>
+        <target> Profil </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.reject">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:201,203</note>
+      </notes>
+      <segment state="translated">
+        <source> Reject </source>
+        <target> Rejeter </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.rejectPlaceholder">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:209,210</note>
+      </notes>
+      <segment state="translated">
+        <source>Reason for rejection…</source>
+        <target>Raison du rejet…</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.reliability">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:295,297</note>
+      </notes>
+      <segment state="translated">
+        <source> Reliability </source>
+        <target> Fiabilité </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.reliability.certified">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:46</note>
+      </notes>
+      <segment state="translated">
+        <source>Certified</source>
+        <target>Certifié</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.reliability.declared">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:49</note>
+      </notes>
+      <segment state="translated">
+        <source>Declared</source>
+        <target>Déclaré</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.reliability.notValidated">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:50</note>
+      </notes>
+      <segment state="translated">
+        <source>Not validated</source>
+        <target>Non validé</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.reliability.validated">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:48</note>
+      </notes>
+      <segment state="translated">
+        <source>Validated</source>
+        <target>Validé</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.reliability.validatedGoodHistory">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:47</note>
+      </notes>
+      <segment state="translated">
+        <source>Validated — Good history</source>
+        <target>Validé — Bon historique</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.required">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:148,150</note>
+      </notes>
+      <segment state="translated">
+        <source>Required</source>
+        <target>Obligatoire</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.revoke">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:253,255</note>
+      </notes>
+      <segment state="translated">
+        <source> Revoke </source>
+        <target> Révoquer </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.revokePlaceholder">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:261,262</note>
+      </notes>
+      <segment state="translated">
+        <source>Reason for revocation…</source>
+        <target>Raison de la révocation…</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.saveCompliance">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:341,345</note>
+      </notes>
+      <segment state="translated">
+        <source> Save compliance </source>
+        <target> Enregistrer la conformité </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.saveReliability">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:313,317</note>
+      </notes>
+      <segment state="translated">
+        <source> Save reliability </source>
+        <target> Enregistrer la fiabilité </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.subtitle">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.html:9,12</note>
+      </notes>
+      <segment state="translated">
+        <source> Review and manage actor registration requests. </source>
+        <target> Examinez et gérez les demandes d'enregistrement d'acteurs. </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.success.approved">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:93</note>
+      </notes>
+      <segment state="translated">
+        <source>Actor approved successfully.</source>
+        <target>Acteur approuvé avec succès.</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.success.categoryC">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:187</note>
+      </notes>
+      <segment state="translated">
+        <source>Category C approved.</source>
+        <target>Catégorie C approuvée.</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.success.categoryCRemoved">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:188</note>
+      </notes>
+      <segment state="translated">
+        <source>Category C approval removed.</source>
+        <target>Approbation de la catégorie C supprimée.</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.success.complianceUpdated">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:170</note>
+      </notes>
+      <segment state="translated">
+        <source>Compliance level updated.</source>
+        <target>Niveau de conformité mis à jour.</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.success.rejected">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:112</note>
+      </notes>
+      <segment state="translated">
+        <source>Actor rejected.</source>
+        <target>Acteur rejeté.</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.success.reliabilityUpdated">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:151</note>
+      </notes>
+      <segment state="translated">
+        <source>Reliability level updated.</source>
+        <target>Niveau de fiabilité mis à jour.</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.success.revoked">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:131</note>
+      </notes>
+      <segment state="translated">
+        <source>Actor revoked.</source>
+        <target>Acteur révoqué.</target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.taxId">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:94,96</note>
+      </notes>
+      <segment state="translated">
+        <source> Tax ID </source>
+        <target> Numéro fiscal </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.title">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.html:6,8</note>
+      </notes>
+      <segment state="translated">
+        <source> Actor Validation </source>
+        <target> Validation d'acteur </target>
+      </segment>
+    </unit>
+    <unit id="admin.actors.view">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.html:80,81</note>
+      </notes>
+      <segment state="translated">
+        <source>View</source>
+        <target>Afficher</target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.actions">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:191,194</note>
+      </notes>
+      <segment state="translated">
+        <source> Actions </source>
+        <target> Actions </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.activate">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:242,245</note>
+      </notes>
+      <segment state="translated">
+        <source> Activate </source>
+        <target> Activer </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.activatedAt">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:143,145</note>
+      </notes>
+      <segment state="translated">
+        <source> Activated </source>
+        <target> Activé </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.annual">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:228,229</note>
+      </notes>
+      <segment state="translated">
+        <source> Annual (365 days) </source>
+        <target> Annuel (365 jours) </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.backToList">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:8,12</note>
+      </notes>
+      <segment state="translated">
+        <source>Back to premium requests</source>
+        <target>Retour aux demandes premium</target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.cancel">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:282,283</note>
+      </notes>
+      <segment state="translated">
+        <source> Cancel </source>
+        <target> Annuler </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.col.company">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.html:30,31</note>
+      </notes>
+      <segment state="translated">
+        <source>Company</source>
+        <target>Entreprise</target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.col.requested">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.html:32,33</note>
+      </notes>
+      <segment state="translated">
+        <source>Requested</source>
+        <target>Demandé</target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.col.status">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.html:33,35</note>
+      </notes>
+      <segment state="translated">
+        <source>Status</source>
+        <target>Statut</target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.col.tier">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.html:31,32</note>
+      </notes>
+      <segment state="translated">
+        <source>Current tier</source>
+        <target>Niveau actuel</target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.confirmReject">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:274,276</note>
+      </notes>
+      <segment state="translated">
+        <source> Confirm rejection </source>
+        <target> Confirmer le refus </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.currentTier">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:106,108</note>
+      </notes>
+      <segment state="translated">
+        <source> Current tier </source>
+        <target> Niveau actuel </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.empty">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.html:52,53</note>
+      </notes>
+      <segment state="translated">
+        <source> No premium requests found. </source>
+        <target> Aucune demande premium trouvée. </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.entityType">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:79,81</note>
+      </notes>
+      <segment state="translated">
+        <source> Entity type </source>
+        <target> Type d'entité </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.error.activateFailed">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.ts:74</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to activate request.</source>
+        <target>Échec de l'activation de la demande.</target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.error.loadFailed">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.ts:57</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to load request.</source>
+        <target>Échec du chargement de la demande.</target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.error.rejectFailed">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.ts:93</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to reject request.</source>
+        <target>Échec du rejet de la demande.</target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.expiresAt">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:152,154</note>
+      </notes>
+      <segment state="translated">
+        <source> Expires </source>
+        <target> Expire </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.filter.activated">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.ts:55</note>
+      </notes>
+      <segment state="translated">
+        <source>Activated</source>
+        <target>Activé</target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.filter.all">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.ts:53</note>
+      </notes>
+      <segment state="translated">
+        <source>All statuses</source>
+        <target>Tous les statuts</target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.filter.expired">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.ts:57</note>
+      </notes>
+      <segment state="translated">
+        <source>Expired</source>
+        <target>Expiré</target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.filter.pending">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.ts:54</note>
+      </notes>
+      <segment state="translated">
+        <source>Pending</source>
+        <target>En attente</target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.filter.rejected">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.ts:56</note>
+      </notes>
+      <segment state="translated">
+        <source>Rejected</source>
+        <target>Rejeté</target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.history">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:125,127</note>
+      </notes>
+      <segment state="translated">
+        <source> History </source>
+        <target> Historique </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.monthly">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:214,215</note>
+      </notes>
+      <segment state="translated">
+        <source> Monthly (30 days) </source>
+        <target> Mensuel (30 jours) </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.noActions">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:294,297</note>
+      </notes>
+      <segment state="translated">
+        <source> No actions available for this request. </source>
+        <target> Aucune action disponible pour cette demande. </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.notFound">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:45,48</note>
+      </notes>
+      <segment state="translated">
+        <source> Request not found. </source>
+        <target> Demande non trouvée. </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.phone">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:95,97</note>
+      </notes>
+      <segment state="translated">
+        <source> Phone </source>
+        <target> Téléphone </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.plan">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:131,133</note>
+      </notes>
+      <segment state="translated">
+        <source> Plan </source>
+        <target> Plan </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.profile">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:74,76</note>
+      </notes>
+      <segment state="translated">
+        <source> Profile </source>
+        <target> Profil </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.reject">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:254,256</note>
+      </notes>
+      <segment state="translated">
+        <source> Reject </source>
+        <target> Rejeter </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.rejectedAt">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:161,163</note>
+      </notes>
+      <segment state="translated">
+        <source> Rejected </source>
+        <target> Rejeté </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.rejectionReason">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:173,175</note>
+      </notes>
+      <segment state="translated">
+        <source> Rejection reason </source>
+        <target> Motif du rejet </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.rejectPlaceholder">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:262,263</note>
+      </notes>
+      <segment state="translated">
+        <source>Reason for rejection…</source>
+        <target>Raison du rejet…</target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.selectPlan">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:200,202</note>
+      </notes>
+      <segment state="translated">
+        <source> Select plan </source>
+        <target> Sélectionner un plan </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.subtitle">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.html:8,12</note>
+      </notes>
+      <segment state="translated">
+        <source> Review and manage premium upgrade requests. </source>
+        <target> Vérifiez et gérez les demandes de mise à niveau premium. </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.success.activated">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.ts:70</note>
+      </notes>
+      <segment state="translated">
+        <source>Premium request activated.</source>
+        <target>Demande premium activée.</target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.success.rejected">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.ts:89</note>
+      </notes>
+      <segment state="translated">
+        <source>Premium request rejected.</source>
+        <target>Demande premium rejetée.</target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.taxId">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:87,89</note>
+      </notes>
+      <segment state="translated">
+        <source> Tax ID </source>
+        <target> Numéro fiscal </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.title">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.html:5,7</note>
+      </notes>
+      <segment state="translated">
+        <source> Premium Requests </source>
+        <target> Demandes premium </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.upgradeRequest">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:58,61</note>
+      </notes>
+      <segment state="translated">
+        <source> Premium upgrade request </source>
+        <target> Demande de mise à niveau premium </target>
+      </segment>
+    </unit>
+    <unit id="admin.premium.view">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.html:76,77</note>
+      </notes>
+      <segment state="translated">
+        <source>View</source>
+        <target>Afficher</target>
+      </segment>
+    </unit>
+    <unit id="auth.layout.brand">
+      <notes>
+        <note category="location">libs/auth/layout/src/lib/auth-layout/auth-layout.html:18,22</note>
+      </notes>
+      <segment state="translated">
+        <source>Strategis Flow</source>
+        <target>Strategis Flow</target>
+      </segment>
+    </unit>
+    <unit id="auth.layout.description">
+      <notes>
+        <note category="location">libs/auth/layout/src/lib/auth-layout/auth-layout.html:37,41</note>
+      </notes>
+      <segment state="translated">
+        <source> For producers, collectors, transporters, sorters, recyclers, processors and waste
+          eliminators in the sector. </source>
+        <target> Pour les producteurs, collecteurs, transporteurs, trieurs, recycleurs,
+          transformateurs et éliminateurs de déchets du secteur. </target>
+      </segment>
+    </unit>
+    <unit id="auth.layout.tagline.italic">
+      <notes>
+        <note category="location">libs/auth/layout/src/lib/auth-layout/auth-layout.html:31,34</note>
+      </notes>
+      <segment state="translated">
+        <source>for the sector</source>
+        <target>pour le secteur</target>
+      </segment>
+    </unit>
+    <unit id="emailVerification.code.error">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.html:38,43</note>
+      </notes>
+      <segment state="translated">
+        <source> Please enter the 6-digit code. </source>
+        <target> Veuillez entrer le code à 6 chiffres. </target>
+      </segment>
+    </unit>
+    <unit id="emailVerification.error.invalid">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.ts:109</note>
+      </notes>
+      <segment state="translated">
+        <source>Invalid or expired code. Please try again.</source>
+        <target>Code invalide ou expiré. Veuillez réessayer.</target>
+      </segment>
+    </unit>
+    <unit id="emailVerification.error.resend">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.ts:131</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to resend code. Please try again.</source>
+        <target>Impossible de renvoyer le code. Veuillez réessayer.</target>
+      </segment>
+    </unit>
+    <unit id="emailVerification.resend.countdown">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.html:61,63</note>
+      </notes>
+      <segment state="translated">
+        <source> Resend code in <ph id="0" equiv="INTERPOLATION" disp="{{ resendCountdown() }}" />s </source>
+        <target> Renvoyer le code dans <ph id="0" equiv="INTERPOLATION"
+            disp="{{ resendCountdown() }}" />s </target>
+      </segment>
+    </unit>
+    <unit id="emailVerification.resend.label">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.html:76,81</note>
+      </notes>
+      <segment state="translated">
+        <source>Resend</source>
+        <target>Renvoyer</target>
+      </segment>
+    </unit>
+    <unit id="emailVerification.resend.loading">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.html:74,76</note>
+      </notes>
+      <segment state="translated">
+        <source>Sending…</source>
+        <target>Envoi…</target>
+      </segment>
+    </unit>
+    <unit id="emailVerification.resend.prompt">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.html:65,69</note>
+      </notes>
+      <segment state="translated">
+        <source>Didn&apos;t receive the code?</source>
+        <target>Vous n'avez pas reçu le code ?</target>
+      </segment>
+    </unit>
+    <unit id="emailVerification.submit.label">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.html:52,57</note>
+      </notes>
+      <segment state="translated">
+        <source>Verify →</source>
+        <target>Vérifier →</target>
+      </segment>
+    </unit>
+    <unit id="emailVerification.submit.loading">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.html:50,52</note>
+      </notes>
+      <segment state="translated">
+        <source>Verifying…</source>
+        <target>Vérification…</target>
+      </segment>
+    </unit>
+    <unit id="emailVerification.subtitle">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.html:12,13</note>
+      </notes>
+      <segment state="translated">
+        <source>We sent a 6-digit code to</source>
+        <target>Nous avons envoyé un code à 6 chiffres à</target>
+      </segment>
+    </unit>
+    <unit id="emailVerification.title">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.html:7,11</note>
+      </notes>
+      <segment state="translated">
+        <source> Verify your email </source>
+        <target> Vérifiez votre e-mail </target>
+      </segment>
+    </unit>
+    <unit id="forgotPassword.email.error">
+      <notes>
+        <note category="location">
+          libs/auth/forgot-password/src/lib/forgot-password/forgot-password.html:60,65</note>
+      </notes>
+      <segment state="translated">
+        <source> Please enter a valid email address. </source>
+        <target> Veuillez entrer une adresse e-mail valide. </target>
+      </segment>
+    </unit>
+    <unit id="forgotPassword.email.label">
+      <notes>
+        <note category="location">
+          libs/auth/forgot-password/src/lib/forgot-password/forgot-password.html:46,49</note>
+      </notes>
+      <segment state="translated">
+        <source> Email address </source>
+        <target> Adresse e-mail </target>
+      </segment>
+    </unit>
+    <unit id="forgotPassword.email.placeholder">
+      <notes>
+        <note category="location">
+          libs/auth/forgot-password/src/lib/forgot-password/forgot-password.html:55,56</note>
+      </notes>
+      <segment state="translated">
+        <source>name@company.com</source>
+        <target>nom@entreprise.com</target>
+      </segment>
+    </unit>
+    <unit id="forgotPassword.login.prompt">
+      <notes>
+        <note category="location">
+          libs/auth/forgot-password/src/lib/forgot-password/forgot-password.html:85,93</note>
+      </notes>
+      <segment state="translated">
+        <source> Remember your password? <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK"
+            type="link"
+            dispStart="&lt;a routerLink=&quot;/auth/login&quot; class=&quot;text-foreground ml-1 underline underline-offset-2&quot; &gt;"
+            dispEnd="&lt;/a &gt;">Sign in</pc></source>
+        <target> Vous vous souvenez de votre mot de passe ? <pc id="0" equivStart="START_LINK"
+            equivEnd="CLOSE_LINK" type="link"
+            dispStart="&lt;a routerLink=&quot;/auth/login&quot; class=&quot;text-foreground ml-1 underline underline-offset-2&quot; &gt;"
+            dispEnd="&lt;/a &gt;">Se connecter</pc></target>
+      </segment>
+    </unit>
+    <unit id="forgotPassword.submit.label">
+      <notes>
+        <note category="location">
+          libs/auth/forgot-password/src/lib/forgot-password/forgot-password.html:75,80</note>
+      </notes>
+      <segment state="translated">
+        <source>Send reset link →</source>
+        <target>Envoyer le lien de réinitialisation →</target>
+      </segment>
+    </unit>
+    <unit id="forgotPassword.submit.loading">
+      <notes>
+        <note category="location">
+          libs/auth/forgot-password/src/lib/forgot-password/forgot-password.html:73,75</note>
+      </notes>
+      <segment state="translated">
+        <source>Sending…</source>
+        <target>Envoi en cours…</target>
+      </segment>
+    </unit>
+    <unit id="forgotPassword.subtitle">
+      <notes>
+        <note category="location">
+          libs/auth/forgot-password/src/lib/forgot-password/forgot-password.html:30,34</note>
+      </notes>
+      <segment state="translated">
+        <source> Enter your email address and we&apos;ll send you a link to reset your password. </source>
+        <target> Entrez votre adresse e-mail et nous vous enverrons un lien pour réinitialiser votre
+          mot de passe. </target>
+      </segment>
+    </unit>
+    <unit id="forgotPassword.success.backToLogin">
+      <notes>
+        <note category="location">
+          libs/auth/forgot-password/src/lib/forgot-password/forgot-password.html:22,27</note>
+      </notes>
+      <segment state="translated">
+        <source> Back to sign in </source>
+        <target> Retour à la connexion </target>
+      </segment>
+    </unit>
+    <unit id="forgotPassword.success.message">
+      <notes>
+        <note category="location">
+          libs/auth/forgot-password/src/lib/forgot-password/forgot-password.html:14,18</note>
+      </notes>
+      <segment state="translated">
+        <source> If an account exists for that email address, we&apos;ve sent a password reset link.
+          Check your inbox (and spam folder). </source>
+        <target> Si un compte existe pour cette adresse e-mail, nous avons envoyé un lien de
+          réinitialisation de mot de passe. Vérifiez votre boîte de réception (et dossier spam). </target>
+      </segment>
+    </unit>
+    <unit id="forgotPassword.title">
+      <notes>
+        <note category="location">
+          libs/auth/forgot-password/src/lib/forgot-password/forgot-password.html:7,11</note>
+      </notes>
+      <segment state="translated">
+        <source> Reset your password </source>
+        <target> Réinitialiser votre mot de passe </target>
+      </segment>
+    </unit>
+    <unit id="login.email.error">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:38,41</note>
+      </notes>
+      <segment state="translated">
+        <source> Please enter a valid email address. </source>
+        <target> Veuillez entrer une adresse e-mail valide. </target>
+      </segment>
+    </unit>
+    <unit id="login.email.label">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:24,26</note>
+      </notes>
+      <segment state="translated">
+        <source> Email address </source>
+        <target> Adresse e-mail </target>
+      </segment>
+    </unit>
+    <unit id="login.email.placeholder">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:33,34</note>
+      </notes>
+      <segment state="translated">
+        <source>name@company.com</source>
+        <target>nom@entreprise.com</target>
+      </segment>
+    </unit>
+    <unit id="login.error.invalidCredentials">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.ts:68</note>
+      </notes>
+      <segment state="translated">
+        <source>Invalid email or password.</source>
+        <target>E-mail ou mot de passe invalide.</target>
+      </segment>
+    </unit>
+    <unit id="login.password.error">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:73,76</note>
+      </notes>
+      <segment state="translated">
+        <source> Password is required. </source>
+        <target> Le mot de passe est obligatoire. </target>
+      </segment>
+    </unit>
+    <unit id="login.password.forgot">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:58,61</note>
+      </notes>
+      <segment state="translated">
+        <source> Forgot password? </source>
+        <target> Mot de passe oublié ? </target>
+      </segment>
+    </unit>
+    <unit id="login.password.label">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:51,53</note>
+      </notes>
+      <segment state="translated">
+        <source> Password </source>
+        <target> Mot de passe </target>
+      </segment>
+    </unit>
+    <unit id="login.password.placeholder">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:68,69</note>
+      </notes>
+      <segment state="translated">
+        <source>•••••••••••••••</source>
+        <target>•••••••••••••••</target>
+      </segment>
+    </unit>
+    <unit id="login.register.prompt">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:107,114</note>
+      </notes>
+      <segment state="translated">
+        <source> Don&apos;t have an account? <pc id="0" equivStart="START_LINK"
+            equivEnd="CLOSE_LINK" type="link"
+            dispStart="&lt;a routerLink=&quot;/auth/register&quot; class=&quot;text-foreground ml-1 underline underline-offset-2&quot; &gt;"
+            dispEnd="&lt;/a &gt;">Create one</pc></source>
+        <target> Vous n'avez pas de compte ? <pc id="0" equivStart="START_LINK"
+            equivEnd="CLOSE_LINK" type="link"
+            dispStart="&lt;a routerLink=&quot;/auth/register&quot; class=&quot;text-foreground ml-1 underline underline-offset-2&quot; &gt;"
+            dispEnd="&lt;/a &gt;">En créer un</pc></target>
+      </segment>
+    </unit>
+    <unit id="login.submit.label">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:97,100</note>
+      </notes>
+      <segment state="translated">
+        <source>Sign in →</source>
+        <target>Se connecter →</target>
+      </segment>
+    </unit>
+    <unit id="login.submit.loading">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:95,97</note>
+      </notes>
+      <segment state="translated">
+        <source>Signing in…</source>
+        <target>Connexion en cours…</target>
+      </segment>
+    </unit>
+    <unit id="login.title">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:7,10</note>
+      </notes>
+      <segment state="translated">
+        <source> Sign in </source>
+        <target> Se connecter </target>
+      </segment>
+    </unit>
+    <unit id="myProfile.badge.free">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:10,14</note>
+      </notes>
+      <segment state="translated">
+        <source>Free plan</source>
+        <target>Plan gratuit</target>
+      </segment>
+    </unit>
+    <unit id="myProfile.badge.premium">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:8,10</note>
+      </notes>
+      <segment state="translated">
+        <source>Premium</source>
+        <target>Premium</target>
+      </segment>
+    </unit>
+    <unit id="myProfile.edit.title">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:73,75</note>
+      </notes>
+      <segment state="translated">
+        <source>Edit profile</source>
+        <target>Modifier le profil</target>
+      </segment>
+    </unit>
+    <unit id="myProfile.editButton">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:21,25</note>
+      </notes>
+      <segment state="translated">
+        <source> Edit profile </source>
+        <target> Modifier le profil </target>
+      </segment>
+    </unit>
+    <unit id="myProfile.field.address">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:56,58</note>
+      </notes>
+      <segment state="translated">
+        <source> Address </source>
+        <target> Adresse </target>
+      </segment>
+    </unit>
+    <unit id="myProfile.field.companyReg">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:42,44</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:93,95</note>
+      </notes>
+      <segment state="translated">
+        <source> Company registration number </source>
+        <target> Numéro d'immatriculation de l'entreprise </target>
+      </segment>
+    </unit>
+    <unit id="myProfile.field.entityType">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:28,30</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:79,81</note>
+      </notes>
+      <segment state="translated">
+        <source> Entity type </source>
+        <target> Type d'entité </target>
+      </segment>
+    </unit>
+    <unit id="myProfile.field.interventionZone">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:63,65</note>
+      </notes>
+      <segment state="translated">
+        <source> Intervention zone </source>
+        <target> Zone d'intervention </target>
+      </segment>
+    </unit>
+    <unit id="myProfile.field.phone">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:49,51</note>
+      </notes>
+      <segment state="translated">
+        <source> Phone </source>
+        <target> Téléphone </target>
+      </segment>
+    </unit>
+    <unit id="myProfile.field.taxId">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:35,37</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:86,88</note>
+      </notes>
+      <segment state="translated">
+        <source> Tax ID </source>
+        <target> Numéro fiscal </target>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.address.label">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:152,155</note>
+      </notes>
+      <segment state="translated">
+        <source> Address <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
+            type="other" dispStart="&lt;span class=&quot;ml-1 text-muted-foreground&quot;&gt;"
+            dispEnd="&lt;/span&gt;">(optional)</pc></source>
+        <target> Adresse <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
+            type="other" dispStart="&lt;span class=&quot;ml-1 text-muted-foreground&quot;&gt;"
+            dispEnd="&lt;/span&gt;">(optionnel)</pc></target>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.address.placeholder">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:162,164</note>
+      </notes>
+      <segment state="translated">
+        <source>Rue de la Paix, Douala</source>
+        <target>Rue de la Paix, Douala</target>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.cancel">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:229,232</note>
+      </notes>
+      <segment state="translated">
+        <source> Cancel </source>
+        <target> Annuler </target>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.companyName.label">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:113,116</note>
+      </notes>
+      <segment state="translated">
+        <source> Company or full name </source>
+        <target> Entreprise ou nom complet </target>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.companyName.placeholder">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:122,123</note>
+      </notes>
+      <segment state="translated">
+        <source>Acme Corp</source>
+        <target>Acme Corp</target>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.interventionZone.label">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:175,178</note>
+      </notes>
+      <segment state="translated">
+        <source> Intervention zone <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
+            type="other" dispStart="&lt;span class=&quot;ml-1 text-muted-foreground&quot;&gt;"
+            dispEnd="&lt;/span&gt;">(optional)</pc></source>
+        <target> Zone d'intervention <pc id="0" equivStart="START_TAG_SPAN"
+            equivEnd="CLOSE_TAG_SPAN" type="other"
+            dispStart="&lt;span class=&quot;ml-1 text-muted-foreground&quot;&gt;"
+            dispEnd="&lt;/span&gt;">(optionnel)</pc></target>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.interventionZone.placeholder">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:184,186</note>
+      </notes>
+      <segment state="translated">
+        <source>Littoral, Cameroon</source>
+        <target>Littoral, Cameroun</target>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.location.label">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:198,201</note>
+      </notes>
+      <segment state="translated">
+        <source> Location <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
+            type="other" dispStart="&lt;span class=&quot;ml-1 text-muted-foreground&quot;&gt;"
+            dispEnd="&lt;/span&gt;">(optional)</pc></source>
+        <target> Localisation <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
+            type="other" dispStart="&lt;span class=&quot;ml-1 text-muted-foreground&quot;&gt;"
+            dispEnd="&lt;/span&gt;">(optionnel)</pc></target>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.phone.label">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:136,138</note>
+      </notes>
+      <segment state="translated">
+        <source> Phone </source>
+        <target> Téléphone </target>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.submit.label">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:217,221</note>
+      </notes>
+      <segment state="translated">
+        <source>Save changes</source>
+        <target>Enregistrer les modifications</target>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.submit.loading">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:215,217</note>
+      </notes>
+      <segment state="translated">
+        <source>Saving…</source>
+        <target>Enregistrement…</target>
+      </segment>
+    </unit>
+    <unit id="myProfile.submit.error">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.ts:134</note>
+      </notes>
+      <segment state="translated">
+        <source>Something went wrong. Please try again.</source>
+        <target>Une erreur s'est produite. Veuillez réessayer.</target>
+      </segment>
+    </unit>
+    <unit id="myProfile.submit.success">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.ts:124</note>
+      </notes>
+      <segment state="translated">
+        <source>Profile updated successfully.</source>
+        <target>Profil mis à jour avec succès.</target>
+      </segment>
+    </unit>
+    <unit id="navbar.breadcrumb.page">
+      <notes>
+        <note category="location">libs/layout/src/lib/navbar/navbar.html:20,24</note>
+      </notes>
+      <segment state="translated">
+        <source>OVERVIEW</source>
+        <target>APERÇU</target>
+      </segment>
+    </unit>
+    <unit id="navbar.breadcrumb.section">
+      <notes>
+        <note category="location">libs/layout/src/lib/navbar/navbar.html:16,18</note>
+      </notes>
+      <segment state="translated">
+        <source>WORKSPACE</source>
+        <target>ESPACE DE TRAVAIL</target>
+      </segment>
+    </unit>
+    <unit id="navbar.hamburger.ariaLabel">
+      <notes>
+        <note category="location">libs/layout/src/lib/navbar/navbar.html:8,9</note>
+      </notes>
+      <segment state="translated">
+        <source>Toggle sidebar</source>
+        <target>Activer/désactiver la barre latérale</target>
+      </segment>
+    </unit>
+    <unit id="navbar.theme.ariaLabel">
+      <notes>
+        <note category="location">libs/layout/src/lib/navbar/navbar.html:30,31</note>
+      </notes>
+      <segment state="translated">
+        <source>Toggle theme</source>
+        <target>Activer/désactiver le thème</target>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.free.cta">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:54,58</note>
+      </notes>
+      <segment state="translated">
+        <source> Continue with Starter → </source>
+        <target> Continuer avec Starter → </target>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.free.description">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:30,33</note>
+      </notes>
+      <segment state="translated">
+        <source> Get started with core features, no commitment needed. </source>
+        <target> Commencez avec les fonctionnalités essentielles, sans engagement. </target>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.free.feature1">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:41,42</note>
+      </notes>
+      <segment state="translated">
+        <source>✓ Up to 3 projects</source>
+        <target>✓ Jusqu'à 3 projets</target>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.free.feature2">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:42,43</note>
+      </notes>
+      <segment state="translated">
+        <source>✓ Basic analytics</source>
+        <target>✓ Analyses de base</target>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.free.feature3">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:43,46</note>
+      </notes>
+      <segment state="translated">
+        <source>✓ Community support</source>
+        <target>✓ Support communautaire</target>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.free.price">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:37,40</note>
+      </notes>
+      <segment state="translated">
+        <source> Free </source>
+        <target> Gratuit </target>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.free.title">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:27,29</note>
+      </notes>
+      <segment state="translated">
+        <source> Starter </source>
+        <target> Starter </target>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.premium.cta">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:89,92</note>
+      </notes>
+      <segment state="translated">
+        <source>Get Premium →</source>
+        <target>Obtenir Premium →</target>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.premium.cta.loading">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:87,89</note>
+      </notes>
+      <segment state="translated">
+        <source>Processing…</source>
+        <target>Traitement…</target>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.premium.description">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:66,69</note>
+      </notes>
+      <segment state="translated">
+        <source> Unlock all features and get dedicated support. </source>
+        <target> Déverrouillez toutes les fonctionnalités et obtenez un support dédié. </target>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.premium.feature1">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:74,75</note>
+      </notes>
+      <segment state="translated">
+        <source>✓ Unlimited projects</source>
+        <target>✓ Projets illimités</target>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.premium.feature2">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:75,76</note>
+      </notes>
+      <segment state="translated">
+        <source>✓ Advanced analytics</source>
+        <target>✓ Analyses avancées</target>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.premium.feature3">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:76,77</note>
+      </notes>
+      <segment state="translated">
+        <source>✓ Priority support</source>
+        <target>✓ Support prioritaire</target>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.premium.feature4">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:77,80</note>
+      </notes>
+      <segment state="translated">
+        <source>✓ Custom integrations</source>
+        <target>✓ Intégrations personnalisées</target>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.premium.price">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:70,73</note>
+      </notes>
+      <segment state="translated">
+        <source> Contact us </source>
+        <target> Nous contacter </target>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.premium.title">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:63,65</note>
+      </notes>
+      <segment state="translated">
+        <source> Premium </source>
+        <target> Premium </target>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.step">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:3,7</note>
+      </notes>
+      <segment state="translated">
+        <source>Step 4 of 5</source>
+        <target>Étape 4 sur 5</target>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.subtitle">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:14,18</note>
+      </notes>
+      <segment state="translated">
+        <source> You can upgrade or downgrade at any time. </source>
+        <target> Vous pouvez mettre à niveau ou rétrograder à tout moment. </target>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.title">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:10,13</note>
+      </notes>
+      <segment state="translated">
+        <source> Choose your plan </source>
+        <target> Choisissez votre plan </target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.address.label">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:191,194</note>
+      </notes>
+      <segment state="translated">
+        <source> Address <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
+            type="other" dispStart="&lt;span class=&quot;text-muted-foreground ml-1&quot;&gt;"
+            dispEnd="&lt;/span&gt;">(optional)</pc></source>
+        <target> Adresse <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
+            type="other" dispStart="&lt;span class=&quot;text-muted-foreground ml-1&quot;&gt;"
+            dispEnd="&lt;/span&gt;">(optionnel)</pc></target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.address.placeholder">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:201,203</note>
+      </notes>
+      <segment state="translated">
+        <source>Rue de la Paix, Douala</source>
+        <target>Rue de la Paix, Douala</target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.companyName.error">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:62,64</note>
+      </notes>
+      <segment state="translated">
+        <source> This field is required. </source>
+        <target> Ce champ est obligatoire. </target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.companyName.label">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:45,48</note>
+      </notes>
+      <segment state="translated">
+        <source> Company or full name </source>
+        <target> Nom de l'entreprise ou nom complet </target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.companyName.placeholder">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:54,55</note>
+      </notes>
+      <segment state="translated">
+        <source>Acme Corp</source>
+        <target>Acme Corp</target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.companyRegistrationNumber.error">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:120,122</note>
+      </notes>
+      <segment state="translated">
+        <source> This field is required for your entity type. </source>
+        <target> Ce champ est obligatoire pour votre type d'entité. </target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.companyRegistrationNumber.label">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:104,107</note>
+      </notes>
+      <segment state="translated">
+        <source> Company registration number </source>
+        <target> Numéro d'enregistrement de l'entreprise </target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.companyRegistrationNumber.placeholder">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:112,113</note>
+      </notes>
+      <segment state="translated">
+        <source>RC/DLA/2021/B/1234</source>
+        <target>RC/DLA/2021/B/1234</target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.entityType.company">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.ts:74</note>
+      </notes>
+      <segment state="translated">
+        <source>Company</source>
+        <target>Entreprise</target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.entityType.individual">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.ts:70</note>
+      </notes>
+      <segment state="translated">
+        <source>Individual</source>
+        <target>Personne physique</target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.entityType.label">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:77,79</note>
+      </notes>
+      <segment state="translated">
+        <source> Entity type </source>
+        <target> Type d'entité </target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.entityType.ngo">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.ts:76</note>
+      </notes>
+      <segment state="translated">
+        <source>NGO</source>
+        <target>ONG</target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.entityType.other">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.ts:83</note>
+      </notes>
+      <segment state="translated">
+        <source>Other</source>
+        <target>Autre</target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.entityType.publicInstitution">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.ts:79</note>
+      </notes>
+      <segment state="translated">
+        <source>Public Institution</source>
+        <target>Institution publique</target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.interventionZone.label">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:214,217</note>
+      </notes>
+      <segment state="translated">
+        <source> Intervention zone <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
+            type="other" dispStart="&lt;span class=&quot;text-muted-foreground ml-1&quot;&gt;"
+            dispEnd="&lt;/span&gt;">(optional)</pc></source>
+        <target> Zone d'intervention <pc id="0" equivStart="START_TAG_SPAN"
+            equivEnd="CLOSE_TAG_SPAN" type="other"
+            dispStart="&lt;span class=&quot;text-muted-foreground ml-1&quot;&gt;"
+            dispEnd="&lt;/span&gt;">(optionnel)</pc></target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.interventionZone.placeholder">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:223,225</note>
+      </notes>
+      <segment state="translated">
+        <source>Littoral, Cameroon</source>
+        <target>Littoral, Cameroun</target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.location.label">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:237,240</note>
+      </notes>
+      <segment state="translated">
+        <source> Location <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
+            type="other" dispStart="&lt;span class=&quot;text-muted-foreground ml-1&quot;&gt;"
+            dispEnd="&lt;/span&gt;">(optional)</pc></source>
+        <target> Localisation <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
+            type="other" dispStart="&lt;span class=&quot;text-muted-foreground ml-1&quot;&gt;"
+            dispEnd="&lt;/span&gt;">(optionnel)</pc></target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.phone.error">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:175,177</note>
+      </notes>
+      <segment state="translated">
+        <source> This field is required. </source>
+        <target> Ce champ est obligatoire. </target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.phone.label">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:167,169</note>
+      </notes>
+      <segment state="translated">
+        <source> Phone </source>
+        <target> Téléphone </target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.step">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:4,8</note>
+      </notes>
+      <segment state="translated">
+        <source> Step 3 of 5 </source>
+        <target> Étape 3 sur 5 </target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.submit.label">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:256,260</note>
+      </notes>
+      <segment state="translated">
+        <source>Continue →</source>
+        <target>Continuer →</target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.submit.loading">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:254,256</note>
+      </notes>
+      <segment state="translated">
+        <source>Saving…</source>
+        <target>Enregistrement…</target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.taxIdNumber.error">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:154,156</note>
+      </notes>
+      <segment state="translated">
+        <source> This field is required. </source>
+        <target> Ce champ est obligatoire. </target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.taxIdNumber.label">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:138,141</note>
+      </notes>
+      <segment state="translated">
+        <source> Tax ID </source>
+        <target> Numéro fiscal </target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.taxIdNumber.placeholder">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:146,147</note>
+      </notes>
+      <segment state="translated">
+        <source>M123456789</source>
+        <target>M123456789</target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.title">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:20,24</note>
+      </notes>
+      <segment state="translated">
+        <source> Your professional profile </source>
+        <target> Votre profil professionnel </target>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.title.edit">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:13,17</note>
+      </notes>
+      <segment state="translated">
+        <source> Edit your profile </source>
+        <target> Modifiez votre profil </target>
+      </segment>
+    </unit>
+    <unit id="onboardingRole.error.loadTypes">
+      <notes>
+        <note category="location">libs/onboarding/role/src/lib/onboarding-role/onboarding-role.ts:47</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to load roles. Please refresh.</source>
+        <target>Échec du chargement des rôles. Veuillez actualiser.</target>
+      </segment>
+    </unit>
+    <unit id="onboardingRole.loading">
+      <notes>
+        <note category="location">
+          libs/onboarding/role/src/lib/onboarding-role/onboarding-role.html:20,23</note>
+      </notes>
+      <segment state="translated">
+        <source>Loading roles…</source>
+        <target>Chargement des rôles…</target>
+      </segment>
+    </unit>
+    <unit id="onboardingRole.step">
+      <notes>
+        <note category="location">
+          libs/onboarding/role/src/lib/onboarding-role/onboarding-role.html:3,7</note>
+      </notes>
+      <segment state="translated">
+        <source>Step 5 of 5</source>
+        <target>Étape 5 sur 5</target>
+      </segment>
+    </unit>
+    <unit id="onboardingRole.submit.label">
+      <notes>
+        <note category="location">
+          libs/onboarding/role/src/lib/onboarding-role/onboarding-role.html:82,86</note>
+      </notes>
+      <segment state="translated">
+        <source>Continue →</source>
+        <target>Continuer →</target>
+      </segment>
+    </unit>
+    <unit id="onboardingRole.submit.loading">
+      <notes>
+        <note category="location">
+          libs/onboarding/role/src/lib/onboarding-role/onboarding-role.html:80,82</note>
+      </notes>
+      <segment state="translated">
+        <source>Saving…</source>
+        <target>Enregistrement…</target>
+      </segment>
+    </unit>
+    <unit id="onboardingRole.subtitle">
+      <notes>
+        <note category="location">
+          libs/onboarding/role/src/lib/onboarding-role/onboarding-role.html:14,18</note>
+      </notes>
+      <segment state="translated">
+        <source> Select one or more roles that describe how you&apos;ll use the platform. </source>
+        <target> Sélectionnez un ou plusieurs rôles qui décrivent comment vous utiliserez la
+          plateforme. </target>
+      </segment>
+    </unit>
+    <unit id="onboardingRole.title">
+      <notes>
+        <note category="location">
+          libs/onboarding/role/src/lib/onboarding-role/onboarding-role.html:10,13</note>
+      </notes>
+      <segment state="translated">
+        <source> Choose your role </source>
+        <target> Choisissez votre rôle </target>
+      </segment>
+    </unit>
+    <unit id="onboardingRole.validationBadge">
+      <notes>
+        <note category="location">
+          libs/onboarding/role/src/lib/onboarding-role/onboarding-role.html:46,49</note>
+      </notes>
+      <segment state="translated">
+        <source> validation </source>
+        <target> validation </target>
+      </segment>
+    </unit>
+    <unit id="placesAutocomplete.clear">
+      <notes>
+        <note category="location">
+          libs/shared/ui/src/lib/places-autocomplete/places-autocomplete.html:22,28</note>
+      </notes>
+      <segment state="translated">
+        <source>Clear location</source>
+        <target>Effacer la localisation</target>
+      </segment>
+    </unit>
+    <unit id="placesAutocomplete.locating">
+      <notes>
+        <note category="location">
+          libs/shared/ui/src/lib/places-autocomplete/places-autocomplete.html:62,64</note>
+      </notes>
+      <segment state="translated">
+        <source>Locating…</source>
+        <target>Localisation…</target>
+      </segment>
+    </unit>
+    <unit id="placesAutocomplete.placeholder">
+      <notes>
+        <note category="location">
+          libs/shared/ui/src/lib/places-autocomplete/places-autocomplete.html:13,18</note>
+      </notes>
+      <segment state="translated">
+        <source>e.g. Douala, Cameroon</source>
+        <target>p. ex. Douala, Cameroun</target>
+      </segment>
+    </unit>
+    <unit id="placesAutocomplete.useMyLocation">
+      <notes>
+        <note category="location">
+          libs/shared/ui/src/lib/places-autocomplete/places-autocomplete.html:65,69</note>
+      </notes>
+      <segment state="translated">
+        <source>My location</source>
+        <target>Ma localisation</target>
+      </segment>
+    </unit>
+    <unit id="register.confirmPassword.error.mismatch">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:209,214</note>
+      </notes>
+      <segment state="translated">
+        <source> Passwords do not match. </source>
+        <target> Les mots de passe ne correspondent pas. </target>
+      </segment>
+    </unit>
+    <unit id="register.confirmPassword.error.required">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:202,204</note>
+      </notes>
+      <segment state="translated">
+        <source> Please confirm your password. </source>
+        <target> Veuillez confirmer votre mot de passe. </target>
+      </segment>
+    </unit>
+    <unit id="register.confirmPassword.label">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:183,186</note>
+      </notes>
+      <segment state="translated">
+        <source> Confirm password </source>
+        <target> Confirmer le mot de passe </target>
+      </segment>
+    </unit>
+    <unit id="register.confirmPassword.placeholder">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:192,194</note>
+      </notes>
+      <segment state="translated">
+        <source>•••••••••••••••</source>
+        <target>•••••••••••••••</target>
+      </segment>
+    </unit>
+    <unit id="register.email.error">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:102,104</note>
+      </notes>
+      <segment state="translated">
+        <source> Please enter a valid email address. </source>
+        <target> Veuillez entrer une adresse e-mail valide. </target>
+      </segment>
+    </unit>
+    <unit id="register.email.label">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:88,90</note>
+      </notes>
+      <segment state="translated">
+        <source> Email address </source>
+        <target> Adresse e-mail </target>
+      </segment>
+    </unit>
+    <unit id="register.email.placeholder">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:97,98</note>
+      </notes>
+      <segment state="translated">
+        <source>name@company.com</source>
+        <target>name@company.com</target>
+      </segment>
+    </unit>
+    <unit id="register.firstName.error">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:46,48</note>
+      </notes>
+      <segment state="translated">
+        <source> First name is required. </source>
+        <target> Le prénom est obligatoire. </target>
+      </segment>
+    </unit>
+    <unit id="register.firstName.label">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:32,34</note>
+      </notes>
+      <segment state="translated">
+        <source> First name </source>
+        <target> Prénom </target>
+      </segment>
+    </unit>
+    <unit id="register.firstName.placeholder">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:42</note>
+      </notes>
+      <segment state="translated">
+        <source>Jane</source>
+        <target>Jane</target>
+      </segment>
+    </unit>
+    <unit id="register.lastName.error">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:73,75</note>
+      </notes>
+      <segment state="translated">
+        <source> Last name is required. </source>
+        <target> Le nom de famille est obligatoire. </target>
+      </segment>
+    </unit>
+    <unit id="register.lastName.label">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:59,61</note>
+      </notes>
+      <segment state="translated">
+        <source> Last name </source>
+        <target> Nom de famille </target>
+      </segment>
+    </unit>
+    <unit id="register.lastName.placeholder">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:69</note>
+      </notes>
+      <segment state="translated">
+        <source>Doe</source>
+        <target>Doe</target>
+      </segment>
+    </unit>
+    <unit id="register.login.prompt">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:234,241</note>
+      </notes>
+      <segment state="translated">
+        <source> Already have an account? <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK"
+            type="link"
+            dispStart="&lt;a routerLink=&quot;/auth/login&quot; class=&quot;text-foreground ml-1 underline underline-offset-2&quot; &gt;"
+            dispEnd="&lt;/a &gt;">Sign in</pc></source>
+        <target> Vous avez déjà un compte ? <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK"
+            type="link"
+            dispStart="&lt;a routerLink=&quot;/auth/login&quot; class=&quot;text-foreground ml-1 underline underline-offset-2&quot; &gt;"
+            dispEnd="&lt;/a &gt;">Se connecter</pc></target>
+      </segment>
+    </unit>
+    <unit id="register.password.error.required">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:133,135</note>
+      </notes>
+      <segment state="translated">
+        <source> Password is required. </source>
+        <target> Le mot de passe est obligatoire. </target>
+      </segment>
+    </unit>
+    <unit id="register.password.label">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:116,119</note>
+      </notes>
+      <segment state="translated">
+        <source> Password </source>
+        <target> Mot de passe </target>
+      </segment>
+    </unit>
+    <unit id="register.password.placeholder">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:125,126</note>
+      </notes>
+      <segment state="translated">
+        <source>•••••••••••••••</source>
+        <target>•••••••••••••••</target>
+      </segment>
+    </unit>
+    <unit id="register.password.rule.digit">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:164,166</note>
+      </notes>
+      <segment state="translated">
+        <source>One number</source>
+        <target>Un chiffre</target>
+      </segment>
+    </unit>
+    <unit id="register.password.rule.lowercase">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:158,160</note>
+      </notes>
+      <segment state="translated">
+        <source>One lowercase letter</source>
+        <target>Une lettre minuscule</target>
+      </segment>
+    </unit>
+    <unit id="register.password.rule.minLength">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:146,148</note>
+      </notes>
+      <segment state="translated">
+        <source>At least 8 characters</source>
+        <target>Au moins 8 caractères</target>
+      </segment>
+    </unit>
+    <unit id="register.password.rule.special">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:170,174</note>
+      </notes>
+      <segment state="translated">
+        <source>One special character</source>
+        <target>Un caractère spécial</target>
+      </segment>
+    </unit>
+    <unit id="register.password.rule.uppercase">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:152,154</note>
+      </notes>
+      <segment state="translated">
+        <source>One uppercase letter</source>
+        <target>Une lettre majuscule</target>
+      </segment>
+    </unit>
+    <unit id="register.submit.label">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:224,227</note>
+      </notes>
+      <segment state="translated">
+        <source>Create account →</source>
+        <target>Créer un compte →</target>
+      </segment>
+    </unit>
+    <unit id="register.submit.loading">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:222,224</note>
+      </notes>
+      <segment state="translated">
+        <source>Creating account…</source>
+        <target>Création du compte…</target>
+      </segment>
+    </unit>
+    <unit id="register.title">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:7,10</note>
+      </notes>
+      <segment state="translated">
+        <source> Create your account </source>
+        <target> Créez votre compte </target>
+      </segment>
+    </unit>
+    <unit id="resetPassword.confirmPassword.error.mismatch">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:130,136</note>
+      </notes>
+      <segment state="translated">
+        <source> Passwords do not match. </source>
+        <target> Les mots de passe ne correspondent pas. </target>
+      </segment>
+    </unit>
+    <unit id="resetPassword.confirmPassword.error.required">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:126,129</note>
+      </notes>
+      <segment state="translated">
+        <source> Please confirm your password. </source>
+        <target> Veuillez confirmer votre mot de passe. </target>
+      </segment>
+    </unit>
+    <unit id="resetPassword.confirmPassword.label">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:110,113</note>
+      </notes>
+      <segment state="translated">
+        <source> Confirm new password </source>
+        <target> Confirmer le nouveau mot de passe </target>
+      </segment>
+    </unit>
+    <unit id="resetPassword.confirmPassword.placeholder">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:119,121</note>
+      </notes>
+      <segment state="translated">
+        <source>•••••••••••••••</source>
+        <target>•••••••••••••••</target>
+      </segment>
+    </unit>
+    <unit id="resetPassword.error.generic">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.ts:108</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to reset password. The link may have expired.</source>
+        <target>Impossible de réinitialiser le mot de passe. Le lien a peut-être expiré.</target>
+      </segment>
+    </unit>
+    <unit id="resetPassword.error.missingToken">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.ts:87</note>
+      </notes>
+      <segment state="translated">
+        <source>Invalid or expired reset link.</source>
+        <target>Lien de réinitialisation invalide ou expiré.</target>
+      </segment>
+    </unit>
+    <unit id="resetPassword.password.error.required">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:60,62</note>
+      </notes>
+      <segment state="translated">
+        <source> Password is required. </source>
+        <target> Le mot de passe est requis. </target>
+      </segment>
+    </unit>
+    <unit id="resetPassword.password.label">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:46,49</note>
+      </notes>
+      <segment state="translated">
+        <source> New password </source>
+        <target> Nouveau mot de passe </target>
+      </segment>
+    </unit>
+    <unit id="resetPassword.password.placeholder">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:55,56</note>
+      </notes>
+      <segment state="translated">
+        <source>•••••••••••••••</source>
+        <target>•••••••••••••••</target>
+      </segment>
+    </unit>
+    <unit id="resetPassword.password.rule.digit">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:91,93</note>
+      </notes>
+      <segment state="translated">
+        <source>One number</source>
+        <target>Un chiffre</target>
+      </segment>
+    </unit>
+    <unit id="resetPassword.password.rule.lowercase">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:85,87</note>
+      </notes>
+      <segment state="translated">
+        <source>One lowercase letter</source>
+        <target>Une lettre minuscule</target>
+      </segment>
+    </unit>
+    <unit id="resetPassword.password.rule.minLength">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:73,75</note>
+      </notes>
+      <segment state="translated">
+        <source>At least 8 characters</source>
+        <target>Au moins 8 caractères</target>
+      </segment>
+    </unit>
+    <unit id="resetPassword.password.rule.special">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:97,101</note>
+      </notes>
+      <segment state="translated">
+        <source>One special character</source>
+        <target>Un caractère spécial</target>
+      </segment>
+    </unit>
+    <unit id="resetPassword.password.rule.uppercase">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:79,81</note>
+      </notes>
+      <segment state="translated">
+        <source>One uppercase letter</source>
+        <target>Une lettre majuscule</target>
+      </segment>
+    </unit>
+    <unit id="resetPassword.submit.label">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:145,150</note>
+      </notes>
+      <segment state="translated">
+        <source>Reset password →</source>
+        <target>Réinitialiser le mot de passe →</target>
+      </segment>
+    </unit>
+    <unit id="resetPassword.submit.loading">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:143,145</note>
+      </notes>
+      <segment state="translated">
+        <source>Resetting…</source>
+        <target>Réinitialisation…</target>
+      </segment>
+    </unit>
+    <unit id="resetPassword.success.message">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:14,17</note>
+      </notes>
+      <segment state="translated">
+        <source> Your password has been reset. Redirecting you to sign in… </source>
+        <target> Votre mot de passe a été réinitialisé. Redirection vers la connexion… </target>
+      </segment>
+    </unit>
+    <unit id="resetPassword.success.signIn">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:21,26</note>
+      </notes>
+      <segment state="translated">
+        <source> Sign in now </source>
+        <target> Se connecter maintenant </target>
+      </segment>
+    </unit>
+    <unit id="resetPassword.title">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:7,11</note>
+      </notes>
+      <segment state="translated">
+        <source> Choose a new password </source>
+        <target> Choisir un nouveau mot de passe </target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.addDocuments">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:215,218</note>
+      </notes>
+      <segment state="translated">
+        <source> Add documents </source>
+        <target> Ajouter des documents </target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.available">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:61,64</note>
+      </notes>
+      <segment state="translated">
+        <source> Available </source>
+        <target> Disponible </target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.awaitingDocuments">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:93,98</note>
+      </notes>
+      <segment state="translated">
+        <source> Your application is awaiting required documents. Please upload them below. </source>
+        <target> Votre demande en attente de documents obligatoires. Veuillez les télécharger
+          ci-dessous. </target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.back">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:8,11</note>
+      </notes>
+      <segment state="translated">
+        <source>Back to roles</source>
+        <target>Retour aux rôles</target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.cancel">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:273,275</note>
+      </notes>
+      <segment state="translated">
+        <source> Cancel </source>
+        <target> Annuler </target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.categoryC">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:128,130</note>
+      </notes>
+      <segment state="translated">
+        <source> Category C </source>
+        <target> Catégorie C </target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.complianceLevel">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:120,122</note>
+      </notes>
+      <segment state="translated">
+        <source> Compliance level </source>
+        <target> Niveau de conformité </target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.deleteDoc">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:53</note>
+      </notes>
+      <segment state="translated">
+        <source>Delete document</source>
+        <target>Supprimer le document</target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.docDefaultLabel">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:52</note>
+      </notes>
+      <segment state="translated">
+        <source>Document</source>
+        <target>Document</target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.documents">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:151,154</note>
+      </notes>
+      <segment state="translated">
+        <source> Documents </source>
+        <target> Documents </target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.error.availabilityFailed">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:94</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to update availability.</source>
+        <target>Échec de la mise à jour de la disponibilité.</target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.error.deleteFailed">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:171</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to delete document.</source>
+        <target>Échec de la suppression du document.</target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.error.documentsFailed">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:148</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to submit documents.</source>
+        <target>Échec de la soumission des documents.</target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.error.loadFailed">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:75</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to load role.</source>
+        <target>Échec du chargement du rôle.</target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.info">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:104,106</note>
+      </notes>
+      <segment state="translated">
+        <source> Details </source>
+        <target> Détails </target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.labelPlaceholder">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:54</note>
+      </notes>
+      <segment state="translated">
+        <source>Label (optional)</source>
+        <target>Étiquette (facultatif)</target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.no">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:51</note>
+      </notes>
+      <segment state="translated">
+        <source>No</source>
+        <target>Non</target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.noDocuments">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:159,162</note>
+      </notes>
+      <segment state="translated">
+        <source> No documents uploaded yet. </source>
+        <target> Aucun document téléchargé pour le moment. </target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.notFound">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:35,38</note>
+      </notes>
+      <segment state="translated">
+        <source> Role not found. </source>
+        <target> Rôle introuvable. </target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.open">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:187,188</note>
+      </notes>
+      <segment state="translated">
+        <source>Open</source>
+        <target>Ouvrir</target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.rejectionReason">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:73,75</note>
+      </notes>
+      <segment state="translated">
+        <source> Rejection reason </source>
+        <target> Motif du rejet </target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.reliabilityLevel">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:112,114</note>
+      </notes>
+      <segment state="translated">
+        <source> Reliability level </source>
+        <target> Niveau de fiabilité </target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.required">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:176,178</note>
+      </notes>
+      <segment state="translated">
+        <source> Required </source>
+        <target> Obligatoire </target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.revocationReason">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:83,85</note>
+      </notes>
+      <segment state="translated">
+        <source> Revocation reason </source>
+        <target> Motif de révocation </target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.selectFiles">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:225,227</note>
+      </notes>
+      <segment state="translated">
+        <source> Select files </source>
+        <target> Sélectionner les fichiers </target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.submit">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:264,266</note>
+      </notes>
+      <segment state="translated">
+        <source> Submit documents </source>
+        <target> Soumettre les documents </target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.success.availabilityToggled">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:89</note>
+      </notes>
+      <segment state="translated">
+        <source>Availability updated.</source>
+        <target>Disponibilité mise à jour.</target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.success.documentDeleted">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:166</note>
+      </notes>
+      <segment state="translated">
+        <source>Document deleted.</source>
+        <target>Document supprimé.</target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.success.documentsSubmitted">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:143</note>
+      </notes>
+      <segment state="translated">
+        <source>Documents submitted successfully.</source>
+        <target>Documents soumis avec succès.</target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.validatedAt">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:136,138</note>
+      </notes>
+      <segment state="translated">
+        <source> Validated at </source>
+        <target> Validé le </target>
+      </segment>
+    </unit>
+    <unit id="roles.detail.yes">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:50</note>
+      </notes>
+      <segment state="translated">
+        <source>Yes</source>
+        <target>Oui</target>
+      </segment>
+    </unit>
+    <unit id="roles.error.addFailed">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.ts:124</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to add roles.</source>
+        <target>Impossible d'ajouter les rôles.</target>
+      </segment>
+    </unit>
+    <unit id="roles.error.loadFailed">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.ts:77</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to load roles.</source>
+        <target>Impossible de charger les rôles.</target>
+      </segment>
+    </unit>
+    <unit id="roles.myRoles.addRolesSubtitle">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.html:110,113</note>
+      </notes>
+      <segment state="translated">
+        <source> Select one or more roles to register for. </source>
+        <target> Sélectionnez un ou plusieurs rôles pour vous inscrire. </target>
+      </segment>
+    </unit>
+    <unit id="roles.myRoles.addRolesTitle">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.html:104,107</note>
+      </notes>
+      <segment state="translated">
+        <source> Add roles </source>
+        <target> Ajouter des rôles </target>
+      </segment>
+    </unit>
+    <unit id="roles.myRoles.addSelected">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.html:164,167</note>
+      </notes>
+      <segment state="translated">
+        <source> Add selected roles </source>
+        <target> Ajouter les rôles sélectionnés </target>
+      </segment>
+    </unit>
+    <unit id="roles.myRoles.myRolesTitle">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.html:37,40</note>
+      </notes>
+      <segment state="translated">
+        <source> My roles </source>
+        <target> Mes rôles </target>
+      </segment>
+    </unit>
+    <unit id="roles.myRoles.noRoles">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.html:42,45</note>
+      </notes>
+      <segment state="translated">
+        <source> You haven&apos;t registered for any role yet. </source>
+        <target> Vous ne vous êtes inscrit pour aucun rôle. </target>
+      </segment>
+    </unit>
+    <unit id="roles.myRoles.requiresValidation">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.html:62,65</note>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.html:148,151</note>
+      </notes>
+      <segment state="translated">
+        <source> Requires validation </source>
+        <target> Validation requise </target>
+      </segment>
+    </unit>
+    <unit id="roles.myRoles.uploadDocuments">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.html:78,81</note>
+      </notes>
+      <segment state="translated">
+        <source>Upload docs</source>
+        <target>Télécharger les docs</target>
+      </segment>
+    </unit>
+    <unit id="roles.myRoles.view">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.html:85,86</note>
+      </notes>
+      <segment state="translated">
+        <source>View</source>
+        <target>Afficher</target>
+      </segment>
+    </unit>
+    <unit id="roles.success.rolesAdded">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.ts:119</note>
+      </notes>
+      <segment state="translated">
+        <source>Roles added successfully.</source>
+        <target>Rôles ajoutés avec succès.</target>
+      </segment>
+    </unit>
+    <unit id="sidebar.brand">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.html:14,18</note>
+      </notes>
+      <segment state="translated">
+        <source>Strategis Flow</source>
+        <target>Strategis Flow</target>
+      </segment>
+    </unit>
+    <unit id="sidebar.item.actorValidation">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:132</note>
+      </notes>
+      <segment state="translated">
+        <source>Actor Validation</source>
+        <target>Validation des acteurs</target>
+      </segment>
+    </unit>
+    <unit id="sidebar.item.declareLot">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:97</note>
+      </notes>
+      <segment state="translated">
+        <source>Declare a lot</source>
+        <target>Déclarer un lot</target>
+      </segment>
+    </unit>
+    <unit id="sidebar.item.lots">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:92</note>
+      </notes>
+      <segment state="translated">
+        <source>My lots</source>
+        <target>Mes lots</target>
+      </segment>
+    </unit>
+    <unit id="sidebar.item.overview">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:86</note>
+      </notes>
+      <segment state="translated">
+        <source>Overview</source>
+        <target>Aperçu</target>
+      </segment>
+    </unit>
+    <unit id="sidebar.item.premiumRequests">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:137</note>
+      </notes>
+      <segment state="translated">
+        <source>Premium Requests</source>
+        <target>Demandes Premium</target>
+      </segment>
+    </unit>
+    <unit id="sidebar.item.profile">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:107</note>
+      </notes>
+      <segment state="translated">
+        <source>Professional profile</source>
+        <target>Profil professionnel</target>
+      </segment>
+    </unit>
+    <unit id="sidebar.item.roles">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:112</note>
+      </notes>
+      <segment state="translated">
+        <source>Actor roles</source>
+        <target>Rôles d'acteur</target>
+      </segment>
+    </unit>
+    <unit id="sidebar.item.subscription">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:117</note>
+      </notes>
+      <segment state="translated">
+        <source>Subscription</source>
+        <target>Abonnement</target>
+      </segment>
+    </unit>
+    <unit id="sidebar.menu.accountSettings">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.html:94,97</note>
+      </notes>
+      <segment state="translated">
+        <source>Account settings</source>
+        <target>Paramètres du compte</target>
+      </segment>
+    </unit>
+    <unit id="sidebar.menu.logout">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.html:101,103</note>
+      </notes>
+      <segment state="translated">
+        <source>Logout</source>
+        <target>Déconnexion</target>
+      </segment>
+    </unit>
+    <unit id="sidebar.section.account">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:104</note>
+      </notes>
+      <segment state="translated">
+        <source>ACCOUNT</source>
+        <target>COMPTE</target>
+      </segment>
+    </unit>
+    <unit id="sidebar.section.admin">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:129</note>
+      </notes>
+      <segment state="translated">
+        <source>ADMINISTRATION</source>
+        <target>ADMINISTRATION</target>
+      </segment>
+    </unit>
+    <unit id="sidebar.section.workspace">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:83</note>
+      </notes>
+      <segment state="translated">
+        <source>WORKSPACE</source>
+        <target>ESPACE DE TRAVAIL</target>
+      </segment>
+    </unit>
+    <unit id="sidebar.subtitle">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.html:23,26</note>
+      </notes>
+      <segment state="translated">
+        <source> Waste flow orchestration platform </source>
+        <target> Plateforme d'orchestration des flux de déchets </target>
+      </segment>
+    </unit>
+    <unit id="sidebar.tier.free">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:151</note>
+      </notes>
+      <segment state="translated">
+        <source>Free plan</source>
+        <target>Plan gratuit</target>
+      </segment>
+    </unit>
+    <unit id="sidebar.tier.premium">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:150</note>
+      </notes>
+      <segment state="translated">
+        <source>Premium</source>
+        <target>Premium</target>
+      </segment>
+    </unit>
+    <unit id="subscription.action.renew">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:117,122</note>
+      </notes>
+      <segment state="translated">
+        <source>Renew</source>
+        <target>Renouveler</target>
+      </segment>
+    </unit>
+    <unit id="subscription.action.requestAgain">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:98,101</note>
+      </notes>
+      <segment state="translated">
+        <source>Request again</source>
+        <target>Demander à nouveau</target>
+      </segment>
+    </unit>
+    <unit id="subscription.action.requestUpgrade">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:142,148</note>
+      </notes>
+      <segment state="translated">
+        <source>Request premium upgrade</source>
+        <target>Demander une mise à niveau premium</target>
+      </segment>
+    </unit>
+    <unit id="subscription.activatedAt">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:42,43</note>
+      </notes>
+      <segment state="translated">
+        <source>Activated:</source>
+        <target>Activé :</target>
+      </segment>
+    </unit>
+    <unit id="subscription.currentPlan">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:25,28</note>
+      </notes>
+      <segment state="translated">
+        <source> Current Plan </source>
+        <target> Plan actuel </target>
+      </segment>
+    </unit>
+    <unit id="subscription.error.loadFailed">
+      <notes>
+        <note category="location">libs/subscription/src/lib/my-subscription/my-subscription.ts:52</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to load subscription data.</source>
+        <target>Impossible de charger les données d'abonnement.</target>
+      </segment>
+    </unit>
+    <unit id="subscription.error.upgradeFailed">
+      <notes>
+        <note category="location">libs/subscription/src/lib/my-subscription/my-subscription.ts:76</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to submit upgrade request. Please try again.</source>
+        <target>Impossible de soumettre la demande de mise à niveau. Veuillez réessayer.</target>
+      </segment>
+    </unit>
+    <unit id="subscription.expiresAt">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:46,47</note>
+      </notes>
+      <segment state="translated">
+        <source>Expires:</source>
+        <target>Expire :</target>
+      </segment>
+    </unit>
+    <unit id="subscription.history.col.date">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:165,167</note>
+      </notes>
+      <segment state="translated">
+        <source> Date </source>
+        <target> Date </target>
+      </segment>
+    </unit>
+    <unit id="subscription.history.col.plan">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:171,173</note>
+      </notes>
+      <segment state="translated">
+        <source> Plan </source>
+        <target> Plan </target>
+      </segment>
+    </unit>
+    <unit id="subscription.history.col.status">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:177,179</note>
+      </notes>
+      <segment state="translated">
+        <source> Status </source>
+        <target> Statut </target>
+      </segment>
+    </unit>
+    <unit id="subscription.history.title">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:155,157</note>
+      </notes>
+      <segment state="translated">
+        <source> Request History </source>
+        <target> Historique des demandes </target>
+      </segment>
+    </unit>
+    <unit id="subscription.status.expiredMessage">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:107,111</note>
+      </notes>
+      <segment state="translated">
+        <source> Your premium subscription has expired. </source>
+        <target> Votre abonnement premium a expiré. </target>
+      </segment>
+    </unit>
+    <unit id="subscription.status.pendingMessage">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:68,72</note>
+      </notes>
+      <segment state="translated">
+        <source> Your upgrade request is under review. </source>
+        <target> Votre demande de mise à niveau est en cours d'examen. </target>
+      </segment>
+    </unit>
+    <unit id="subscription.status.rejectedTitle">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:81,83</note>
+      </notes>
+      <segment state="translated">
+        <source> Your upgrade request was rejected. </source>
+        <target> Votre demande de mise à niveau a été rejetée. </target>
+      </segment>
+    </unit>
+    <unit id="subscription.subtitle">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:14,18</note>
+      </notes>
+      <segment state="translated">
+        <source> View and manage your current subscription plan. </source>
+        <target> Affichage et gestion de votre plan d'abonnement actuel. </target>
+      </segment>
+    </unit>
+    <unit id="subscription.success.upgradeRequested">
+      <notes>
+        <note category="location">libs/subscription/src/lib/my-subscription/my-subscription.ts:69</note>
+      </notes>
+      <segment state="translated">
+        <source>Your premium upgrade request has been submitted.</source>
+        <target>Votre demande de mise à niveau premium a été soumise.</target>
+      </segment>
+    </unit>
+    <unit id="subscription.tier.free">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:34,39</note>
+      </notes>
+      <segment state="translated">
+        <source>Free plan</source>
+        <target>Plan gratuit</target>
+      </segment>
+    </unit>
+    <unit id="subscription.tier.premium">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:30,33</note>
+      </notes>
+      <segment state="translated">
+        <source>Premium</source>
+        <target>Premium</target>
+      </segment>
+    </unit>
+    <unit id="subscription.title">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:8,11</note>
+      </notes>
+      <segment state="translated">
+        <source> My Subscription </source>
+        <target> Mon abonnement </target>
+      </segment>
+    </unit>
+    <unit id="subscription.upgrade.description">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:136,139</note>
+      </notes>
+      <segment state="translated">
+        <source> Get access to premium features and unlock your full potential. </source>
+        <target> Accédez aux fonctionnalités premium et libérez tout votre potentiel. </target>
+      </segment>
+    </unit>
+    <unit id="subscription.upgrade.title">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:130,133</note>
+      </notes>
+      <segment state="translated">
+        <source> Upgrade to Premium </source>
+        <target> Passer à Premium </target>
+      </segment>
+    </unit>
+    <unit id="toast.container.label">
+      <notes>
+        <note category="location">libs/shared/ui/src/lib/toast/toast-container.ts:35,36</note>
+      </notes>
+      <segment state="translated">
+        <source>Notifications</source>
+        <target>Notifications</target>
+      </segment>
+    </unit>
+    <unit id="toast.dismiss.label">
+      <notes>
+        <note category="location">libs/shared/ui/src/lib/toast/toast-container.ts:54</note>
+      </notes>
+      <segment state="translated">
+        <source>Dismiss</source>
+        <target>Fermer</target>
+      </segment>
+    </unit>
+    <unit id="upgradeRequest.status.activated">
+      <notes>
+        <note category="location">libs/profiles/data-access/src/lib/premium-upgrade-request.ts:46</note>
+      </notes>
+      <segment state="translated">
+        <source>Activated</source>
+        <target>Activé</target>
+      </segment>
+    </unit>
+    <unit id="upgradeRequest.status.expired">
+      <notes>
+        <note category="location">libs/profiles/data-access/src/lib/premium-upgrade-request.ts:48</note>
+      </notes>
+      <segment state="translated">
+        <source>Expired</source>
+        <target>Expiré</target>
+      </segment>
+    </unit>
+    <unit id="upgradeRequest.status.pending">
+      <notes>
+        <note category="location">libs/profiles/data-access/src/lib/premium-upgrade-request.ts:45</note>
+      </notes>
+      <segment state="translated">
+        <source>Pending</source>
+        <target>En attente</target>
+      </segment>
+    </unit>
+    <unit id="upgradeRequest.status.rejected">
+      <notes>
+        <note category="location">libs/profiles/data-access/src/lib/premium-upgrade-request.ts:47</note>
+      </notes>
+      <segment state="translated">
+        <source>Rejected</source>
+        <target>Rejeté</target>
+      </segment>
+    </unit>
+  </file>
 </xliff>

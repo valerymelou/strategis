@@ -1,4 +1,3187 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en-US">
-  <file id="ngi18n" original="ng.template"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="2.0" xmlns="urn:oasis:names:tc:xliff:document:2.0" srcLang="en">
+  <file id="ngi18n" original="ng.template">
+    <unit id="3885497195825665706">
+      <notes>
+        <note category="location">libs/shared/ui/src/lib/paginator/paginator.html:28</note>
+      </notes>
+      <segment>
+        <source>Next</source>
+      </segment>
+    </unit>
+    <unit id="4452427314943113135">
+      <notes>
+        <note category="location">libs/shared/ui/src/lib/paginator/paginator.html:16</note>
+      </notes>
+      <segment>
+        <source>Previous</source>
+      </segment>
+    </unit>
+    <unit id="451274430253853039">
+      <notes>
+        <note category="location">libs/shared/ui/src/lib/paginator/paginator.html:4,6</note>
+      </notes>
+      <segment>
+        <source>Showing <ph id="0" equiv="INTERPOLATION" disp="{{ from() }}" />–<ph id="1"
+            equiv="INTERPOLATION_1" disp="{{ to() }}" /> of <ph id="2" equiv="INTERPOLATION_2"
+            disp="{{ count() }}" /> results</source>
+      </segment>
+    </unit>
+    <unit id="6453098595803131790">
+      <notes>
+        <note category="location">libs/shared/ui/src/lib/paginator/paginator.html:19,21</note>
+      </notes>
+      <segment>
+        <source>Page <ph id="0" equiv="INTERPOLATION" disp="{{ page() }}" /> of <ph id="1"
+            equiv="INTERPOLATION_1" disp="{{ pages() }}" /></source>
+      </segment>
+    </unit>
+    <unit id="actor.status.active">
+      <notes>
+        <note category="location">libs/profiles/data-access/src/lib/actor.ts:77</note>
+      </notes>
+      <segment>
+        <source>Active</source>
+      </segment>
+    </unit>
+    <unit id="actor.status.awaitingDocuments">
+      <notes>
+        <note category="location">libs/profiles/data-access/src/lib/actor.ts:76</note>
+      </notes>
+      <segment>
+        <source>Awaiting docs</source>
+      </segment>
+    </unit>
+    <unit id="actor.status.pending">
+      <notes>
+        <note category="location">libs/profiles/data-access/src/lib/actor.ts:75</note>
+      </notes>
+      <segment>
+        <source>Pending</source>
+      </segment>
+    </unit>
+    <unit id="actor.status.rejected">
+      <notes>
+        <note category="location">libs/profiles/data-access/src/lib/actor.ts:78</note>
+      </notes>
+      <segment>
+        <source>Rejected</source>
+      </segment>
+    </unit>
+    <unit id="actor.status.revoked">
+      <notes>
+        <note category="location">libs/profiles/data-access/src/lib/actor.ts:79</note>
+      </notes>
+      <segment>
+        <source>Revoked</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.actions">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:178,180</note>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:242,244</note>
+      </notes>
+      <segment>
+        <source> Actions </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.address">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:110,112</note>
+      </notes>
+      <segment>
+        <source> Address </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.approve">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:189,192</note>
+      </notes>
+      <segment>
+        <source> Approve </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.backToList">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:8,12</note>
+      </notes>
+      <segment>
+        <source>Back to actors</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.cancel">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:229,230</note>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:281,282</note>
+      </notes>
+      <segment>
+        <source> Cancel </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.categoryC">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:351,353</note>
+      </notes>
+      <segment>
+        <source> Category C </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.categoryCLabel">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:364,366</note>
+      </notes>
+      <segment>
+        <source> Approved for category C </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.col.actorType">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.html:33,34</note>
+      </notes>
+      <segment>
+        <source>Actor type</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.col.company">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.html:32,33</note>
+      </notes>
+      <segment>
+        <source>Company</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.col.documents">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.html:35,36</note>
+      </notes>
+      <segment>
+        <source>Documents</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.col.status">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.html:34,35</note>
+      </notes>
+      <segment>
+        <source>Status</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.col.submitted">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.html:36,38</note>
+      </notes>
+      <segment>
+        <source>Submitted</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.compliance">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:323,325</note>
+      </notes>
+      <segment>
+        <source> Compliance </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.compliance.approved">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:55</note>
+      </notes>
+      <segment>
+        <source>Approved</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.compliance.atRisk">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:58</note>
+      </notes>
+      <segment>
+        <source>At risk</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.compliance.compliant">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:57</note>
+      </notes>
+      <segment>
+        <source>Compliant</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.compliance.nonCompliant">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:59</note>
+      </notes>
+      <segment>
+        <source>Non-compliant</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.compliance.validated">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:56</note>
+      </notes>
+      <segment>
+        <source>Validated</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.confirmReject">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:221,223</note>
+      </notes>
+      <segment>
+        <source> Confirm rejection </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.confirmRevoke">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:273,275</note>
+      </notes>
+      <segment>
+        <source> Confirm revocation </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.docDefaultLabel">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:40</note>
+      </notes>
+      <segment>
+        <source>Document</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.documents">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:125,127</note>
+      </notes>
+      <segment>
+        <source> Documents </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.download">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:158,159</note>
+      </notes>
+      <segment>
+        <source>Open</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.empty">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.html:55,56</note>
+      </notes>
+      <segment>
+        <source> No actors found. </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.entityType">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:86,88</note>
+      </notes>
+      <segment>
+        <source> Entity type </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.error.approveFailed">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:97</note>
+      </notes>
+      <segment>
+        <source>Failed to approve actor.</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.error.categoryCFailed">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:192</note>
+      </notes>
+      <segment>
+        <source>Failed to update category C approval.</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.error.complianceFailed">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:173</note>
+      </notes>
+      <segment>
+        <source>Failed to update compliance level.</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.error.loadFailed">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:82</note>
+      </notes>
+      <segment>
+        <source>Failed to load actor.</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.error.rejectFailed">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:116</note>
+      </notes>
+      <segment>
+        <source>Failed to reject actor.</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.error.reliabilityFailed">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:154</note>
+      </notes>
+      <segment>
+        <source>Failed to update reliability level.</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.error.revokeFailed">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:135</note>
+      </notes>
+      <segment>
+        <source>Failed to revoke actor.</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.filter.active">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.ts:55</note>
+      </notes>
+      <segment>
+        <source>Active</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.filter.all">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.ts:52</note>
+      </notes>
+      <segment>
+        <source>All statuses</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.filter.awaitingDocuments">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.ts:54</note>
+      </notes>
+      <segment>
+        <source>Awaiting documents</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.filter.pending">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.ts:53</note>
+      </notes>
+      <segment>
+        <source>Pending</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.filter.rejected">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.ts:56</note>
+      </notes>
+      <segment>
+        <source>Rejected</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.filter.revoked">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.ts:57</note>
+      </notes>
+      <segment>
+        <source>Revoked</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.noDocuments">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:132,134</note>
+      </notes>
+      <segment>
+        <source> No documents uploaded yet. </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.notFound">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:54,57</note>
+      </notes>
+      <segment>
+        <source> Actor not found. </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.phone">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:102,104</note>
+      </notes>
+      <segment>
+        <source> Phone </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.profile">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:81,83</note>
+      </notes>
+      <segment>
+        <source> Profile </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.reject">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:201,203</note>
+      </notes>
+      <segment>
+        <source> Reject </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.rejectPlaceholder">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:209,210</note>
+      </notes>
+      <segment>
+        <source>Reason for rejection…</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.reliability">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:295,297</note>
+      </notes>
+      <segment>
+        <source> Reliability </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.reliability.certified">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:46</note>
+      </notes>
+      <segment>
+        <source>Certified</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.reliability.declared">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:49</note>
+      </notes>
+      <segment>
+        <source>Declared</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.reliability.notValidated">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:50</note>
+      </notes>
+      <segment>
+        <source>Not validated</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.reliability.validated">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:48</note>
+      </notes>
+      <segment>
+        <source>Validated</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.reliability.validatedGoodHistory">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:47</note>
+      </notes>
+      <segment>
+        <source>Validated — Good history</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.required">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:148,150</note>
+      </notes>
+      <segment>
+        <source>Required</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.revoke">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:253,255</note>
+      </notes>
+      <segment>
+        <source> Revoke </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.revokePlaceholder">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:261,262</note>
+      </notes>
+      <segment>
+        <source>Reason for revocation…</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.saveCompliance">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:341,345</note>
+      </notes>
+      <segment>
+        <source> Save compliance </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.saveReliability">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:313,317</note>
+      </notes>
+      <segment>
+        <source> Save reliability </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.subtitle">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.html:9,12</note>
+      </notes>
+      <segment>
+        <source> Review and manage actor registration requests. </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.success.approved">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:93</note>
+      </notes>
+      <segment>
+        <source>Actor approved successfully.</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.success.categoryC">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:187</note>
+      </notes>
+      <segment>
+        <source>Category C approved.</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.success.categoryCRemoved">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:188</note>
+      </notes>
+      <segment>
+        <source>Category C approval removed.</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.success.complianceUpdated">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:170</note>
+      </notes>
+      <segment>
+        <source>Compliance level updated.</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.success.rejected">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:112</note>
+      </notes>
+      <segment>
+        <source>Actor rejected.</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.success.reliabilityUpdated">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:151</note>
+      </notes>
+      <segment>
+        <source>Reliability level updated.</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.success.revoked">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.ts:131</note>
+      </notes>
+      <segment>
+        <source>Actor revoked.</source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.taxId">
+      <notes>
+        <note category="location">
+          libs/admin/actors/src/lib/admin-actor-detail/admin-actor-detail.html:94,96</note>
+      </notes>
+      <segment>
+        <source> Tax ID </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.title">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.html:6,8</note>
+      </notes>
+      <segment>
+        <source> Actor Validation </source>
+      </segment>
+    </unit>
+    <unit id="admin.actors.view">
+      <notes>
+        <note category="location">libs/admin/actors/src/lib/admin-actors/admin-actors.html:80,81</note>
+      </notes>
+      <segment>
+        <source>View</source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.actions">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:191,194</note>
+      </notes>
+      <segment>
+        <source> Actions </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.activate">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:242,245</note>
+      </notes>
+      <segment>
+        <source> Activate </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.activatedAt">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:143,145</note>
+      </notes>
+      <segment>
+        <source> Activated </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.annual">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:228,229</note>
+      </notes>
+      <segment>
+        <source> Annual (365 days) </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.backToList">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:8,12</note>
+      </notes>
+      <segment>
+        <source>Back to premium requests</source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.cancel">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:282,283</note>
+      </notes>
+      <segment>
+        <source> Cancel </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.col.company">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.html:30,31</note>
+      </notes>
+      <segment>
+        <source>Company</source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.col.requested">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.html:32,33</note>
+      </notes>
+      <segment>
+        <source>Requested</source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.col.status">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.html:33,35</note>
+      </notes>
+      <segment>
+        <source>Status</source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.col.tier">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.html:31,32</note>
+      </notes>
+      <segment>
+        <source>Current tier</source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.confirmReject">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:274,276</note>
+      </notes>
+      <segment>
+        <source> Confirm rejection </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.currentTier">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:106,108</note>
+      </notes>
+      <segment>
+        <source> Current tier </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.empty">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.html:52,53</note>
+      </notes>
+      <segment>
+        <source> No premium requests found. </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.entityType">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:79,81</note>
+      </notes>
+      <segment>
+        <source> Entity type </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.error.activateFailed">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.ts:74</note>
+      </notes>
+      <segment>
+        <source>Failed to activate request.</source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.error.loadFailed">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.ts:57</note>
+      </notes>
+      <segment>
+        <source>Failed to load request.</source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.error.rejectFailed">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.ts:93</note>
+      </notes>
+      <segment>
+        <source>Failed to reject request.</source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.expiresAt">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:152,154</note>
+      </notes>
+      <segment>
+        <source> Expires </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.filter.activated">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.ts:55</note>
+      </notes>
+      <segment>
+        <source>Activated</source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.filter.all">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.ts:53</note>
+      </notes>
+      <segment>
+        <source>All statuses</source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.filter.expired">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.ts:57</note>
+      </notes>
+      <segment>
+        <source>Expired</source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.filter.pending">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.ts:54</note>
+      </notes>
+      <segment>
+        <source>Pending</source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.filter.rejected">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.ts:56</note>
+      </notes>
+      <segment>
+        <source>Rejected</source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.history">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:125,127</note>
+      </notes>
+      <segment>
+        <source> History </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.monthly">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:214,215</note>
+      </notes>
+      <segment>
+        <source> Monthly (30 days) </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.noActions">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:294,297</note>
+      </notes>
+      <segment>
+        <source> No actions available for this request. </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.notFound">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:45,48</note>
+      </notes>
+      <segment>
+        <source> Request not found. </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.phone">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:95,97</note>
+      </notes>
+      <segment>
+        <source> Phone </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.plan">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:131,133</note>
+      </notes>
+      <segment>
+        <source> Plan </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.profile">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:74,76</note>
+      </notes>
+      <segment>
+        <source> Profile </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.reject">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:254,256</note>
+      </notes>
+      <segment>
+        <source> Reject </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.rejectedAt">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:161,163</note>
+      </notes>
+      <segment>
+        <source> Rejected </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.rejectionReason">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:173,175</note>
+      </notes>
+      <segment>
+        <source> Rejection reason </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.rejectPlaceholder">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:262,263</note>
+      </notes>
+      <segment>
+        <source>Reason for rejection…</source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.selectPlan">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:200,202</note>
+      </notes>
+      <segment>
+        <source> Select plan </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.subtitle">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.html:8,12</note>
+      </notes>
+      <segment>
+        <source> Review and manage premium upgrade requests. </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.success.activated">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.ts:70</note>
+      </notes>
+      <segment>
+        <source>Premium request activated.</source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.success.rejected">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.ts:89</note>
+      </notes>
+      <segment>
+        <source>Premium request rejected.</source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.taxId">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:87,89</note>
+      </notes>
+      <segment>
+        <source> Tax ID </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.title">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.html:5,7</note>
+      </notes>
+      <segment>
+        <source> Premium Requests </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.upgradeRequest">
+      <notes>
+        <note category="location">
+          libs/admin/premium/src/lib/admin-premium-detail/admin-premium-detail.html:58,61</note>
+      </notes>
+      <segment>
+        <source> Premium upgrade request </source>
+      </segment>
+    </unit>
+    <unit id="admin.premium.view">
+      <notes>
+        <note category="location">libs/admin/premium/src/lib/admin-premium/admin-premium.html:76,77</note>
+      </notes>
+      <segment>
+        <source>View</source>
+      </segment>
+    </unit>
+    <unit id="auth.layout.brand">
+      <notes>
+        <note category="location">libs/auth/layout/src/lib/auth-layout/auth-layout.html:18,22</note>
+      </notes>
+      <segment>
+        <source>Strategis Flow</source>
+      </segment>
+    </unit>
+    <unit id="auth.layout.description">
+      <notes>
+        <note category="location">libs/auth/layout/src/lib/auth-layout/auth-layout.html:37,41</note>
+      </notes>
+      <segment>
+        <source> For producers, collectors, transporters, sorters, recyclers, processors and waste
+          eliminators in the sector. </source>
+      </segment>
+    </unit>
+    <unit id="auth.layout.tagline.italic">
+      <notes>
+        <note category="location">libs/auth/layout/src/lib/auth-layout/auth-layout.html:31,34</note>
+      </notes>
+      <segment>
+        <source>for the sector</source>
+      </segment>
+    </unit>
+    <unit id="emailVerification.code.error">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.html:38,43</note>
+      </notes>
+      <segment>
+        <source> Please enter the 6-digit code. </source>
+      </segment>
+    </unit>
+    <unit id="emailVerification.error.invalid">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.ts:109</note>
+      </notes>
+      <segment>
+        <source>Invalid or expired code. Please try again.</source>
+      </segment>
+    </unit>
+    <unit id="emailVerification.error.resend">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.ts:131</note>
+      </notes>
+      <segment>
+        <source>Failed to resend code. Please try again.</source>
+      </segment>
+    </unit>
+    <unit id="emailVerification.resend.countdown">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.html:61,63</note>
+      </notes>
+      <segment>
+        <source> Resend code in <ph id="0" equiv="INTERPOLATION" disp="{{ resendCountdown() }}" />s </source>
+      </segment>
+    </unit>
+    <unit id="emailVerification.resend.label">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.html:76,81</note>
+      </notes>
+      <segment>
+        <source>Resend</source>
+      </segment>
+    </unit>
+    <unit id="emailVerification.resend.loading">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.html:74,76</note>
+      </notes>
+      <segment>
+        <source>Sending…</source>
+      </segment>
+    </unit>
+    <unit id="emailVerification.resend.prompt">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.html:65,69</note>
+      </notes>
+      <segment>
+        <source>Didn&apos;t receive the code?</source>
+      </segment>
+    </unit>
+    <unit id="emailVerification.submit.label">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.html:52,57</note>
+      </notes>
+      <segment>
+        <source>Verify →</source>
+      </segment>
+    </unit>
+    <unit id="emailVerification.submit.loading">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.html:50,52</note>
+      </notes>
+      <segment>
+        <source>Verifying…</source>
+      </segment>
+    </unit>
+    <unit id="emailVerification.subtitle">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.html:12,13</note>
+      </notes>
+      <segment>
+        <source>We sent a 6-digit code to</source>
+      </segment>
+    </unit>
+    <unit id="emailVerification.title">
+      <notes>
+        <note category="location">
+          libs/auth/email-verification/src/lib/email-verification/email-verification.html:7,11</note>
+      </notes>
+      <segment>
+        <source> Verify your email </source>
+      </segment>
+    </unit>
+    <unit id="forgotPassword.email.error">
+      <notes>
+        <note category="location">
+          libs/auth/forgot-password/src/lib/forgot-password/forgot-password.html:60,65</note>
+      </notes>
+      <segment>
+        <source> Please enter a valid email address. </source>
+      </segment>
+    </unit>
+    <unit id="forgotPassword.email.label">
+      <notes>
+        <note category="location">
+          libs/auth/forgot-password/src/lib/forgot-password/forgot-password.html:46,49</note>
+      </notes>
+      <segment>
+        <source> Email address </source>
+      </segment>
+    </unit>
+    <unit id="forgotPassword.email.placeholder">
+      <notes>
+        <note category="location">
+          libs/auth/forgot-password/src/lib/forgot-password/forgot-password.html:55,56</note>
+      </notes>
+      <segment>
+        <source>name@company.com</source>
+      </segment>
+    </unit>
+    <unit id="forgotPassword.login.prompt">
+      <notes>
+        <note category="location">
+          libs/auth/forgot-password/src/lib/forgot-password/forgot-password.html:85,93</note>
+      </notes>
+      <segment>
+        <source> Remember your password? <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK"
+            type="link"
+            dispStart="&lt;a routerLink=&quot;/auth/login&quot; class=&quot;text-foreground ml-1 underline underline-offset-2&quot; &gt;"
+            dispEnd="&lt;/a &gt;">Sign in</pc></source>
+      </segment>
+    </unit>
+    <unit id="forgotPassword.submit.label">
+      <notes>
+        <note category="location">
+          libs/auth/forgot-password/src/lib/forgot-password/forgot-password.html:75,80</note>
+      </notes>
+      <segment>
+        <source>Send reset link →</source>
+      </segment>
+    </unit>
+    <unit id="forgotPassword.submit.loading">
+      <notes>
+        <note category="location">
+          libs/auth/forgot-password/src/lib/forgot-password/forgot-password.html:73,75</note>
+      </notes>
+      <segment>
+        <source>Sending…</source>
+      </segment>
+    </unit>
+    <unit id="forgotPassword.subtitle">
+      <notes>
+        <note category="location">
+          libs/auth/forgot-password/src/lib/forgot-password/forgot-password.html:30,34</note>
+      </notes>
+      <segment>
+        <source> Enter your email address and we&apos;ll send you a link to reset your password. </source>
+      </segment>
+    </unit>
+    <unit id="forgotPassword.success.backToLogin">
+      <notes>
+        <note category="location">
+          libs/auth/forgot-password/src/lib/forgot-password/forgot-password.html:22,27</note>
+      </notes>
+      <segment>
+        <source> Back to sign in </source>
+      </segment>
+    </unit>
+    <unit id="forgotPassword.success.message">
+      <notes>
+        <note category="location">
+          libs/auth/forgot-password/src/lib/forgot-password/forgot-password.html:14,18</note>
+      </notes>
+      <segment>
+        <source> If an account exists for that email address, we&apos;ve sent a password reset link.
+          Check your inbox (and spam folder). </source>
+      </segment>
+    </unit>
+    <unit id="forgotPassword.title">
+      <notes>
+        <note category="location">
+          libs/auth/forgot-password/src/lib/forgot-password/forgot-password.html:7,11</note>
+      </notes>
+      <segment>
+        <source> Reset your password </source>
+      </segment>
+    </unit>
+    <unit id="login.email.error">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:38,41</note>
+      </notes>
+      <segment>
+        <source> Please enter a valid email address. </source>
+      </segment>
+    </unit>
+    <unit id="login.email.label">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:24,26</note>
+      </notes>
+      <segment>
+        <source> Email address </source>
+      </segment>
+    </unit>
+    <unit id="login.email.placeholder">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:33,34</note>
+      </notes>
+      <segment>
+        <source>name@company.com</source>
+      </segment>
+    </unit>
+    <unit id="login.error.invalidCredentials">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.ts:68</note>
+      </notes>
+      <segment>
+        <source>Invalid email or password.</source>
+      </segment>
+    </unit>
+    <unit id="login.password.error">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:73,76</note>
+      </notes>
+      <segment>
+        <source> Password is required. </source>
+      </segment>
+    </unit>
+    <unit id="login.password.forgot">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:58,61</note>
+      </notes>
+      <segment>
+        <source> Forgot password? </source>
+      </segment>
+    </unit>
+    <unit id="login.password.label">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:51,53</note>
+      </notes>
+      <segment>
+        <source> Password </source>
+      </segment>
+    </unit>
+    <unit id="login.password.placeholder">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:68,69</note>
+      </notes>
+      <segment>
+        <source>•••••••••••••••</source>
+      </segment>
+    </unit>
+    <unit id="login.register.prompt">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:107,114</note>
+      </notes>
+      <segment>
+        <source> Don&apos;t have an account? <pc id="0" equivStart="START_LINK"
+            equivEnd="CLOSE_LINK" type="link"
+            dispStart="&lt;a routerLink=&quot;/auth/register&quot; class=&quot;text-foreground ml-1 underline underline-offset-2&quot; &gt;"
+            dispEnd="&lt;/a &gt;">Create one</pc></source>
+      </segment>
+    </unit>
+    <unit id="login.submit.label">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:97,100</note>
+      </notes>
+      <segment>
+        <source>Sign in →</source>
+      </segment>
+    </unit>
+    <unit id="login.submit.loading">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:95,97</note>
+      </notes>
+      <segment>
+        <source>Signing in…</source>
+      </segment>
+    </unit>
+    <unit id="login.title">
+      <notes>
+        <note category="location">libs/auth/login/src/lib/login/login.html:7,10</note>
+      </notes>
+      <segment>
+        <source> Sign in </source>
+      </segment>
+    </unit>
+    <unit id="myProfile.badge.free">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:10,14</note>
+      </notes>
+      <segment>
+        <source>Free plan</source>
+      </segment>
+    </unit>
+    <unit id="myProfile.badge.premium">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:8,10</note>
+      </notes>
+      <segment>
+        <source>Premium</source>
+      </segment>
+    </unit>
+    <unit id="myProfile.edit.title">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:73,75</note>
+      </notes>
+      <segment>
+        <source>Edit profile</source>
+      </segment>
+    </unit>
+    <unit id="myProfile.editButton">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:21,25</note>
+      </notes>
+      <segment>
+        <source> Edit profile </source>
+      </segment>
+    </unit>
+    <unit id="myProfile.field.address">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:56,58</note>
+      </notes>
+      <segment>
+        <source> Address </source>
+      </segment>
+    </unit>
+    <unit id="myProfile.field.companyReg">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:42,44</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:93,95</note>
+      </notes>
+      <segment>
+        <source> Company registration number </source>
+      </segment>
+    </unit>
+    <unit id="myProfile.field.entityType">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:28,30</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:79,81</note>
+      </notes>
+      <segment>
+        <source> Entity type </source>
+      </segment>
+    </unit>
+    <unit id="myProfile.field.interventionZone">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:63,65</note>
+      </notes>
+      <segment>
+        <source> Intervention zone </source>
+      </segment>
+    </unit>
+    <unit id="myProfile.field.phone">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:49,51</note>
+      </notes>
+      <segment>
+        <source> Phone </source>
+      </segment>
+    </unit>
+    <unit id="myProfile.field.taxId">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:35,37</note>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:86,88</note>
+      </notes>
+      <segment>
+        <source> Tax ID </source>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.address.label">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:152,155</note>
+      </notes>
+      <segment>
+        <source> Address <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
+            type="other" dispStart="&lt;span class=&quot;ml-1 text-muted-foreground&quot;&gt;"
+            dispEnd="&lt;/span&gt;">(optional)</pc></source>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.address.placeholder">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:162,164</note>
+      </notes>
+      <segment>
+        <source>Rue de la Paix, Douala</source>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.cancel">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:229,232</note>
+      </notes>
+      <segment>
+        <source> Cancel </source>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.companyName.label">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:113,116</note>
+      </notes>
+      <segment>
+        <source> Company or full name </source>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.companyName.placeholder">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:122,123</note>
+      </notes>
+      <segment>
+        <source>Acme Corp</source>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.interventionZone.label">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:175,178</note>
+      </notes>
+      <segment>
+        <source> Intervention zone <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
+            type="other" dispStart="&lt;span class=&quot;ml-1 text-muted-foreground&quot;&gt;"
+            dispEnd="&lt;/span&gt;">(optional)</pc></source>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.interventionZone.placeholder">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:184,186</note>
+      </notes>
+      <segment>
+        <source>Littoral, Cameroon</source>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.location.label">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:198,201</note>
+      </notes>
+      <segment>
+        <source> Location <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
+            type="other" dispStart="&lt;span class=&quot;ml-1 text-muted-foreground&quot;&gt;"
+            dispEnd="&lt;/span&gt;">(optional)</pc></source>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.phone.label">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:136,138</note>
+      </notes>
+      <segment>
+        <source> Phone </source>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.submit.label">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:217,221</note>
+      </notes>
+      <segment>
+        <source>Save changes</source>
+      </segment>
+    </unit>
+    <unit id="myProfile.form.submit.loading">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.html:215,217</note>
+      </notes>
+      <segment>
+        <source>Saving…</source>
+      </segment>
+    </unit>
+    <unit id="myProfile.submit.error">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.ts:134</note>
+      </notes>
+      <segment>
+        <source>Something went wrong. Please try again.</source>
+      </segment>
+    </unit>
+    <unit id="myProfile.submit.success">
+      <notes>
+        <note category="location">libs/profile/src/lib/my-profile/my-profile.ts:124</note>
+      </notes>
+      <segment>
+        <source>Profile updated successfully.</source>
+      </segment>
+    </unit>
+    <unit id="navbar.breadcrumb.page">
+      <notes>
+        <note category="location">libs/layout/src/lib/navbar/navbar.html:20,24</note>
+      </notes>
+      <segment>
+        <source>OVERVIEW</source>
+      </segment>
+    </unit>
+    <unit id="navbar.breadcrumb.section">
+      <notes>
+        <note category="location">libs/layout/src/lib/navbar/navbar.html:16,18</note>
+      </notes>
+      <segment>
+        <source>WORKSPACE</source>
+      </segment>
+    </unit>
+    <unit id="navbar.hamburger.ariaLabel">
+      <notes>
+        <note category="location">libs/layout/src/lib/navbar/navbar.html:8,9</note>
+      </notes>
+      <segment>
+        <source>Toggle sidebar</source>
+      </segment>
+    </unit>
+    <unit id="navbar.theme.ariaLabel">
+      <notes>
+        <note category="location">libs/layout/src/lib/navbar/navbar.html:30,31</note>
+      </notes>
+      <segment>
+        <source>Toggle theme</source>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.free.cta">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:54,58</note>
+      </notes>
+      <segment>
+        <source> Continue with Starter → </source>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.free.description">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:30,33</note>
+      </notes>
+      <segment>
+        <source> Get started with core features, no commitment needed. </source>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.free.feature1">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:41,42</note>
+      </notes>
+      <segment>
+        <source>✓ Up to 3 projects</source>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.free.feature2">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:42,43</note>
+      </notes>
+      <segment>
+        <source>✓ Basic analytics</source>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.free.feature3">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:43,46</note>
+      </notes>
+      <segment>
+        <source>✓ Community support</source>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.free.price">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:37,40</note>
+      </notes>
+      <segment>
+        <source> Free </source>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.free.title">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:27,29</note>
+      </notes>
+      <segment>
+        <source> Starter </source>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.premium.cta">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:89,92</note>
+      </notes>
+      <segment>
+        <source>Get Premium →</source>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.premium.cta.loading">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:87,89</note>
+      </notes>
+      <segment>
+        <source>Processing…</source>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.premium.description">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:66,69</note>
+      </notes>
+      <segment>
+        <source> Unlock all features and get dedicated support. </source>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.premium.feature1">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:74,75</note>
+      </notes>
+      <segment>
+        <source>✓ Unlimited projects</source>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.premium.feature2">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:75,76</note>
+      </notes>
+      <segment>
+        <source>✓ Advanced analytics</source>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.premium.feature3">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:76,77</note>
+      </notes>
+      <segment>
+        <source>✓ Priority support</source>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.premium.feature4">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:77,80</note>
+      </notes>
+      <segment>
+        <source>✓ Custom integrations</source>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.premium.price">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:70,73</note>
+      </notes>
+      <segment>
+        <source> Contact us </source>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.premium.title">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:63,65</note>
+      </notes>
+      <segment>
+        <source> Premium </source>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.step">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:3,7</note>
+      </notes>
+      <segment>
+        <source>Step 4 of 5</source>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.subtitle">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:14,18</note>
+      </notes>
+      <segment>
+        <source> You can upgrade or downgrade at any time. </source>
+      </segment>
+    </unit>
+    <unit id="onboardingPlan.title">
+      <notes>
+        <note category="location">
+          libs/onboarding/plan/src/lib/onboarding-plan/onboarding-plan.html:10,13</note>
+      </notes>
+      <segment>
+        <source> Choose your plan </source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.address.label">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:191,194</note>
+      </notes>
+      <segment>
+        <source> Address <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
+            type="other" dispStart="&lt;span class=&quot;text-muted-foreground ml-1&quot;&gt;"
+            dispEnd="&lt;/span&gt;">(optional)</pc></source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.address.placeholder">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:201,203</note>
+      </notes>
+      <segment>
+        <source>Rue de la Paix, Douala</source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.companyName.error">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:62,64</note>
+      </notes>
+      <segment>
+        <source> This field is required. </source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.companyName.label">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:45,48</note>
+      </notes>
+      <segment>
+        <source> Company or full name </source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.companyName.placeholder">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:54,55</note>
+      </notes>
+      <segment>
+        <source>Acme Corp</source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.companyRegistrationNumber.error">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:120,122</note>
+      </notes>
+      <segment>
+        <source> This field is required for your entity type. </source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.companyRegistrationNumber.label">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:104,107</note>
+      </notes>
+      <segment>
+        <source> Company registration number </source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.companyRegistrationNumber.placeholder">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:112,113</note>
+      </notes>
+      <segment>
+        <source>RC/DLA/2021/B/1234</source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.entityType.company">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.ts:74</note>
+      </notes>
+      <segment>
+        <source>Company</source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.entityType.individual">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.ts:70</note>
+      </notes>
+      <segment>
+        <source>Individual</source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.entityType.label">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:77,79</note>
+      </notes>
+      <segment>
+        <source> Entity type </source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.entityType.ngo">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.ts:76</note>
+      </notes>
+      <segment>
+        <source>NGO</source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.entityType.other">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.ts:83</note>
+      </notes>
+      <segment>
+        <source>Other</source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.entityType.publicInstitution">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.ts:79</note>
+      </notes>
+      <segment>
+        <source>Public Institution</source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.interventionZone.label">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:214,217</note>
+      </notes>
+      <segment>
+        <source> Intervention zone <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
+            type="other" dispStart="&lt;span class=&quot;text-muted-foreground ml-1&quot;&gt;"
+            dispEnd="&lt;/span&gt;">(optional)</pc></source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.interventionZone.placeholder">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:223,225</note>
+      </notes>
+      <segment>
+        <source>Littoral, Cameroon</source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.location.label">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:237,240</note>
+      </notes>
+      <segment>
+        <source> Location <pc id="0" equivStart="START_TAG_SPAN" equivEnd="CLOSE_TAG_SPAN"
+            type="other" dispStart="&lt;span class=&quot;text-muted-foreground ml-1&quot;&gt;"
+            dispEnd="&lt;/span&gt;">(optional)</pc></source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.phone.error">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:175,177</note>
+      </notes>
+      <segment>
+        <source> This field is required. </source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.phone.label">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:167,169</note>
+      </notes>
+      <segment>
+        <source> Phone </source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.step">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:4,8</note>
+      </notes>
+      <segment>
+        <source> Step 3 of 5 </source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.submit.label">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:256,260</note>
+      </notes>
+      <segment>
+        <source>Continue →</source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.submit.loading">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:254,256</note>
+      </notes>
+      <segment>
+        <source>Saving…</source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.taxIdNumber.error">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:154,156</note>
+      </notes>
+      <segment>
+        <source> This field is required. </source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.taxIdNumber.label">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:138,141</note>
+      </notes>
+      <segment>
+        <source> Tax ID </source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.taxIdNumber.placeholder">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:146,147</note>
+      </notes>
+      <segment>
+        <source>M123456789</source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.title">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:20,24</note>
+      </notes>
+      <segment>
+        <source> Your professional profile </source>
+      </segment>
+    </unit>
+    <unit id="onboardingProfile.title.edit">
+      <notes>
+        <note category="location">
+          libs/onboarding/profile/src/lib/onboarding-profile/onboarding-profile.html:13,17</note>
+      </notes>
+      <segment>
+        <source> Edit your profile </source>
+      </segment>
+    </unit>
+    <unit id="onboardingRole.error.loadTypes">
+      <notes>
+        <note category="location">libs/onboarding/role/src/lib/onboarding-role/onboarding-role.ts:47</note>
+      </notes>
+      <segment>
+        <source>Failed to load roles. Please refresh.</source>
+      </segment>
+    </unit>
+    <unit id="onboardingRole.loading">
+      <notes>
+        <note category="location">
+          libs/onboarding/role/src/lib/onboarding-role/onboarding-role.html:20,23</note>
+      </notes>
+      <segment>
+        <source>Loading roles…</source>
+      </segment>
+    </unit>
+    <unit id="onboardingRole.step">
+      <notes>
+        <note category="location">
+          libs/onboarding/role/src/lib/onboarding-role/onboarding-role.html:3,7</note>
+      </notes>
+      <segment>
+        <source>Step 5 of 5</source>
+      </segment>
+    </unit>
+    <unit id="onboardingRole.submit.label">
+      <notes>
+        <note category="location">
+          libs/onboarding/role/src/lib/onboarding-role/onboarding-role.html:82,86</note>
+      </notes>
+      <segment>
+        <source>Continue →</source>
+      </segment>
+    </unit>
+    <unit id="onboardingRole.submit.loading">
+      <notes>
+        <note category="location">
+          libs/onboarding/role/src/lib/onboarding-role/onboarding-role.html:80,82</note>
+      </notes>
+      <segment>
+        <source>Saving…</source>
+      </segment>
+    </unit>
+    <unit id="onboardingRole.subtitle">
+      <notes>
+        <note category="location">
+          libs/onboarding/role/src/lib/onboarding-role/onboarding-role.html:14,18</note>
+      </notes>
+      <segment>
+        <source> Select one or more roles that describe how you&apos;ll use the platform. </source>
+      </segment>
+    </unit>
+    <unit id="onboardingRole.title">
+      <notes>
+        <note category="location">
+          libs/onboarding/role/src/lib/onboarding-role/onboarding-role.html:10,13</note>
+      </notes>
+      <segment>
+        <source> Choose your role </source>
+      </segment>
+    </unit>
+    <unit id="onboardingRole.validationBadge">
+      <notes>
+        <note category="location">
+          libs/onboarding/role/src/lib/onboarding-role/onboarding-role.html:46,49</note>
+      </notes>
+      <segment>
+        <source> validation </source>
+      </segment>
+    </unit>
+    <unit id="placesAutocomplete.clear">
+      <notes>
+        <note category="location">
+          libs/shared/ui/src/lib/places-autocomplete/places-autocomplete.html:22,28</note>
+      </notes>
+      <segment>
+        <source>Clear location</source>
+      </segment>
+    </unit>
+    <unit id="placesAutocomplete.locating">
+      <notes>
+        <note category="location">
+          libs/shared/ui/src/lib/places-autocomplete/places-autocomplete.html:62,64</note>
+      </notes>
+      <segment>
+        <source>Locating…</source>
+      </segment>
+    </unit>
+    <unit id="placesAutocomplete.placeholder">
+      <notes>
+        <note category="location">
+          libs/shared/ui/src/lib/places-autocomplete/places-autocomplete.html:13,18</note>
+      </notes>
+      <segment>
+        <source>e.g. Douala, Cameroon</source>
+      </segment>
+    </unit>
+    <unit id="placesAutocomplete.useMyLocation">
+      <notes>
+        <note category="location">
+          libs/shared/ui/src/lib/places-autocomplete/places-autocomplete.html:65,69</note>
+      </notes>
+      <segment>
+        <source>My location</source>
+      </segment>
+    </unit>
+    <unit id="register.confirmPassword.error.mismatch">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:209,214</note>
+      </notes>
+      <segment>
+        <source> Passwords do not match. </source>
+      </segment>
+    </unit>
+    <unit id="register.confirmPassword.error.required">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:202,204</note>
+      </notes>
+      <segment>
+        <source> Please confirm your password. </source>
+      </segment>
+    </unit>
+    <unit id="register.confirmPassword.label">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:183,186</note>
+      </notes>
+      <segment>
+        <source> Confirm password </source>
+      </segment>
+    </unit>
+    <unit id="register.confirmPassword.placeholder">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:192,194</note>
+      </notes>
+      <segment>
+        <source>•••••••••••••••</source>
+      </segment>
+    </unit>
+    <unit id="register.email.error">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:102,104</note>
+      </notes>
+      <segment>
+        <source> Please enter a valid email address. </source>
+      </segment>
+    </unit>
+    <unit id="register.email.label">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:88,90</note>
+      </notes>
+      <segment>
+        <source> Email address </source>
+      </segment>
+    </unit>
+    <unit id="register.email.placeholder">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:97,98</note>
+      </notes>
+      <segment>
+        <source>name@company.com</source>
+      </segment>
+    </unit>
+    <unit id="register.firstName.error">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:46,48</note>
+      </notes>
+      <segment>
+        <source> First name is required. </source>
+      </segment>
+    </unit>
+    <unit id="register.firstName.label">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:32,34</note>
+      </notes>
+      <segment>
+        <source> First name </source>
+      </segment>
+    </unit>
+    <unit id="register.firstName.placeholder">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:42</note>
+      </notes>
+      <segment>
+        <source>Jane</source>
+      </segment>
+    </unit>
+    <unit id="register.lastName.error">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:73,75</note>
+      </notes>
+      <segment>
+        <source> Last name is required. </source>
+      </segment>
+    </unit>
+    <unit id="register.lastName.label">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:59,61</note>
+      </notes>
+      <segment>
+        <source> Last name </source>
+      </segment>
+    </unit>
+    <unit id="register.lastName.placeholder">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:69</note>
+      </notes>
+      <segment>
+        <source>Doe</source>
+      </segment>
+    </unit>
+    <unit id="register.login.prompt">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:234,241</note>
+      </notes>
+      <segment>
+        <source> Already have an account? <pc id="0" equivStart="START_LINK" equivEnd="CLOSE_LINK"
+            type="link"
+            dispStart="&lt;a routerLink=&quot;/auth/login&quot; class=&quot;text-foreground ml-1 underline underline-offset-2&quot; &gt;"
+            dispEnd="&lt;/a &gt;">Sign in</pc></source>
+      </segment>
+    </unit>
+    <unit id="register.password.error.required">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:133,135</note>
+      </notes>
+      <segment>
+        <source> Password is required. </source>
+      </segment>
+    </unit>
+    <unit id="register.password.label">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:116,119</note>
+      </notes>
+      <segment>
+        <source> Password </source>
+      </segment>
+    </unit>
+    <unit id="register.password.placeholder">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:125,126</note>
+      </notes>
+      <segment>
+        <source>•••••••••••••••</source>
+      </segment>
+    </unit>
+    <unit id="register.password.rule.digit">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:164,166</note>
+      </notes>
+      <segment>
+        <source>One number</source>
+      </segment>
+    </unit>
+    <unit id="register.password.rule.lowercase">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:158,160</note>
+      </notes>
+      <segment>
+        <source>One lowercase letter</source>
+      </segment>
+    </unit>
+    <unit id="register.password.rule.minLength">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:146,148</note>
+      </notes>
+      <segment>
+        <source>At least 8 characters</source>
+      </segment>
+    </unit>
+    <unit id="register.password.rule.special">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:170,174</note>
+      </notes>
+      <segment>
+        <source>One special character</source>
+      </segment>
+    </unit>
+    <unit id="register.password.rule.uppercase">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:152,154</note>
+      </notes>
+      <segment>
+        <source>One uppercase letter</source>
+      </segment>
+    </unit>
+    <unit id="register.submit.label">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:224,227</note>
+      </notes>
+      <segment>
+        <source>Create account →</source>
+      </segment>
+    </unit>
+    <unit id="register.submit.loading">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:222,224</note>
+      </notes>
+      <segment>
+        <source>Creating account…</source>
+      </segment>
+    </unit>
+    <unit id="register.title">
+      <notes>
+        <note category="location">libs/auth/register/src/lib/register/register.html:7,10</note>
+      </notes>
+      <segment>
+        <source> Create your account </source>
+      </segment>
+    </unit>
+    <unit id="resetPassword.confirmPassword.error.mismatch">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:130,136</note>
+      </notes>
+      <segment>
+        <source> Passwords do not match. </source>
+      </segment>
+    </unit>
+    <unit id="resetPassword.confirmPassword.error.required">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:126,129</note>
+      </notes>
+      <segment>
+        <source> Please confirm your password. </source>
+      </segment>
+    </unit>
+    <unit id="resetPassword.confirmPassword.label">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:110,113</note>
+      </notes>
+      <segment>
+        <source> Confirm new password </source>
+      </segment>
+    </unit>
+    <unit id="resetPassword.confirmPassword.placeholder">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:119,121</note>
+      </notes>
+      <segment>
+        <source>•••••••••••••••</source>
+      </segment>
+    </unit>
+    <unit id="resetPassword.error.generic">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.ts:108</note>
+      </notes>
+      <segment>
+        <source>Failed to reset password. The link may have expired.</source>
+      </segment>
+    </unit>
+    <unit id="resetPassword.error.missingToken">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.ts:87</note>
+      </notes>
+      <segment>
+        <source>Invalid or expired reset link.</source>
+      </segment>
+    </unit>
+    <unit id="resetPassword.password.error.required">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:60,62</note>
+      </notes>
+      <segment>
+        <source> Password is required. </source>
+      </segment>
+    </unit>
+    <unit id="resetPassword.password.label">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:46,49</note>
+      </notes>
+      <segment>
+        <source> New password </source>
+      </segment>
+    </unit>
+    <unit id="resetPassword.password.placeholder">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:55,56</note>
+      </notes>
+      <segment>
+        <source>•••••••••••••••</source>
+      </segment>
+    </unit>
+    <unit id="resetPassword.password.rule.digit">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:91,93</note>
+      </notes>
+      <segment>
+        <source>One number</source>
+      </segment>
+    </unit>
+    <unit id="resetPassword.password.rule.lowercase">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:85,87</note>
+      </notes>
+      <segment>
+        <source>One lowercase letter</source>
+      </segment>
+    </unit>
+    <unit id="resetPassword.password.rule.minLength">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:73,75</note>
+      </notes>
+      <segment>
+        <source>At least 8 characters</source>
+      </segment>
+    </unit>
+    <unit id="resetPassword.password.rule.special">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:97,101</note>
+      </notes>
+      <segment>
+        <source>One special character</source>
+      </segment>
+    </unit>
+    <unit id="resetPassword.password.rule.uppercase">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:79,81</note>
+      </notes>
+      <segment>
+        <source>One uppercase letter</source>
+      </segment>
+    </unit>
+    <unit id="resetPassword.submit.label">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:145,150</note>
+      </notes>
+      <segment>
+        <source>Reset password →</source>
+      </segment>
+    </unit>
+    <unit id="resetPassword.submit.loading">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:143,145</note>
+      </notes>
+      <segment>
+        <source>Resetting…</source>
+      </segment>
+    </unit>
+    <unit id="resetPassword.success.message">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:14,17</note>
+      </notes>
+      <segment>
+        <source> Your password has been reset. Redirecting you to sign in… </source>
+      </segment>
+    </unit>
+    <unit id="resetPassword.success.signIn">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:21,26</note>
+      </notes>
+      <segment>
+        <source> Sign in now </source>
+      </segment>
+    </unit>
+    <unit id="resetPassword.title">
+      <notes>
+        <note category="location">
+          libs/auth/reset-password/src/lib/reset-password/reset-password.html:7,11</note>
+      </notes>
+      <segment>
+        <source> Choose a new password </source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.addDocuments">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:215,218</note>
+      </notes>
+      <segment>
+        <source> Add documents </source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.available">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:61,64</note>
+      </notes>
+      <segment>
+        <source> Available </source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.awaitingDocuments">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:93,98</note>
+      </notes>
+      <segment>
+        <source> Your application is awaiting required documents. Please upload them below. </source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.back">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:8,11</note>
+      </notes>
+      <segment>
+        <source>Back to roles</source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.cancel">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:273,275</note>
+      </notes>
+      <segment>
+        <source> Cancel </source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.categoryC">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:128,130</note>
+      </notes>
+      <segment>
+        <source> Category C </source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.complianceLevel">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:120,122</note>
+      </notes>
+      <segment>
+        <source> Compliance level </source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.deleteDoc">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:53</note>
+      </notes>
+      <segment>
+        <source>Delete document</source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.docDefaultLabel">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:52</note>
+      </notes>
+      <segment>
+        <source>Document</source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.documents">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:151,154</note>
+      </notes>
+      <segment>
+        <source> Documents </source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.error.availabilityFailed">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:94</note>
+      </notes>
+      <segment>
+        <source>Failed to update availability.</source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.error.deleteFailed">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:171</note>
+      </notes>
+      <segment>
+        <source>Failed to delete document.</source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.error.documentsFailed">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:148</note>
+      </notes>
+      <segment>
+        <source>Failed to submit documents.</source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.error.loadFailed">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:75</note>
+      </notes>
+      <segment>
+        <source>Failed to load role.</source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.info">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:104,106</note>
+      </notes>
+      <segment>
+        <source> Details </source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.labelPlaceholder">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:54</note>
+      </notes>
+      <segment>
+        <source>Label (optional)</source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.no">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:51</note>
+      </notes>
+      <segment>
+        <source>No</source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.noDocuments">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:159,162</note>
+      </notes>
+      <segment>
+        <source> No documents uploaded yet. </source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.notFound">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:35,38</note>
+      </notes>
+      <segment>
+        <source> Role not found. </source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.open">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:187,188</note>
+      </notes>
+      <segment>
+        <source>Open</source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.rejectionReason">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:73,75</note>
+      </notes>
+      <segment>
+        <source> Rejection reason </source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.reliabilityLevel">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:112,114</note>
+      </notes>
+      <segment>
+        <source> Reliability level </source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.required">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:176,178</note>
+      </notes>
+      <segment>
+        <source> Required </source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.revocationReason">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:83,85</note>
+      </notes>
+      <segment>
+        <source> Revocation reason </source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.selectFiles">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:225,227</note>
+      </notes>
+      <segment>
+        <source> Select files </source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.submit">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:264,266</note>
+      </notes>
+      <segment>
+        <source> Submit documents </source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.success.availabilityToggled">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:89</note>
+      </notes>
+      <segment>
+        <source>Availability updated.</source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.success.documentDeleted">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:166</note>
+      </notes>
+      <segment>
+        <source>Document deleted.</source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.success.documentsSubmitted">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:143</note>
+      </notes>
+      <segment>
+        <source>Documents submitted successfully.</source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.validatedAt">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.html:136,138</note>
+      </notes>
+      <segment>
+        <source> Validated at </source>
+      </segment>
+    </unit>
+    <unit id="roles.detail.yes">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-role-detail/my-role-detail.ts:50</note>
+      </notes>
+      <segment>
+        <source>Yes</source>
+      </segment>
+    </unit>
+    <unit id="roles.error.addFailed">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.ts:124</note>
+      </notes>
+      <segment>
+        <source>Failed to add roles.</source>
+      </segment>
+    </unit>
+    <unit id="roles.error.loadFailed">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.ts:77</note>
+      </notes>
+      <segment>
+        <source>Failed to load roles.</source>
+      </segment>
+    </unit>
+    <unit id="roles.myRoles.addRolesSubtitle">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.html:110,113</note>
+      </notes>
+      <segment>
+        <source> Select one or more roles to register for. </source>
+      </segment>
+    </unit>
+    <unit id="roles.myRoles.addRolesTitle">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.html:104,107</note>
+      </notes>
+      <segment>
+        <source> Add roles </source>
+      </segment>
+    </unit>
+    <unit id="roles.myRoles.addSelected">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.html:164,167</note>
+      </notes>
+      <segment>
+        <source> Add selected roles </source>
+      </segment>
+    </unit>
+    <unit id="roles.myRoles.myRolesTitle">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.html:37,40</note>
+      </notes>
+      <segment>
+        <source> My roles </source>
+      </segment>
+    </unit>
+    <unit id="roles.myRoles.noRoles">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.html:42,45</note>
+      </notes>
+      <segment>
+        <source> You haven&apos;t registered for any role yet. </source>
+      </segment>
+    </unit>
+    <unit id="roles.myRoles.requiresValidation">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.html:62,65</note>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.html:148,151</note>
+      </notes>
+      <segment>
+        <source> Requires validation </source>
+      </segment>
+    </unit>
+    <unit id="roles.myRoles.uploadDocuments">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.html:78,81</note>
+      </notes>
+      <segment>
+        <source>Upload docs</source>
+      </segment>
+    </unit>
+    <unit id="roles.myRoles.view">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.html:85,86</note>
+      </notes>
+      <segment>
+        <source>View</source>
+      </segment>
+    </unit>
+    <unit id="roles.success.rolesAdded">
+      <notes>
+        <note category="location">libs/roles/src/lib/my-roles/my-roles.ts:119</note>
+      </notes>
+      <segment>
+        <source>Roles added successfully.</source>
+      </segment>
+    </unit>
+    <unit id="sidebar.brand">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.html:14,18</note>
+      </notes>
+      <segment>
+        <source>Strategis Flow</source>
+      </segment>
+    </unit>
+    <unit id="sidebar.item.actorValidation">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:132</note>
+      </notes>
+      <segment>
+        <source>Actor Validation</source>
+      </segment>
+    </unit>
+    <unit id="sidebar.item.declareLot">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:97</note>
+      </notes>
+      <segment>
+        <source>Declare a lot</source>
+      </segment>
+    </unit>
+    <unit id="sidebar.item.lots">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:92</note>
+      </notes>
+      <segment>
+        <source>My lots</source>
+      </segment>
+    </unit>
+    <unit id="sidebar.item.overview">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:86</note>
+      </notes>
+      <segment>
+        <source>Overview</source>
+      </segment>
+    </unit>
+    <unit id="sidebar.item.premiumRequests">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:137</note>
+      </notes>
+      <segment>
+        <source>Premium Requests</source>
+      </segment>
+    </unit>
+    <unit id="sidebar.item.profile">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:107</note>
+      </notes>
+      <segment>
+        <source>Professional profile</source>
+      </segment>
+    </unit>
+    <unit id="sidebar.item.roles">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:112</note>
+      </notes>
+      <segment>
+        <source>Actor roles</source>
+      </segment>
+    </unit>
+    <unit id="sidebar.item.subscription">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:117</note>
+      </notes>
+      <segment>
+        <source>Subscription</source>
+      </segment>
+    </unit>
+    <unit id="sidebar.menu.accountSettings">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.html:94,97</note>
+      </notes>
+      <segment>
+        <source>Account settings</source>
+      </segment>
+    </unit>
+    <unit id="sidebar.menu.logout">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.html:101,103</note>
+      </notes>
+      <segment>
+        <source>Logout</source>
+      </segment>
+    </unit>
+    <unit id="sidebar.section.account">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:104</note>
+      </notes>
+      <segment>
+        <source>ACCOUNT</source>
+      </segment>
+    </unit>
+    <unit id="sidebar.section.admin">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:129</note>
+      </notes>
+      <segment>
+        <source>ADMINISTRATION</source>
+      </segment>
+    </unit>
+    <unit id="sidebar.section.workspace">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:83</note>
+      </notes>
+      <segment>
+        <source>WORKSPACE</source>
+      </segment>
+    </unit>
+    <unit id="sidebar.subtitle">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.html:23,26</note>
+      </notes>
+      <segment>
+        <source> Waste flow orchestration platform </source>
+      </segment>
+    </unit>
+    <unit id="sidebar.tier.free">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:151</note>
+      </notes>
+      <segment>
+        <source>Free plan</source>
+      </segment>
+    </unit>
+    <unit id="sidebar.tier.premium">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:150</note>
+      </notes>
+      <segment>
+        <source>Premium</source>
+      </segment>
+    </unit>
+    <unit id="subscription.action.renew">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:117,122</note>
+      </notes>
+      <segment>
+        <source>Renew</source>
+      </segment>
+    </unit>
+    <unit id="subscription.action.requestAgain">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:98,101</note>
+      </notes>
+      <segment>
+        <source>Request again</source>
+      </segment>
+    </unit>
+    <unit id="subscription.action.requestUpgrade">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:142,148</note>
+      </notes>
+      <segment>
+        <source>Request premium upgrade</source>
+      </segment>
+    </unit>
+    <unit id="subscription.activatedAt">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:42,43</note>
+      </notes>
+      <segment>
+        <source>Activated:</source>
+      </segment>
+    </unit>
+    <unit id="subscription.currentPlan">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:25,28</note>
+      </notes>
+      <segment>
+        <source> Current Plan </source>
+      </segment>
+    </unit>
+    <unit id="subscription.error.loadFailed">
+      <notes>
+        <note category="location">libs/subscription/src/lib/my-subscription/my-subscription.ts:52</note>
+      </notes>
+      <segment>
+        <source>Failed to load subscription data.</source>
+      </segment>
+    </unit>
+    <unit id="subscription.error.upgradeFailed">
+      <notes>
+        <note category="location">libs/subscription/src/lib/my-subscription/my-subscription.ts:76</note>
+      </notes>
+      <segment>
+        <source>Failed to submit upgrade request. Please try again.</source>
+      </segment>
+    </unit>
+    <unit id="subscription.expiresAt">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:46,47</note>
+      </notes>
+      <segment>
+        <source>Expires:</source>
+      </segment>
+    </unit>
+    <unit id="subscription.history.col.date">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:165,167</note>
+      </notes>
+      <segment>
+        <source> Date </source>
+      </segment>
+    </unit>
+    <unit id="subscription.history.col.plan">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:171,173</note>
+      </notes>
+      <segment>
+        <source> Plan </source>
+      </segment>
+    </unit>
+    <unit id="subscription.history.col.status">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:177,179</note>
+      </notes>
+      <segment>
+        <source> Status </source>
+      </segment>
+    </unit>
+    <unit id="subscription.history.title">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:155,157</note>
+      </notes>
+      <segment>
+        <source> Request History </source>
+      </segment>
+    </unit>
+    <unit id="subscription.status.expiredMessage">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:107,111</note>
+      </notes>
+      <segment>
+        <source> Your premium subscription has expired. </source>
+      </segment>
+    </unit>
+    <unit id="subscription.status.pendingMessage">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:68,72</note>
+      </notes>
+      <segment>
+        <source> Your upgrade request is under review. </source>
+      </segment>
+    </unit>
+    <unit id="subscription.status.rejectedTitle">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:81,83</note>
+      </notes>
+      <segment>
+        <source> Your upgrade request was rejected. </source>
+      </segment>
+    </unit>
+    <unit id="subscription.subtitle">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:14,18</note>
+      </notes>
+      <segment>
+        <source> View and manage your current subscription plan. </source>
+      </segment>
+    </unit>
+    <unit id="subscription.success.upgradeRequested">
+      <notes>
+        <note category="location">libs/subscription/src/lib/my-subscription/my-subscription.ts:69</note>
+      </notes>
+      <segment>
+        <source>Your premium upgrade request has been submitted.</source>
+      </segment>
+    </unit>
+    <unit id="subscription.tier.free">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:34,39</note>
+      </notes>
+      <segment>
+        <source>Free plan</source>
+      </segment>
+    </unit>
+    <unit id="subscription.tier.premium">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:30,33</note>
+      </notes>
+      <segment>
+        <source>Premium</source>
+      </segment>
+    </unit>
+    <unit id="subscription.title">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:8,11</note>
+      </notes>
+      <segment>
+        <source> My Subscription </source>
+      </segment>
+    </unit>
+    <unit id="subscription.upgrade.description">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:136,139</note>
+      </notes>
+      <segment>
+        <source> Get access to premium features and unlock your full potential. </source>
+      </segment>
+    </unit>
+    <unit id="subscription.upgrade.title">
+      <notes>
+        <note category="location">
+          libs/subscription/src/lib/my-subscription/my-subscription.html:130,133</note>
+      </notes>
+      <segment>
+        <source> Upgrade to Premium </source>
+      </segment>
+    </unit>
+    <unit id="toast.container.label">
+      <notes>
+        <note category="location">libs/shared/ui/src/lib/toast/toast-container.ts:35,36</note>
+      </notes>
+      <segment>
+        <source>Notifications</source>
+      </segment>
+    </unit>
+    <unit id="toast.dismiss.label">
+      <notes>
+        <note category="location">libs/shared/ui/src/lib/toast/toast-container.ts:54</note>
+      </notes>
+      <segment>
+        <source>Dismiss</source>
+      </segment>
+    </unit>
+    <unit id="upgradeRequest.status.activated">
+      <notes>
+        <note category="location">libs/profiles/data-access/src/lib/premium-upgrade-request.ts:46</note>
+      </notes>
+      <segment>
+        <source>Activated</source>
+      </segment>
+    </unit>
+    <unit id="upgradeRequest.status.expired">
+      <notes>
+        <note category="location">libs/profiles/data-access/src/lib/premium-upgrade-request.ts:48</note>
+      </notes>
+      <segment>
+        <source>Expired</source>
+      </segment>
+    </unit>
+    <unit id="upgradeRequest.status.pending">
+      <notes>
+        <note category="location">libs/profiles/data-access/src/lib/premium-upgrade-request.ts:45</note>
+      </notes>
+      <segment>
+        <source>Pending</source>
+      </segment>
+    </unit>
+    <unit id="upgradeRequest.status.rejected">
+      <notes>
+        <note category="location">libs/profiles/data-access/src/lib/premium-upgrade-request.ts:47</note>
+      </notes>
+      <segment>
+        <source>Rejected</source>
+      </segment>
+    </unit>
+  </file>
 </xliff>

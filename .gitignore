@@ -45,3 +45,5 @@ Thumbs.db
 
 .angular
 .env
+.engo
+*.bak

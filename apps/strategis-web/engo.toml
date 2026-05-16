@@ -1,0 +1,14 @@
+[project]
+format = "xliff"
+files_glob = "src/locale/fr/*.xlf"
+
+[languages]
+source = "en"
+targets = ["fr"]
+
+[ai]
+provider = "anthropic"
+model = "claude-haiku-4-5"
+batch_size = 15
+
+[glossary]
