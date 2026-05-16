@@ -23,8 +23,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
   gdal-bin \
   libgdal-dev \
   gettext \
-  wait-for-it \
-  curl
+  wait-for-it
 
 # Requirements are installed here to ensure they will be cached.
 RUN --mount=type=cache,target=/root/.cache/uv \
