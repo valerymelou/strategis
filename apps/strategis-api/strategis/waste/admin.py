@@ -1,6 +1,9 @@
 from django.contrib import admin
 
-from .models import CEDCode, LotCategorization, WasteLot, WasteLotPhoto
+from .models import CEDCode
+from .models import LotCategorization
+from .models import WasteLot
+from .models import WasteLotPhoto
 
 
 @admin.register(CEDCode)

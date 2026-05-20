@@ -84,7 +84,8 @@ class TestCEDCodeList(BaseAPITestCase):
         b = CEDCodeFactory(code="TST-CAT-B", category=CEDCode.Category.B)
 
         resp = self.client.get(
-            self.url, {"filter[category]": "A", "filter[search]": "TST-CAT"}
+            self.url,
+            {"filter[category]": "A", "filter[search]": "TST-CAT"},
         )
 
         ids = [item["id"] for item in resp.data["results"]]
@@ -96,7 +97,8 @@ class TestCEDCodeList(BaseAPITestCase):
         safe = CEDCodeFactory(code="TST-HAZ-N", is_hazardous=False)
 
         resp = self.client.get(
-            self.url, {"filter[isHazardous]": "true", "filter[search]": "TST-HAZ"}
+            self.url,
+            {"filter[isHazardous]": "true", "filter[search]": "TST-HAZ"},
         )
 
         ids = [item["id"] for item in resp.data["results"]]
@@ -108,7 +110,8 @@ class TestCEDCodeList(BaseAPITestCase):
         inactive = CEDCodeFactory(code="TST-ACT-N", is_active=False)
 
         resp = self.client.get(
-            self.url, {"filter[isActive]": "false", "filter[search]": "TST-ACT"}
+            self.url,
+            {"filter[isActive]": "false", "filter[search]": "TST-ACT"},
         )
 
         ids = [item["id"] for item in resp.data["results"]]
