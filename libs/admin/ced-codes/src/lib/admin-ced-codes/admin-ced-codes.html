@@ -1,0 +1,177 @@
+<div class="p-6">
+  <!-- Header -->
+  <div class="mb-6 flex items-center justify-between">
+    <div>
+      <h1
+        class="text-foreground text-2xl font-semibold"
+        i18n="@@admin.cedCodes.title"
+      >
+        CED Codes
+      </h1>
+      <p
+        class="text-muted-foreground mt-1 text-sm"
+        i18n="@@admin.cedCodes.subtitle"
+      >
+        Manage the waste classification codes (CED).
+      </p>
+    </div>
+    <a
+      [routerLink]="['/admin/ced-codes/new']"
+      uiButton
+      variant="default"
+      class="inline-flex items-center gap-2"
+    >
+      <ng-icon name="lucidePlus" size="16" />
+      <span i18n="@@admin.cedCodes.newButton">New CED Code</span>
+    </a>
+  </div>
+
+  <!-- Filter bar -->
+  <div class="mb-4 flex flex-wrap items-center gap-3">
+    <input
+      type="search"
+      class="border-border bg-background text-foreground focus:ring-ring h-9 rounded-md border px-3 text-sm focus:ring-2 focus:outline-none"
+      placeholder="Search code, label…"
+      i18n-placeholder="@@admin.cedCodes.searchPlaceholder"
+      [value]="searchFilter()"
+      (input)="onSearchInput($event)"
+    />
+    <select
+      class="border-border bg-background text-foreground focus:ring-ring h-9 rounded-md border px-3 text-sm focus:ring-2 focus:outline-none"
+      [value]="categoryFilter()"
+      (change)="onCategoryChange($event)"
+    >
+      @for (opt of categoryOptions; track opt.value) {
+      <option [value]="opt.value">{{ opt.label }}</option>
+      }
+    </select>
+    <select
+      class="border-border bg-background text-foreground focus:ring-ring h-9 rounded-md border px-3 text-sm focus:ring-2 focus:outline-none"
+      [value]="isHazardousFilter()"
+      (change)="onHazardousChange($event)"
+    >
+      @for (opt of hazardousOptions; track opt.value) {
+      <option [value]="opt.value">{{ opt.label }}</option>
+      }
+    </select>
+    <select
+      class="border-border bg-background text-foreground focus:ring-ring h-9 rounded-md border px-3 text-sm focus:ring-2 focus:outline-none"
+      [value]="isActiveFilter()"
+      (change)="onActiveChange($event)"
+    >
+      @for (opt of activeOptions; track opt.value) {
+      <option [value]="opt.value">{{ opt.label }}</option>
+      }
+    </select>
+    <!-- Row count -->
+    <div class="ml-auto">
+      @if (isLoading()) {
+      <div class="bg-muted h-4 w-28 animate-pulse rounded"></div>
+      } @else {
+      <p class="text-muted-foreground text-sm">
+        @if (pagination()) {
+        <ng-container i18n="@@admin.cedCodes.rowCount"
+          >{{ cedCodes().length }} of {{ pagination()!.count }}
+          results</ng-container
+        >
+        } @else { {{ cedCodes().length }}
+        <ng-container i18n="@@admin.cedCodes.rowCountSimple"
+          >results</ng-container
+        >
+        }
+      </p>
+      }
+    </div>
+  </div>
+
+  <!-- Table -->
+  <div class="border-border overflow-hidden rounded-lg border">
+    <table uiTable>
+      <thead uiThead>
+        <tr uiTr>
+          <th uiTh i18n="@@admin.cedCodes.col.code">Code</th>
+          <th uiTh i18n="@@admin.cedCodes.col.chapter">Chapter</th>
+          <th uiTh i18n="@@admin.cedCodes.col.label">Label</th>
+          <th uiTh i18n="@@admin.cedCodes.col.category">Category</th>
+          <th uiTh i18n="@@admin.cedCodes.col.hazardous">Hazardous</th>
+          <th uiTh i18n="@@admin.cedCodes.col.active">Active</th>
+        </tr>
+      </thead>
+      <tbody uiTbody>
+        @if (isLoading()) { @for (i of [1, 2, 3, 4, 5]; track i) {
+        <tr uiTr>
+          @for (j of [1, 2, 3, 4, 5, 6]; track j) {
+          <td uiTd>
+            <div class="bg-muted h-4 animate-pulse rounded"></div>
+          </td>
+          }
+        </tr>
+        } } @else if (cedCodes().length === 0) {
+        <tr uiTr>
+          <td uiTd colspan="6" class="py-16 text-center">
+            <p
+              class="text-muted-foreground text-sm"
+              i18n="@@admin.cedCodes.empty"
+            >
+              No CED codes found.
+            </p>
+          </td>
+        </tr>
+        } @else { @for (cedCode of cedCodes(); track cedCode.id) {
+        <tr
+          uiTr
+          [routerLink]="['/admin/ced-codes', cedCode.id]"
+          class="hover:bg-muted/50! cursor-pointer"
+        >
+          <td uiTd class="font-mono font-medium">{{ cedCode.code }}</td>
+          <td uiTd class="text-muted-foreground">{{ cedCode.chapterCode }}</td>
+          <td uiTd class="max-w-xs truncate">{{ cedCode.label }}</td>
+          <td uiTd>
+            <span uiBadge [variant]="cedCode.categoryVariant">
+              {{ cedCode.categoryLabel }}
+            </span>
+          </td>
+          <td uiTd>
+            @if (cedCode.isHazardous) {
+            <span
+              uiBadge
+              variant="destructive"
+              i18n="@@admin.cedCodes.hazardous.yes"
+              >Yes</span
+            >
+            } @else {
+            <span uiBadge variant="outline" i18n="@@admin.cedCodes.hazardous.no"
+              >No</span
+            >
+            }
+          </td>
+          <td uiTd>
+            @if (cedCode.isActive) {
+            <span uiBadge variant="default" i18n="@@admin.cedCodes.active.yes"
+              >Active</span
+            >
+            } @else {
+            <span uiBadge variant="secondary" i18n="@@admin.cedCodes.active.no"
+              >Inactive</span
+            >
+            }
+          </td>
+        </tr>
+        } }
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Pagination -->
+  @if (pagination() && pagination()!.pages > 1) {
+  <div class="mt-4">
+    <ui-paginator
+      [page]="pagination()!.page"
+      [pages]="pagination()!.pages"
+      [count]="pagination()!.count"
+      [pageSize]="50"
+      (pageChange)="onPageChange($event)"
+    />
+  </div>
+  }
+</div>

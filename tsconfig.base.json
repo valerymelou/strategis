@@ -47,7 +47,9 @@
       "@strategis/admin/premium": ["./libs/admin/premium/src/index.ts"],
       "@strategis/profile": ["./libs/profile/src/index.ts"],
       "@strategis/roles": ["./libs/roles/src/index.ts"],
-      "@strategis/subscription": ["./libs/subscription/src/index.ts"]
+      "@strategis/subscription": ["./libs/subscription/src/index.ts"],
+      "@strategis/waste/data-access": ["./libs/waste/data-access/src/index.ts"],
+      "@strategis/admin/ced-codes": ["./libs/admin/ced-codes/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

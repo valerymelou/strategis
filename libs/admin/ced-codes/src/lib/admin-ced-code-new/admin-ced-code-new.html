@@ -1,0 +1,303 @@
+<div class="p-6">
+  <!-- Back -->
+  <a
+    routerLink="/admin/ced-codes"
+    class="text-muted-foreground hover:text-foreground mb-6 inline-flex items-center gap-2 text-sm"
+  >
+    <ng-icon name="lucideArrowLeft" size="14" />
+    <span i18n="@@admin.cedCodes.backToList">Back to CED codes</span>
+  </a>
+
+  <!-- Header -->
+  <div class="mb-6">
+    <h1
+      class="text-foreground text-2xl font-semibold"
+      i18n="@@admin.cedCodes.new.title"
+    >
+      New CED Code
+    </h1>
+    <p
+      class="text-muted-foreground mt-1 text-sm"
+      i18n="@@admin.cedCodes.new.subtitle"
+    >
+      Add a new waste classification code.
+    </p>
+  </div>
+
+  <!-- Form -->
+  <div class="border-border rounded-lg border p-5">
+    <form
+      [formGroup]="form"
+      (ngSubmit)="submit()"
+      class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+    >
+      <div class="flex flex-col gap-1">
+        <label
+          class="text-foreground text-sm font-medium"
+          i18n="@@admin.cedCodes.field.code"
+          for="code"
+          >Code <span class="text-destructive">*</span></label
+        >
+        <input
+          uiInput
+          type="text"
+          formControlName="code"
+          id="code"
+          [class.border-destructive]="code.invalid && code.touched"
+        />
+        @if (code.hasError('apiError') && code.touched) {
+        <p class="text-destructive text-xs">{{ code.getError('apiError') }}</p>
+        }
+      </div>
+      <div class="flex flex-col gap-1">
+        <label
+          class="text-foreground text-sm font-medium"
+          i18n="@@admin.cedCodes.field.chapterCode"
+          for="chapterCode"
+          >Chapter code <span class="text-destructive">*</span></label
+        >
+        <input
+          uiInput
+          type="text"
+          formControlName="chapterCode"
+          id="chapterCode"
+          [class.border-destructive]="chapterCode.invalid && chapterCode.touched"
+        />
+        @if (chapterCode.hasError('apiError') && chapterCode.touched) {
+        <p class="text-destructive text-xs">
+          {{ chapterCode.getError('apiError') }}
+        </p>
+        }
+      </div>
+      <div class="flex flex-col gap-1">
+        <label
+          class="text-foreground text-sm font-medium"
+          i18n="@@admin.cedCodes.field.subCategoryCode"
+          for="subCategoryCode"
+          >Sub-category code <span class="text-destructive">*</span></label
+        >
+        <input
+          uiInput
+          type="text"
+          formControlName="subCategoryCode"
+          id="subCategoryCode"
+          [class.border-destructive]="subCategoryCode.invalid && subCategoryCode.touched"
+        />
+        @if (subCategoryCode.hasError('apiError') && subCategoryCode.touched) {
+        <p class="text-destructive text-xs">
+          {{ subCategoryCode.getError('apiError') }}
+        </p>
+        }
+      </div>
+      <div class="flex flex-col gap-1">
+        <label
+          class="text-foreground text-sm font-medium"
+          i18n="@@admin.cedCodes.field.subCategoryLabel"
+          for="subCategoryLabel"
+          >Sub-category label <span class="text-destructive">*</span></label
+        >
+        <input
+          uiInput
+          type="text"
+          formControlName="subCategoryLabel"
+          id="subCategoryLabel"
+          [class.border-destructive]="subCategoryLabel.invalid && subCategoryLabel.touched"
+        />
+        @if (subCategoryLabel.hasError('apiError') && subCategoryLabel.touched)
+        {
+        <p class="text-destructive text-xs">
+          {{ subCategoryLabel.getError('apiError') }}
+        </p>
+        }
+      </div>
+      <div class="flex flex-col gap-1 sm:col-span-2">
+        <label
+          class="text-foreground text-sm font-medium"
+          i18n="@@admin.cedCodes.field.label"
+          for="label"
+          >Label <span class="text-destructive">*</span></label
+        >
+        <input
+          uiInput
+          type="text"
+          formControlName="label"
+          id="label"
+          [class.border-destructive]="label.invalid && label.touched"
+        />
+        @if (label.hasError('apiError') && label.touched) {
+        <p class="text-destructive text-xs">{{ label.getError('apiError') }}</p>
+        }
+      </div>
+      <div class="flex flex-col gap-1">
+        <label
+          class="text-foreground text-sm font-medium"
+          i18n="@@admin.cedCodes.field.category"
+          for="category"
+          >Category <span class="text-destructive">*</span></label
+        >
+        <select
+          class="border-border bg-background text-foreground focus:ring-ring h-9 rounded-md border px-3 text-sm focus:ring-2 focus:outline-none"
+          formControlName="category"
+          id="category"
+        >
+          @for (opt of categoryOptions; track opt.value) {
+          <option [value]="opt.value">{{ opt.label }}</option>
+          }
+        </select>
+        @if (category.hasError('apiError') && category.touched) {
+        <p class="text-destructive text-xs">
+          {{ category.getError('apiError') }}
+        </p>
+        }
+      </div>
+      <div class="flex flex-col gap-1">
+        <label
+          class="text-foreground text-sm font-medium"
+          i18n="@@admin.cedCodes.field.subCategoryA"
+          for="subCategoryA"
+          >Sub-category A</label
+        >
+        <input
+          uiInput
+          type="text"
+          formControlName="subCategoryA"
+          id="subCategoryA"
+          [class.border-destructive]="subCategoryA.invalid && subCategoryA.touched"
+        />
+        @if (subCategoryA.hasError('apiError') && subCategoryA.touched) {
+        <p class="text-destructive text-xs">
+          {{ subCategoryA.getError('apiError') }}
+        </p>
+        }
+      </div>
+      <div class="flex flex-col gap-1">
+        <label
+          class="text-foreground text-sm font-medium"
+          i18n="@@admin.cedCodes.field.subCategoryALabel"
+          for="subCategoryALabel"
+          >Sub-category A label</label
+        >
+        <input
+          uiInput
+          type="text"
+          formControlName="subCategoryALabel"
+          id="subCategoryALabel"
+          [class.border-destructive]="subCategoryALabel.invalid && subCategoryALabel.touched"
+        />
+        @if (subCategoryALabel.hasError('apiError') &&
+        subCategoryALabel.touched) {
+        <p class="text-destructive text-xs">
+          {{ subCategoryALabel.getError('apiError') }}
+        </p>
+        }
+      </div>
+      <div class="flex flex-col gap-1">
+        <label
+          class="text-foreground text-sm font-medium"
+          i18n="@@admin.cedCodes.field.allowedUnits"
+          for="allowedUnits"
+          >Allowed units (comma-separated)</label
+        >
+        <input
+          uiInput
+          type="text"
+          formControlName="allowedUnitsRaw"
+          [class.border-destructive]="allowedUnitsRaw.invalid && allowedUnitsRaw.touched"
+        />
+        @if (allowedUnitsRaw.hasError('apiError') && allowedUnitsRaw.touched) {
+        <p class="text-destructive text-xs">
+          {{ allowedUnitsRaw.getError('apiError') }}
+        </p>
+        }
+      </div>
+      <div class="flex flex-col gap-1">
+        <label
+          class="text-foreground text-sm font-medium"
+          i18n="@@admin.cedCodes.field.pointsPerUnit"
+          for="pointsPerUnit"
+          >Points per unit</label
+        >
+        <input
+          uiInput
+          type="text"
+          formControlName="pointsPerUnit"
+          id="pointsPerUnit"
+          [class.border-destructive]="pointsPerUnit.invalid && pointsPerUnit.touched"
+        />
+        @if (pointsPerUnit.hasError('apiError') && pointsPerUnit.touched) {
+        <p class="text-destructive text-xs">
+          {{ pointsPerUnit.getError('apiError') }}
+        </p>
+        }
+      </div>
+      <div class="flex flex-col gap-1 sm:col-span-2 lg:col-span-3">
+        <label
+          class="text-foreground text-sm font-medium"
+          i18n="@@admin.cedCodes.field.referenceScenario"
+          for="referenceScenario"
+          >Reference scenario</label
+        >
+        <input
+          uiInput
+          type="text"
+          formControlName="referenceScenario"
+          [class.border-destructive]="referenceScenario.invalid && referenceScenario.touched"
+        />
+        @if (referenceScenario.hasError('apiError') &&
+        referenceScenario.touched) {
+        <p class="text-destructive text-xs">
+          {{ referenceScenario.getError('apiError') }}
+        </p>
+        }
+      </div>
+      <div class="flex items-center gap-2">
+        <input
+          type="checkbox"
+          id="newIsHazardous"
+          formControlName="isHazardous"
+          class="border-border rounded"
+        />
+        <label
+          for="newIsHazardous"
+          class="text-foreground text-sm"
+          i18n="@@admin.cedCodes.field.isHazardous"
+          >Hazardous</label
+        >
+      </div>
+      <div class="flex items-center gap-2">
+        <input
+          type="checkbox"
+          id="newIsActive"
+          formControlName="isActive"
+          class="border-border rounded"
+        />
+        <label
+          for="newIsActive"
+          class="text-foreground text-sm"
+          i18n="@@admin.cedCodes.field.isActive"
+          >Active</label
+        >
+      </div>
+
+      <div class="flex items-center gap-3 pt-2 sm:col-span-2 lg:col-span-3">
+        <button
+          uiButton
+          variant="default"
+          type="submit"
+          [disabled]="isSubmitting() || form.invalid"
+          i18n="@@admin.cedCodes.new.submitButton"
+        >
+          Create CED code
+        </button>
+        <a
+          routerLink="/admin/ced-codes"
+          uiButton
+          variant="outline"
+          i18n="@@admin.cedCodes.cancelButton"
+        >
+          Cancel
+        </a>
+      </div>
+    </form>
+  </div>
+</div>

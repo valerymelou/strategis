@@ -9,6 +9,11 @@ import { ResetPassword } from '@strategis/auth/reset-password';
 import { adminGuard, authGuard, loginGuard } from '@strategis/auth/data-access';
 import { AdminActors, AdminActorDetail } from '@strategis/admin/actors';
 import { AdminPremium, AdminPremiumDetail } from '@strategis/admin/premium';
+import {
+  AdminCedCodes,
+  AdminCedCodeDetail,
+  AdminCedCodeNew,
+} from '@strategis/admin/ced-codes';
 import { Layout } from '@strategis/layout';
 import {
   onboardingEntryGuard,
@@ -31,7 +36,8 @@ export const appRoutes: Route[] = [
     children: [
       {
         path: 'profile',
-        loadComponent: () => import('@strategis/profile').then((m) => m.MyProfile),
+        loadComponent: () =>
+          import('@strategis/profile').then((m) => m.MyProfile),
       },
       {
         path: 'roles',
@@ -39,11 +45,13 @@ export const appRoutes: Route[] = [
       },
       {
         path: 'roles/:id',
-        loadComponent: () => import('@strategis/roles').then((m) => m.MyRoleDetail),
+        loadComponent: () =>
+          import('@strategis/roles').then((m) => m.MyRoleDetail),
       },
       {
         path: 'subscription',
-        loadComponent: () => import('@strategis/subscription').then((m) => m.MySubscription),
+        loadComponent: () =>
+          import('@strategis/subscription').then((m) => m.MySubscription),
       },
       {
         path: 'admin',
@@ -54,6 +62,9 @@ export const appRoutes: Route[] = [
           { path: 'actors/:id', component: AdminActorDetail },
           { path: 'premium', component: AdminPremium },
           { path: 'premium/:id', component: AdminPremiumDetail },
+          { path: 'ced-codes', component: AdminCedCodes },
+          { path: 'ced-codes/new', component: AdminCedCodeNew },
+          { path: 'ced-codes/:id', component: AdminCedCodeDetail },
         ],
       },
     ],
@@ -65,7 +76,11 @@ export const appRoutes: Route[] = [
       { path: 'login', component: Login, canActivate: [loginGuard] },
       { path: 'register', component: Register, canActivate: [loginGuard] },
       { path: 'verify', component: EmailVerification },
-      { path: 'forgot-password', component: ForgotPassword, canActivate: [loginGuard] },
+      {
+        path: 'forgot-password',
+        component: ForgotPassword,
+        canActivate: [loginGuard],
+      },
       { path: 'reset-password/:token', component: ResetPassword },
       { path: '', redirectTo: 'login', pathMatch: 'full' },
     ],
