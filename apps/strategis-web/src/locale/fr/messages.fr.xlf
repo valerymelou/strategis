@@ -736,6 +736,662 @@
         <target>Afficher</target>
       </segment>
     </unit>
+    <unit id="admin.cedCodes.active.no">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:49,53</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.html:155,158</note>
+      </notes>
+      <segment state="translated">
+        <source>Inactive</source>
+        <target>Inactif</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.active.yes">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.html:151,153</note>
+      </notes>
+      <segment state="translated">
+        <source>Active</source>
+        <target>Actif</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.backToList">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:8,12</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.html:8,12</note>
+      </notes>
+      <segment state="translated">
+        <source>Back to CED codes</source>
+        <target>Retour aux codes CED</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.cancelButton">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:510,513</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.html:298,301</note>
+      </notes>
+      <segment state="translated">
+        <source> Cancel </source>
+        <target> Annuler </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.col.active">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.html:97,100</note>
+      </notes>
+      <segment state="translated">
+        <source>Active</source>
+        <target>Actif</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.col.category">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.html:95,96</note>
+      </notes>
+      <segment state="translated">
+        <source>Category</source>
+        <target>Catégorie</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.col.chapter">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.html:93,94</note>
+      </notes>
+      <segment state="translated">
+        <source>Chapter</source>
+        <target>Chapitre</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.col.code">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.html:92,93</note>
+      </notes>
+      <segment state="translated">
+        <source>Code</source>
+        <target>Code</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.col.hazardous">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.html:96,97</note>
+      </notes>
+      <segment state="translated">
+        <source>Hazardous</source>
+        <target>Dangereux</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.col.label">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.html:94,95</note>
+      </notes>
+      <segment state="translated">
+        <source>Label</source>
+        <target>Étiquette</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.dangerZone">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:185,187</note>
+      </notes>
+      <segment state="translated">
+        <source> Danger zone </source>
+        <target> Zone dangereuse </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.deleteButton">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:196,200</note>
+      </notes>
+      <segment state="translated">
+        <source> Delete this CED code </source>
+        <target> Supprimer ce code CED </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.deleteCancelButton">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:225,229</note>
+      </notes>
+      <segment state="translated">
+        <source> Cancel </source>
+        <target> Annuler </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.deleteConfirmButton">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:215,218</note>
+      </notes>
+      <segment state="translated">
+        <source> Yes, delete </source>
+        <target> Oui, supprimer </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.deleteConfirmText">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:203,205</note>
+      </notes>
+      <segment state="translated">
+        <source> Are you sure? This action cannot be undone. </source>
+        <target> Êtes-vous sûr ? Cette action ne peut pas être annulée. </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.detail.section">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:63,66</note>
+      </notes>
+      <segment state="translated">
+        <source> Details </source>
+        <target> Détails </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.editButton">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:73,76</note>
+      </notes>
+      <segment state="translated">
+        <source> Edit </source>
+        <target> Modifier </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.editSection">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:237,240</note>
+      </notes>
+      <segment state="translated">
+        <source> Edit CED Code </source>
+        <target> Modifier le code CED </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.empty">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.html:116,118</note>
+      </notes>
+      <segment state="translated">
+        <source> No CED codes found. </source>
+        <target> Aucun code CED trouvé. </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.error.createFailed">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.ts:130</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to create CED code.</source>
+        <target>Échec de la création du code CED.</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.error.deleteFailed">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.ts:213</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to delete CED code.</source>
+        <target>Échec de la suppression du code CED.</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.error.loadFailed">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.ts:120</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.ts:130</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to load CED code.</source>
+        <target>Échec du chargement du code CED.</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.error.updateFailed">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.ts:195</note>
+      </notes>
+      <segment state="translated">
+        <source>Failed to update CED code.</source>
+        <target>Échec de la mise à jour du code CED.</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.field.allowedUnits">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:148,150</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:408,411</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.html:199,202</note>
+      </notes>
+      <segment state="translated">
+        <source> Allowed units </source>
+        <target> Unités autorisées </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.field.category">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:346,349</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.html:136,138</note>
+      </notes>
+      <segment state="translated">
+        <source>Category</source>
+        <target>Catégorie</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.field.chapterCode">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:93,95</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:267,270</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.html:57,59</note>
+      </notes>
+      <segment state="translated">
+        <source> Chapter code </source>
+        <target> Code du chapitre </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.field.code">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:82,84</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:249,252</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.html:39,41</note>
+      </notes>
+      <segment state="translated">
+        <source> Code </source>
+        <target> Code </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.field.isActive">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:489,493</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.html:278,282</note>
+      </notes>
+      <segment state="translated">
+        <source>Active</source>
+        <target>Actif</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.field.isHazardous">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:475,478</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.html:264,267</note>
+      </notes>
+      <segment state="translated">
+        <source>Hazardous</source>
+        <target>Dangereux</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.field.label">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:328,331</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.html:118,120</note>
+      </notes>
+      <segment state="translated">
+        <source>Label</source>
+        <target>Libellé</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.field.pointsPerUnit">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:159,161</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:428,431</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.html:218,221</note>
+      </notes>
+      <segment state="translated">
+        <source> Points per unit </source>
+        <target> Points par unité </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.field.referenceScenario">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:170,172</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:448,452</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.html:238,242</note>
+      </notes>
+      <segment state="translated">
+        <source> Reference scenario </source>
+        <target> Scénario de référence </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.field.subCategoryA">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:126,128</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:368,371</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.html:158,161</note>
+      </notes>
+      <segment state="translated">
+        <source> Sub-category A </source>
+        <target> Sous-catégorie A </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.field.subCategoryALabel">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:137,139</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:387,391</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.html:178,182</note>
+      </notes>
+      <segment state="translated">
+        <source> Sub-category A label </source>
+        <target> Libellé de la sous-catégorie A </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.field.subCategoryCode">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:104,106</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:287,289</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.html:77,79</note>
+      </notes>
+      <segment state="translated">
+        <source> Sub-category code </source>
+        <target> Code de la sous-catégorie </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.field.subCategoryLabel">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:115,117</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:307,309</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.html:97,99</note>
+      </notes>
+      <segment state="translated">
+        <source> Sub-category label </source>
+        <target> Libellé de la sous-catégorie </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.filter.active">
+      <notes>
+        <note category="location">libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.ts:88</note>
+      </notes>
+      <segment state="translated">
+        <source>Active</source>
+        <target>Actif</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.filter.allActive">
+      <notes>
+        <note category="location">libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.ts:87</note>
+      </notes>
+      <segment state="translated">
+        <source>All</source>
+        <target>Tous</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.filter.allCategories">
+      <notes>
+        <note category="location">libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.ts:58</note>
+      </notes>
+      <segment state="translated">
+        <source>All categories</source>
+        <target>Toutes les catégories</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.filter.allHazardous">
+      <notes>
+        <note category="location">libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.ts:75</note>
+      </notes>
+      <segment state="translated">
+        <source>All</source>
+        <target>Tous</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.filter.categoryA">
+      <notes>
+        <note category="location">libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.ts:62</note>
+      </notes>
+      <segment state="translated">
+        <source>Category A</source>
+        <target>Catégorie A</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.filter.categoryB">
+      <notes>
+        <note category="location">libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.ts:66</note>
+      </notes>
+      <segment state="translated">
+        <source>Category B</source>
+        <target>Catégorie B</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.filter.categoryC">
+      <notes>
+        <note category="location">libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.ts:70</note>
+      </notes>
+      <segment state="translated">
+        <source>Category C</source>
+        <target>Catégorie C</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.filter.hazardous">
+      <notes>
+        <note category="location">libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.ts:78</note>
+      </notes>
+      <segment state="translated">
+        <source>Hazardous</source>
+        <target>Dangereux</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.filter.inactive">
+      <notes>
+        <note category="location">libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.ts:91</note>
+      </notes>
+      <segment state="translated">
+        <source>Inactive</source>
+        <target>Inactif</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.filter.nonHazardous">
+      <notes>
+        <note category="location">libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.ts:82</note>
+      </notes>
+      <segment state="translated">
+        <source>Non-hazardous</source>
+        <target>Non-dangereux</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.hazardous.no">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.html:145,147</note>
+      </notes>
+      <segment state="translated">
+        <source>No</source>
+        <target>Non</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.hazardous.yes">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:45,47</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.html:140,143</note>
+      </notes>
+      <segment state="translated">
+        <source>Hazardous</source>
+        <target>Dangereux</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.new.submitButton">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.html:290,293</note>
+      </notes>
+      <segment state="translated">
+        <source> Create CED code </source>
+        <target> Créer un code CED </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.new.subtitle">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.html:23,28</note>
+      </notes>
+      <segment state="translated">
+        <source> Add a new waste classification code. </source>
+        <target> Ajouter un nouveau code de classification des déchets. </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.new.title">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.html:17,20</note>
+      </notes>
+      <segment state="translated">
+        <source> New CED Code </source>
+        <target> Nouveau code CED </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.newButton">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.html:25,29</note>
+      </notes>
+      <segment state="translated">
+        <source>New CED Code</source>
+        <target>Nouveau code CED</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.rowCount">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.html:74,75</note>
+      </notes>
+      <segment state="translated">
+        <source><ph id="0" equiv="INTERPOLATION" disp="{{ cedCodes().length }}" /> of <ph id="1"
+            equiv="INTERPOLATION_1" disp="{{ pagination()!.count }}" /> results</source>
+        <target><ph id="0" equiv="INTERPOLATION" disp="{{ cedCodes().length }}" /> sur <ph id="1"
+            equiv="INTERPOLATION_1" disp="{{ pagination()!.count }}" /> résultats</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.rowCountSimple">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.html:79,82</note>
+      </notes>
+      <segment state="translated">
+        <source>results</source>
+        <target>résultats</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.saveButton">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.html:501,503</note>
+      </notes>
+      <segment state="translated">
+        <source> Save changes </source>
+        <target> Enregistrer les modifications </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.searchPlaceholder">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.html:34,35</note>
+      </notes>
+      <segment state="translated">
+        <source>Search code, label…</source>
+        <target>Rechercher un code, un libellé…</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.subtitle">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.html:15,19</note>
+      </notes>
+      <segment state="translated">
+        <source> Manage the waste classification codes (CED). </source>
+        <target> Gérer les codes de classification des déchets (CED). </target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.success.created">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.ts:121</note>
+      </notes>
+      <segment state="translated">
+        <source>CED code created successfully.</source>
+        <target>Code CED créé avec succès.</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.success.deleted">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.ts:207</note>
+      </notes>
+      <segment state="translated">
+        <source>CED code deleted.</source>
+        <target>Code CED supprimé.</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.success.updated">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.ts:187</note>
+      </notes>
+      <segment state="translated">
+        <source>CED code updated successfully.</source>
+        <target>Code CED mis à jour avec succès.</target>
+      </segment>
+    </unit>
+    <unit id="admin.cedCodes.title">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-codes/admin-ced-codes.html:9,12</note>
+      </notes>
+      <segment state="translated">
+        <source> CED Codes </source>
+        <target> Codes CED </target>
+      </segment>
+    </unit>
     <unit id="admin.premium.actions">
       <notes>
         <note category="location">
@@ -1170,6 +1826,45 @@
       <segment state="translated">
         <source>for the sector</source>
         <target>pour le secteur</target>
+      </segment>
+    </unit>
+    <unit id="cedCode.category.a">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.ts:63</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.ts:50</note>
+        <note category="location">libs/waste/data-access/src/lib/ced-code.ts:56</note>
+      </notes>
+      <segment state="translated">
+        <source>Category A</source>
+        <target>Catégorie A</target>
+      </segment>
+    </unit>
+    <unit id="cedCode.category.b">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.ts:64</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.ts:51</note>
+        <note category="location">libs/waste/data-access/src/lib/ced-code.ts:57</note>
+      </notes>
+      <segment state="translated">
+        <source>Category B</source>
+        <target>Catégorie B</target>
+      </segment>
+    </unit>
+    <unit id="cedCode.category.c">
+      <notes>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-detail/admin-ced-code-detail.ts:65</note>
+        <note category="location">
+          libs/admin/ced-codes/src/lib/admin-ced-code-new/admin-ced-code-new.ts:52</note>
+        <note category="location">libs/waste/data-access/src/lib/ced-code.ts:58</note>
+      </notes>
+      <segment state="translated">
+        <source>Category C</source>
+        <target>Catégorie C</target>
       </segment>
     </unit>
     <unit id="emailVerification.code.error">
@@ -3170,16 +3865,25 @@
     </unit>
     <unit id="sidebar.item.actorValidation">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:139</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:141</note>
       </notes>
       <segment state="translated">
         <source>Actor Validation</source>
         <target>Validation des acteurs</target>
       </segment>
     </unit>
+    <unit id="sidebar.item.cedCodes">
+      <notes>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:151</note>
+      </notes>
+      <segment state="translated">
+        <source>CED Codes</source>
+        <target>Codes CED</target>
+      </segment>
+    </unit>
     <unit id="sidebar.item.declareLot">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:97</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:99</note>
       </notes>
       <segment state="translated">
         <source>Declare a lot</source>
@@ -3188,7 +3892,7 @@
     </unit>
     <unit id="sidebar.item.lots">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:92</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:94</note>
       </notes>
       <segment state="translated">
         <source>My lots</source>
@@ -3197,7 +3901,7 @@
     </unit>
     <unit id="sidebar.item.overview">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:86</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:88</note>
       </notes>
       <segment state="translated">
         <source>Overview</source>
@@ -3206,7 +3910,7 @@
     </unit>
     <unit id="sidebar.item.premiumRequests">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:144</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:146</note>
       </notes>
       <segment state="translated">
         <source>Premium Requests</source>
@@ -3215,7 +3919,7 @@
     </unit>
     <unit id="sidebar.item.profile">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:113</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:115</note>
       </notes>
       <segment state="translated">
         <source>Professional profile</source>
@@ -3224,7 +3928,7 @@
     </unit>
     <unit id="sidebar.item.roles">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:118</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:120</note>
       </notes>
       <segment state="translated">
         <source>Actor roles</source>
@@ -3233,7 +3937,7 @@
     </unit>
     <unit id="sidebar.item.subscription">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:123</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:125</note>
       </notes>
       <segment state="translated">
         <source>Subscription</source>
@@ -3269,7 +3973,7 @@
     </unit>
     <unit id="sidebar.section.account">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:110</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:112</note>
       </notes>
       <segment state="translated">
         <source>ACCOUNT</source>
@@ -3278,7 +3982,7 @@
     </unit>
     <unit id="sidebar.section.admin">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:136</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:138</note>
       </notes>
       <segment state="translated">
         <source>ADMINISTRATION</source>
@@ -3287,7 +3991,7 @@
     </unit>
     <unit id="sidebar.section.workspace">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:83</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:85</note>
       </notes>
       <segment state="translated">
         <source>WORKSPACE</source>
@@ -3305,7 +4009,7 @@
     </unit>
     <unit id="sidebar.tier.free">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:162</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:169</note>
       </notes>
       <segment state="translated">
         <source>Free plan</source>
@@ -3314,7 +4018,7 @@
     </unit>
     <unit id="sidebar.tier.premium">
       <notes>
-        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:161</note>
+        <note category="location">libs/layout/src/lib/sidebar/sidebar.ts:168</note>
       </notes>
       <segment state="translated">
         <source>Premium</source>
